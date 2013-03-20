@@ -1,0 +1,76 @@
+                                            Effort                    1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3
+Task                                        (days)  1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0
+- - - - - - - - - - - - - - - - - - - - - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Initiate Git repo and file structure          1   | x
+Wireframe site                                1   |   x x
+Write interim report                          4   |       x x x x x x x
+Code main layout of site                      2   |                   x x x x
+Style the site                                2   |                           x x x x x
+Code navigation functionality                 3   |                                     x x x x
+Design database/tables                        3   |                                             x x x
+Implement database/tables                     3   |                                                   x x
+Setup auto creation of database/tables        3   |                                                       x x x</pre><pre class="dec">
+
+                                            Effort                    1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3
+Task                                        (days)  1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+- - - - - - - - - - - - - - - - - - - - - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Create test data in database                  0   | x x
+Write JS to display products from database    0   |     x x x x x
+Write JS to add products to basket            0   |               x x x x x
+Build checkout function                       0   |                         x x x x x
+Code CMS layout                               0   |                                   x x x x
+Style CMS layout                              0   |                                           x x x x
+Build add/remove products/categories          0   |                                                   x x x x x x</pre><pre class="jan">
+
+
+                                            Effort                    1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3
+Task                                        (days)  1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+- - - - - - - - - - - - - - - - - - - - - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Build image upload facility                   3   | x x x x x x x
+Build stock adjust facility                   3   |               x x x x x x x
+Build report function (open/previous orders)  4   |                             x x x x
+Write interim report                          2   |                                     x x x x x
+Test buying process                           5   |                                               x x x x
+Test product adding process                   4   |                                                       x x x x</pre><pre class="feb">
+
+                                            Effort                    1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2
+Task                                        (days)  1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8
+- - - - - - - - - - - - - - - - - - - - - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Test admin functions                          4   | x x x x
+Test system with other people                 3   |         x x x x x x x x x x x x x x
+		
+
+
+	<pre><span class="dates">
+                                            Effort                    1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 3 3
+Task                                        (days)  1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+- - - - - - - - - - - - - - - - - - - - - - - - - + - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</span><span class="nov">
+01. Initiate Git repo and file structure        0.5   | x
+02. Wireframe site                                2   |   x x
+03. Write interim report                          7   |       x x x x x x x
+04. Code main layout of site                      4   |                   x x x x
+05. Style the site                                5   |                           x x x x x
+06. Code navigation functionality                 4   |                                     x x x x
+07. Design database/tables                        3   |                                             x x x
+08. Implement database/tables                     2   |                                                   x x
+09. Setup auto creation of database/tables        3   |                                                       x x x</span><span class="dec">
+10. Create test data in database                  2   | x x
+11. Write JS to display products from database    5   |     x x x x x
+12. Write JS to add products to basket            5   |               x x x x x
+13. Build checkout function                       5   |                         x x x x x
+14. Code CMS layout                               4   |                                   x x x x
+15. Style CMS layout                              4   |                                           x x x x
+16. Build add/remove products/categories          6   |                                                   x x x x x x</span><span class="jan">
+17. Build image upload facility                   6   | x x x x x x x
+18. Build stock adjust facility                   6   |               x x x x x x x
+19. Build report function (open/previous orders)  4   |                             x x x x
+20. Write interim report                          5   |                                     x x x x x
+21. Test buying process                           4   |                                               x x x x
+22. Test product adding process                   4   |                                                       x x x x</span><span class="feb">
+23. Test admin functions                          4   | x x x x
+24. User testing                                 14   |         x x x x x x x x x x x x x x
+25. Fix bugs                                      7   |                                     x x x x x x x
+
+</span>
+</pre>
+</div>

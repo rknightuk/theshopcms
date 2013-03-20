@@ -1,0 +1,108 @@
+body	{
+	width: 820px;
+	font-family: "HelveticaNeue", Arial, sans-serif;
+	font-size: 10pt;
+	margin: 0 auto;
+	background: #e9e9e9;
+}
+
+section	{
+	width: 820px;
+	margin: 0 auto;
+	background: #FEFEFE;
+	overflow: auto;
+	padding: 20px;
+}
+
+figcaption	{
+	text-align: center;
+	background: #dfdfdf;
+	padding: 5px 0 5px 0;
+}
+
+img	{
+	max-width: 100%;
+}
+
+h1, h2, h3, h4, h5, h6	{
+	font-weight: bold;
+}
+h1	{
+	font-size: 190%;
+}
+h2	{
+	font-size: 160%;
+	padding: 3px 0 3px 0;
+	border-bottom: 1px solid #000;
+}
+
+/*--Gantt chart styling--*/
+
+pre	{
+	font-size: 90%;
+}
+
+#gantt {
+	width: auto;
+	float: left;
+	padding-left: 10px;
+}
+
+.dates	{
+	font-weight: bold;
+}
+
+.nov	{
+	color: #e60000;
+}
+	.key_nov	{
+		border-bottom: 3px solid #e60000;
+	}
+
+.dec, .apr	{
+	color: #4F4FFF;
+}
+	.key_dec	{
+		border-bottom: 3px solid #4F4FFF;
+	}
+
+.jan	{
+	color: #009700;
+}
+	.key_jan	{
+		border-bottom: 3px solid #009700;
+	}
+
+.feb	{
+	color: #EE23C5;
+}
+	.key_feb	{
+		border-bottom: 3px solid #ee23c5;
+	}
+
+.mar	{
+	color: #FF7000;
+}
+	.key_mar	{
+		border-bottom: 3px solid #FF7000;
+	}
+
+.apr	{
+	color: #858585;
+}
+	.key_apr	{
+		border-bottom: 3px solid #858585;
+	}
+
+ul#keylist 	{
+	margin-left: -40px;
+}
+
+#keylist li	{
+	list-style-type: none;
+	display: inline;
+	padding: 5px 10px 5px 10px;
+	margin-right: 10px;
+}
+
+/*--End Gantt styling--*/

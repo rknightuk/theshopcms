@@ -1,0 +1,45 @@
+##Interim report
+
+###Specification and project plan
+**622197**
+
+For this assignment, the key functionality of the site is split into three catagories and will be as follows:
+
+**End user**
+
+- Navigation through catagories on the navigation bar
+- Subcategories will be shown on hover/click of it’s parent category
+- Breadcrumb trail for easy naviagtion up a level
+- Basket always shown in top right corner
+- Items added to basket without page reload
+
+**CMS**
+
+- Add products to the site
+- Add product images to the site
+- Update of stock levels
+- Remove products from the database
+- Update/edit/remove categories
+
+**Admin**
+
+- View open orders
+- View previous orders
+
+![Home page navigation](../img/intOneNavigation.png)
+
+###Plan and schedule
+
+For this project SDLC (Software Development Life Cycle) will be used, as it allows for analysis, testing and prototyping. Based on the Gantt chart below, the planned lifecycle of this project will end approximately towards the end of February 2013. There are two reasons for this. Firstly, I believe that I am able to complete this project in this timescale, without affecting other work. Secondly, the planned timescale also allows enough time for any changes to the product as well as any issues that may arrise in completing the work on time. The main layout and basic functionality of the site will be completed by the 22nd of November with more advanced functionality being added after that. Some factors that are likely to affect work not being completed on time are:
+
+- Other coursework taking priority temporarily
+	- To avoid this, timescales for other coursework will be planned in such a way as to not affect this project.
+- A particular function being difficult to complete
+- Learning new features of PHP and Javascript may be more difficult than initially planned for. This risk will be reduced by using all resources that are available: 
+	- Online tutorials
+	- Books
+	- One-to-one help in tutorial sessions
+- Loss of work
+	- This risk will be reduced significantly by a constant backup to Dropbox
+
+The work that is being set in WEPM (Web Engineering and Project Management) will be useful for making sure the project is completed on time and meets all the requirements as outlined above. DBPRIN (Database Principles), WEBF2 (Web Foundations 2) and GUDE (Getting Usability into Development Environments) will also help with different elements of the project. The days outlined in the Gantt chart will not involve working the entirety of that particular day (8 hours), but instead are planned that work will be completed over a number of hours (3-4) of those particular days. 
