@@ -1,8 +1,8 @@
-<?php include("../db/check_db.php");?>
+<?php include("../../db/check_db.php");?>
 
 <?php
-include ("../inc/header.php");
-include("../inc/nav_cms.php");
+include ("../../inc/header.php");
+include("../../inc/nav_cms.php");
 
 ?>
 
@@ -20,4 +20,4 @@ include("../inc/nav_cms.php");
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
   <script src="upload.js"></script>
 
-<?php include('../inc/footer.php');?>
+<?php include('../../inc/footer.php');?>

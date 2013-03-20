@@ -3,7 +3,7 @@
 foreach ($_FILES["images"]["error"] as $key => $error) {
     if ($error == UPLOAD_ERR_OK) {
         $name = $_FILES["images"]["name"][$key];
-        move_uploaded_file( $_FILES["images"]["tmp_name"][$key], "../img/products/" . $_FILES['images']['name'][$key]);
+        move_uploaded_file( $_FILES["images"]["tmp_name"][$key], "../../img/products/" . $_FILES['images']['name'][$key]);
     }
 }
 
@@ -13,7 +13,7 @@ echo "<p class='feedback_yes'>Successfully Uploaded <em>$filename</em></p>";
 
 echo "<fieldset>
 		<legend>Add a product</legend>
-		<form method='post' action='../db/add_db.php'>
+		<form method='post' action='../../db/add_db.php'>
 		
 			<label for='name'>Product name:</label><input type='text' name='name'><br/>
 			<label for='category'>Category:</label><input type='text' name='category'><br/>

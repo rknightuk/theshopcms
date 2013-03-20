@@ -23,9 +23,10 @@ include("inc/nav_main.php");
 						</section>
 						
 						<section class="product_info">
+						<h2>Product description</h2>
 						<p class="description"><em>'.$row['description'].'</em></p>
-						<p>£'.$row['price'].'<br/>'.$row['stock_level'].' in stock</p>
-						<p><a href="#">Add to basket</a></p>
+						<p>£'.$row['price'].'<br/>'.$row['stock_level'].' in stock</p><br/>
+						<p class="add_to_basket"><a href="#">Add to basket</a></p>
 						</section>';
 						$category = $row['category'];
 					}
@@ -41,7 +42,7 @@ include("inc/nav_main.php");
 					echo "<section class='related'><h3>Related products</h3>";
 					while ( $row = mysqli_fetch_array($result)){
 						echo '<section class="product_related"><h5>'.$row['product_name'].' / <a href="/product.php?product_id='.$row['product_id'].'">View &raquo;</a></h5>
-						<img src="/img/products/'.$row['photo_url'].'"/><br/>
+						<section class="img"><img src="/img/products/'.$row['photo_url'].'"/></section><br/>
 						</section>';
 						
 					}

@@ -1,0 +1,119 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+	
+		<title></title>
+		
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		
+		
+		<!--[if lt IE 9]>
+			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		<link rel="shortcut icon" href="img/favicon.ico">
+		<link rel="stylesheet" type="text/css" href="style.css" />
+
+		<style type="text/css">
+
+		body	{
+			font-family: "Helvetica", Arial, sans-serif;
+					}
+
+		.product	{
+	width: 30%;
+	height: auto;
+	float: left;
+    display: inline-block;
+    margin: 5px;
+    background-color: #f7f7f7;
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    }
+    
+    .product p	{
+	    margin-top: 10px;
+	    font-weight: bold;
+    }
+    
+    .product .description	{
+	    font-weight: normal;
+	    min-height: 70px;
+	    padding: 0 5px;
+    }
+    
+    .product .img	{
+    	min-height: 200px;
+    	line-height: 200px;
+    	border-bottom: 1px solid #DBDBDB;
+    	border-top: 1px solid #DBDBDB;
+    	background-color: #fff;
+    }
+
+    	.product img	{
+		    margin: auto;
+		    max-width: 95%;
+		    max-height: 190px;
+		    height: auto;
+		    margin-top: auto;
+		    margin-bottom: auto;
+		    vertical-align: middle;
+    	}
+    
+    .product h3	{
+	    text-align: center;
+	    width: 100%;
+	    padding-top: 10px;
+	    margin-top: 0;
+    }
+
+    .product .add_to_basket	a {
+    	background: #dbd9d9;
+    	border: 1px solid #bdbdbd;
+    	padding: 10px;
+    	text-decoration: none;
+    }
+
+    .product .add_to_basket	a:hover {
+    	background: #C9C7C7;
+    }
+	
+	.product
+    .product:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+		</style>
+		
+	</head>
+	
+	<body>
+	
+
+		<section class="product">
+
+			<h3>Mouse</h3>
+
+			<section class="img">
+						<img src="/img/products/sample_mouse.png"></section>
+						<p>£3.99 / 200 in stock</p>
+						<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
+						<p><a href="#">Add to basket</a></p>
+						</section>
+
+				<section class="product">
+					<h3>Mouse</h3>
+					<section class="img">
+					<img src="/img/products/sample_keyboard.png"></section>
+					<p>£3.99 / 200 in stock</p>
+					<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3"><br/>More info →</a></p>
+					<p class="add_to_basket"><a href="#">Add to basket</a></p>
+				</section>
+
+
+	</body>
+	
+</html>
