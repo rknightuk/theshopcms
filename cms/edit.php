@@ -35,8 +35,6 @@ include("../inc/nav_cms.php");
 		
 			include("../db/connect_db.php");
 			
-			$query = "SELECT * FROM products ORDER BY category";
-			
 			include("../inc/table_view.php");	
 			
 		?>
