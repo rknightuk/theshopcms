@@ -17,8 +17,9 @@ include("inc/nav_main.php");?>
 					}
 					else {
 						echo "<p class='feedback_yes'>Search results for <em>'$s'</em></p>";
+						include ("inc/product_sort_menu.php");
 							while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-								include("inc/product_mult.php");
+								include("inc/product_layout.php");
 								}
 						}
 					}

@@ -30,6 +30,22 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","inc/category_mult.php?category="+category+"&sortby="+sort,false);
 xmlhttp.send();
 }
+
+
+function searchSort(searchterm, sort)
+{
+	document.getElementById("content").innerHTML = "Loading "+searchterm+"...";
+  xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("content").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","inc/search_sort.php?search="+searchterm+"&sortby="+sort,false);
+xmlhttp.send();
+}
 </script>
 		
 	</head>
@@ -38,7 +54,7 @@ xmlhttp.send();
 		
 		<header>
 		
-			<h1><a href="/"><span class="gray">the</span>Shop</a></h1>
+			<h1><a href="/">theShop</a></h1>
 		
 		</header>
 		
@@ -54,8 +70,8 @@ xmlhttp.send();
 		
 		<nav class="nav_search">
 		
-			<form method="post" action="/search.php" class="searchbox">
-				<input type="text" name="search" placeholder="Search The Shop">
+			<form method="post" action="search.php" class="searchbox">
+				<input type="text" name="search" id="search" placeholder="Search The Shop">
 			</form>
 		
 		</nav>

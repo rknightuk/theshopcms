@@ -66,6 +66,7 @@ a:hover	{
 	}
 
 .feedback_no, .feedback_yes	{
+		margin: 0 auto;
 		position: relative;
 		clear: both;
 		width: 70%;
@@ -342,7 +343,7 @@ tr	{
 	border-bottom: 1px solid #e5e5e5;
 }
 
-#more	{
+#sort	{
 	text-align: center;
 }
 

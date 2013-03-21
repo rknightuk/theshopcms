@@ -1,52 +1,40 @@
 <?php 
 require("../db/connect_db.php");
-$sortby = $_GET['sortby'];
-$category = $_GET["category"];
+if (isset($_GET['sortby'])) {
+	$sortby = $_GET['sortby'];
+}
+if (isset($_GET['category'])) {
+	$category = $_GET["category"];
+}
+if (isset($_POST['search'])) {
+	$s = $_POST["search"];
+}
+
 
 if (!$category == 0) {
 	$query = "SELECT * FROM products WHERE category = '".$category."' ORDER BY ".$sortby."";
 }
+elseif (isset($_POST['search'])) {
+	$query = "SELECT * FROM products
+						WHERE category LIKE '%".$s."%' 
+						OR product_name LIKE '%".$s."%'
+						OR description LIKE '%".$s."%';";
+
+}
 else 	{
 	$query = "SELECT * FROM products ORDER BY ".$sortby."";
 }
+
 	
 	//echo $query;
 	//echo "Category is: ".$category;
 	$result = mysqli_query($dbc, $query);
 
-	?>
-
-	<nav id='more'>
-
-	<p>Sort products by: <select name="aa" onchange="changeCategory('<?php echo "$category";?>', this.value)"> 
-				<option value="">Please select</option>
-				<option value="product_name">name</option>
-				<option value="price">price</option>
-			</select></p>
-
-	</nav>
-
-	<?php
+	include ("product_sort_menu.php");
 	
 	if ($result) {
 			while ( $row = mysqli_fetch_array($result)){
-				echo '<section class="product">
-	
-	<h3><a href="/product.php?product_id='.$row['product_id'].'">'.$row['product_name'].'</a></h3>
-	
-	<section class="img">
-			
-	<img src="/img/products/'.$row['photo_url'].'"/>
-	
-	</section>
-	
-	<p>£'.$row['price'].' / '.$row['stock_level'].' in stock</p>
-	
-	<p class="description">'.substr($row['description'], 0, 60).' <br/><a href="/product.php?product_id='.$row['product_id'].'">More info &rarr;</a></p>
-	
-	<p class="add_to_basket"><a href="#">Add to basket</a></p>
-							
-	</section>';
+				include ("product_layout.php");
 
 		}
 	}
