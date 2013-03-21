@@ -27,7 +27,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("content").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","inc/category_mult.php?category="+category+"&sortby="+sort,true);
+xmlhttp.open("GET","inc/category_mult.php?category="+category+"&sortby="+sort,false);
 xmlhttp.send();
 }
 </script>

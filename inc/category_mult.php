@@ -13,6 +13,20 @@ else 	{
 	//echo $query;
 	//echo "Category is: ".$category;
 	$result = mysqli_query($dbc, $query);
+
+	?>
+
+	<nav id='more'>
+
+	<p>Sort products by: <select name="aa" onchange="changeCategory('<?php echo "$category";?>', this.value)"> 
+				<option value="">Please select</option>
+				<option value="product_name">name</option>
+				<option value="price">price</option>
+			</select></p>
+
+	</nav>
+
+	<?php
 	
 	if ($result) {
 			while ( $row = mysqli_fetch_array($result)){
@@ -33,6 +47,7 @@ else 	{
 	<p class="add_to_basket"><a href="#">Add to basket</a></p>
 							
 	</section>';
+
 		}
 	}
 

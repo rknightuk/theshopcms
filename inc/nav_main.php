@@ -18,7 +18,13 @@
 			
 			?>
 			</ul>
+
+			<h3>Sort options</h3>
+
 			
+
+
+
 		</nav>
 		
 		<section class="content" id="content">
