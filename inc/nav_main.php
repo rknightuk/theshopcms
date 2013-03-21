@@ -1,6 +1,7 @@
 <nav class="nav_main">
 			
 			<ul>
+				<li><a href="#" onclick=changeCategory(0)>All Products</a></li>
 				<?php
 			
 				include("db/connect_db.php");
@@ -11,7 +12,7 @@
 				
 				if ($result) {
 					while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-						echo '<li><a href="/category.php?category='.$row['category'].'">'.$row['category'].'</a></li>';
+						echo '<li><a href="#" onclick=changeCategory("'.$row['category'].'")>'.$row['category'].'</a></li>';
 					}
 				}
 			

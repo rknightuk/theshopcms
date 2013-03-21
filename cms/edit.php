@@ -3,7 +3,7 @@ include("../inc/header.php");
 include("../inc/nav_cms.php");
 ?>
 
-	<script type="text/javascript">
+	<script type="text/javascript"> //This script is in two places
 		function delete_row(product_id)
 		{
 		if (!confirmDelete()) return false;
@@ -34,6 +34,8 @@ include("../inc/nav_cms.php");
 		<?php
 		
 			include("../db/connect_db.php");
+			
+			$query = "SELECT * FROM products ORDER BY category";
 			
 			include("../inc/table_view.php");	
 			

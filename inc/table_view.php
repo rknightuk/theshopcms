@@ -1,7 +1,5 @@
 <?php
 
-$query = "SELECT * FROM products ORDER BY category";
-
 $result = mysqli_query($dbc, $query);
 
 echo "<span id='feedback'></span>";

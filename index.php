@@ -8,6 +8,25 @@ if(isset($_GET['start'])){
 	echo "<p class='feedback_yes'>Database and sample data created.</p>";
 }
 ?>
+
+<script>
+
+function changeCategory(category)
+{
+	document.getElementById("content").innerHTML = "Loading "+category+"...";
+  xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("content").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","inc/category_mult.php?category="+category,true);
+xmlhttp.send();
+}
+</script>
+
 			<?php
 			
 				require("db/connect_db.php");
