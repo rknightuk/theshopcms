@@ -13,6 +13,24 @@
 		<![endif]-->
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/inc/style.css" />
+
+		<script>//move this script
+
+function changeCategory(category, sort)
+{
+	document.getElementById("content").innerHTML = "Loading "+category+"...";
+  xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("content").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","inc/category_mult.php?category="+category+"&sortby="+sort,true);
+xmlhttp.send();
+}
+</script>
 		
 	</head>
 	

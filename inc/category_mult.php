@@ -1,14 +1,15 @@
 <?php 
 require("../db/connect_db.php");
+$sortby = $_GET['sortby'];
 $category = $_GET["category"];
 
 if (!$category == 0) {
-	$query = "SELECT * FROM products WHERE category = '".$category."'";
+	$query = "SELECT * FROM products WHERE category = '".$category."' ORDER BY ".$sortby."";
 }
 else 	{
-	$query = "SELECT * FROM products";
+	$query = "SELECT * FROM products ORDER BY ".$sortby."";
 }
-
+	
 	//echo $query;
 	//echo "Category is: ".$category;
 	$result = mysqli_query($dbc, $query);
