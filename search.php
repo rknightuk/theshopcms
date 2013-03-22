@@ -1,7 +1,10 @@
 <?php 
+
 include("db/connect_db.php");
 include("inc/header.php");
-include("inc/nav_main.php");?>
+include("inc/nav_main.php");
+
+?>
 		
 			<?php
 			

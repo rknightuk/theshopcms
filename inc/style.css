@@ -1,3 +1,5 @@
+/* General page styles */
+
 body	{
 	margin: 0 auto;
 	margin-top: 20px;
@@ -30,19 +32,15 @@ header	{
 		text-decoration: none;
 	}
 
-	.gray	{
-		color: #858585;
-		font-weight: normal;
-	}
-	
-a, a:link, a:visited, a:active	{
-	color: #ff532c;
-	text-decoration: underline;
+.content	{
+	position: relative;
+	width: 750px;
+	padding: 5px;
+	float: right;
 }
 
-a:hover	{
-	color: #939393;
-	text-decoration: none;
+.content img	{
+	max-width: 100%;
 }
 
 .nav_search	{
@@ -133,136 +131,6 @@ a:hover	{
 		border-color: #dbdbdb;
 	}
 
-.content	{
-	position: relative;
-	width: 750px;
-	padding: 5px;
-	float: right;
-}
-
-.content img	{
-	max-width: 100%;
-}
-
-.product	{
-	width: 30%;
-	height: auto;
-	float: left;
-    display: inline-block;
-    margin: 5px;
-    /*background-color: #f7f7f7;*/
-    border: 1px solid #dbdbdb;
-    text-align: center;
-    }
-    
-    .product p	{
-	    margin-top: 10px;
-	    font-weight: bold;
-    }
-    
-    .product .description	{
-	    font-weight: normal;
-	    min-height: 70px;
-	    padding: 0 5px;
-    }
-    
-    .product .img	{
-    	min-height: 200px;
-    	line-height: 200px;
-    	/*border-bottom: 1px solid #DBDBDB;
-    	border-top: 1px solid #DBDBDB;
-    	background-color: #fff;*/
-    }
-
-    	.product img	{
-		    margin: auto;
-		    max-width: 95%;
-		    max-height: 190px;
-		    height: auto;
-		    margin-top: auto;
-		    margin-bottom: auto;
-		    vertical-align: middle;
-    	}
-    
-    .product h3	{
-	    text-align: center;
-	    width: 100%;
-	    padding-top: 10px;
-	    margin-top: 0;
-	    height: 50px;
-    }
-
-    .add_to_basket	a {
-    	background: #dbd9d9;
-    	border: 1px solid #bdbdbd;
-    	padding: 10px;
-    	text-decoration: none;
-    }
-
-    .add_to_basket	a:hover {
-    	background: #C9C7C7;
-    	color: #FF5321;
-    }
-	
-	.product
-    .product:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
-        
-.product_ind	{
-	width: 50%;
-	min-height: 300px;
-	float: left;
-    display: inline-block;
-    padding: 3px 3px 30px 3px;
-    margin: 5px;
-    /*background-color: #f7f7f7;
-    border: 1px solid #dbdbdb;*/
-    text-align: left;
-    }
-    
-    .product_info	{
-	    width: 40%;
-	    height: auto;
-	    float: right;
-	    display: inline-block;
-	    padding: 3px 20px 3px 20px;
-	    margin: 58px 0 0 0;
-	    background-color: #f7f7f7;
-	    border: 1px solid #dbdbdb;
-	    text-align: left;
-	    border-radius: 7px;
-    }
-    
-    .related	{
-		position: relative;
-		width: 750px;
-		padding: 5px;
-		float: right;
-	}
-	
-	.product_related	{
-		width: 30%;
-		height: 250px;
-		float: left;
-		display: inline-block;
-		padding: 3px;
-		margin: 5px;
-		border: 1px solid #dbdbdb;
-		text-align: center;
-	}
-	
-	.product_related .img {
-		line-height: 250px;
-	}
-
-	.product_related img	{
-		max-height: 180px;
-	}
-
-        
 footer	{
 	position: relative;
 	width: 100%;
@@ -270,16 +138,17 @@ footer	{
 	clear: both;
 	background: url('/inc/img/uop.jpg') no-repeat right center;
 }
-        
-/*CMS*/
-
-#image-list img 	{
-	max-width: 200px;
+	
+a, a:link, a:visited, a:active	{
+	color: #ff532c;
+	text-decoration: underline;
 }
 
-#image-list	li {
-	list-style-type: none;
+a:hover	{
+	color: #939393;
+	text-decoration: none;
 }
+
 input {
 	padding: 5px;
 	width: 200px;
@@ -343,15 +212,72 @@ tr	{
 	border-bottom: 1px solid #e5e5e5;
 }
 
-#sort	{
-	text-align: center;
-}
-
 select	{
 	font-size: 20px;
 }
 
-/* SEARCH RESULTS LAYOUT */
+#sort	{
+	text-align: center;
+}
+
+/* Product grid layout */
+
+.product	{
+	width: 30%;
+	height: auto;
+	float: left;
+    display: inline-block;
+    margin: 5px;
+    /*background-color: #f7f7f7;*/
+    border: 1px solid #dbdbdb;
+    text-align: center;
+    }
+    
+    .product p	{
+	    margin-top: 10px;
+	    font-weight: bold;
+    }
+    
+    .product .description	{
+	    font-weight: normal;
+	    min-height: 70px;
+	    padding: 0 5px;
+    }
+    
+    .product .img	{
+    	min-height: 200px;
+    	line-height: 200px;
+    	/*border-bottom: 1px solid #DBDBDB;
+    	border-top: 1px solid #DBDBDB;
+    	background-color: #fff;*/
+    }
+
+    	.product img	{
+		    margin: auto;
+		    max-width: 95%;
+		    max-height: 190px;
+		    height: auto;
+		    margin-top: auto;
+		    margin-bottom: auto;
+		    vertical-align: middle;
+    	}
+    
+    .product h3	{
+	    text-align: center;
+	    width: 100%;
+	    padding-top: 10px;
+	    margin-top: 0;
+	    height: 50px;
+    }
+
+    .product
+    .product:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+
+/* Search results layout */
 
 .search_product	{
 			width: 95%;
@@ -395,10 +321,88 @@ select	{
 		.search_product .buy	{
 			float: right;
 			text-align: right;
+			padding-right: 5px;
 		}
 
-/* END OF SEARCH RESULTS LAYOUT */
+/* Product page layout */
 
+.product_ind	{
+	width: 50%;
+	min-height: 300px;
+	float: left;
+    display: inline-block;
+    padding: 3px 3px 30px 3px;
+    margin: 5px;
+    text-align: left;
+    }
+    
+    .product_info	{
+	    width: 40%;
+	    height: auto;
+	    float: right;
+	    display: inline-block;
+	    padding: 3px 20px 3px 20px;
+	    margin: 58px 0 0 0;
+	    text-align: left;
+	    border-radius: 7px;
+    }
+    
+    .related	{
+		position: relative;
+		width: 750px;
+		padding: 5px;
+		float: right;
+	}
+	
+	.product_related	{
+		width: 30%;
+		height: 250px;
+		float: left;
+		display: inline-block;
+		padding: 3px;
+		margin: 5px;
+		border: 1px solid #dbdbdb;
+		text-align: center;
+	}
+	
+	.product_related .img {
+		line-height: 250px;
+	}
 
+	.product_related img	{
+		max-height: 180px;
+	}
 
+	.add_to_basket, .out_of_stock	{
+		padding: 10px;
+	}
 
+	.add_to_basket a {
+		background: #f7f7f7;
+		text-align: center;
+		padding: 10px 20px;
+		border: 1px solid #FF5321;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
+	.add_to_basket a:hover	{
+		border-color: #dbdbdb;
+	}
+
+	.out_of_stock	{
+		background: #FFC7C6;
+		width: 115px;
+		margin: 0 auto;
+		margin-bottom: 12px;
+		border: 1px solid #f99;
+		text-align: center;
+	}
+
+	p.out_of_stock	{
+		font-weight: normal;
+	}
+
+	.product_info .out_of_stock	{
+		float: left;
+	}

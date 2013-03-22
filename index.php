@@ -1,12 +1,9 @@
-<?php include("db/check_db.php");?>
+<?php 
 
-<?php
+include("db/check_db.php");
 include ("inc/header.php");
 include ("inc/nav_main.php");
 
-if(isset($_GET['start'])){
-	echo "<p class='feedback_yes'>Database and sample data created.</p>";
-}
 ?>
 	
 	<section class="content">

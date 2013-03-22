@@ -13,10 +13,14 @@ echo '<section class="search_product">
 
 			<section class="buy">
 				<p>£'.$row['price'].' / '.$row['stock_level'].' in stock</p>
-				<br/>
-				<p class="add_to_basket"><a href="#">Add to basket</a></p>
-			</section>
-						
-		</section>';
+				<br/>';
+
+			if ($row['stock_level'] == 0){
+				echo '<p class="out_of_stock">Out of stock</p></section></section>';
+			}
+			else 	{
+				echo '<p class="add_to_basket"><a href="#">Add to basket</a></p>
+				</section></section>';
+			}
 
 	?>

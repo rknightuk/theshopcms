@@ -1,11 +1,13 @@
 INSERT INTO products (product_name, category, description, photo_url, price, stock_level)
-				VALUES ("USB Cable", "Computing", "2M USB cable in black", "sample_usbcable.png", 3.99, 112) , 
-				("Keyboard", "Computing", "USB Keyboard, UK layout. White and aluminium finish.", "sample_keyboard.png", 7.99, 20), 
-				("Mouse", "Computing", "Two button USB mouse with black finish.", "sample_mouse.png", 3.99, 200) , 
-				("Microphone", "Computing", "USB Microphone for talking and recording. Yay.", "sample_microphone.png", 12.99, 0), 
-				("Surround Sound Speakers", "Computing", "Surround sound speakers in black finish with remote control.", "sample_speakers.png", 19.99, 86), 
-				("AA Batteries x 4", "Computing", "4 x AA Batteries, awesome.", "sample_batteries.png", 4.99, 74),
-				("Bartlett's Familiar Quotations", "Books", "Contains over 20,00 quotations from over 2,500 authors. 17th edition", "sample_quotations.png", 32.00, 24),
+VALUES ("USB Cable", "Computing", "2M USB cable in black", "sample_usbcable.png", 3.99, 112) , 
+
+("Keyboard", "Computing", "USB Keyboard, UK layout. White and aluminium finish.", "sample_keyboard.png", 7.99, 20), 
+("Mouse", "Computing", "Two button USB mouse with black finish.", "sample_mouse.png", 3.99, 200) , 
+("Microphone", "Computing", "USB Microphone for talking and recording. Yay.", "sample_microphone.png", 12.99, 0), 
+("Surround Sound Speakers", "Computing", "Surround sound speakers in black finish with remote control.", "sample_speakers.png", 19.99, 86), 
+("AA Batteries x 4", "Computing", "4 x AA Batteries, awesome.", "sample_batteries.png", 4.99, 74),
+
+("Bartlett's Familiar Quotations", "Books", "Contains over 20,00 quotations from over 2,500 authors. 17th edition", "sample_quotations.png", 32.00, 24),
 ("Sketchnote Handbook", "Books", "An illustrated guide to visual notetaking by Mike Rohde", "sample_sketchnote.png", 14.65, 0),
 ("HTML and CSS", "Books", "An introduction to HTML and CSS in a visual way", "sample_htmlandcss.png", 7.99, 7),
 ("How to Tell If Your Cat is Plotting to Kill You", "Books", "Brilliantly whimsical yet oddly informative, TheOatmeal.com is an entertainment site full of comics, quizzes, and stories.", "sample_catkill.png", 7.99, 72),
