@@ -17,11 +17,11 @@ $query = "SELECT * FROM products
 	$result = mysqli_query($dbc, $query);
 
 	echo "<p class='feedback_yes'>Search results for <em>'$s'</em> sorted by $sortbylabel</p>";
-	include ("product_sort_menu.php");
+	include ("nav_sort_menu.php");
 	
 	if ($result) {
 			while ( $row = mysqli_fetch_array($result)){
-				include ("search_layout.php");
+				include ("layout_search.php");
 
 		}
 	}

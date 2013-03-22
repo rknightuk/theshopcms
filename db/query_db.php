@@ -30,11 +30,11 @@ else 	{
 	//echo "Category is: ".$category;
 	$result = mysqli_query($dbc, $query);
 
-	include ("product_sort_menu.php");
+	include ("nav_sort_menu.php");
 	
 	if ($result) {
 			while ( $row = mysqli_fetch_array($result)){
-				include ("product_layout.php");
+				include ("layout_main.php");
 
 		}
 	}
