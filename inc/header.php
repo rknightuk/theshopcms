@@ -37,7 +37,7 @@
 		
 		<nav class="nav_search">
 		
-			<form method="post" action="search.php" class="searchbox">
+			<form method="post" action="/search.php" class="searchbox">
 				<input type="text" name="search" id="search" placeholder="Search The Shop">
 			</form>
 		

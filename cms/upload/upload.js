@@ -1,15 +1,8 @@
+<!-- Upload script modified from http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/ -->
+
 (function () {
 	var input = document.getElementById("images"), 
-		formdata = false;
-
-	//function showUploadedItem (source) {
-  	//	var list = document.getElementById("image-list"),
-	//  		li   = document.createElement("li"),
-	//  		img  = document.createElement("img");
-  	//	img.src = source;
-  	//	li.appendChild(img);
-	//	list.appendChild(li);
-	//}   
+		formdata = false;  
 
 	if (window.FormData) {
   		formdata = new FormData();

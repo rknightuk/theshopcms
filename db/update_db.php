@@ -2,7 +2,7 @@
 	
 	header("Location: /cms/edit.php?updated");
 	
-	require($_SERVER['DOCUMENT_ROOT']."/db/connect_db.php");
+	require("connect_db.php");
 	
 	$name = $_POST['name'];
 	$cat = $_POST['category'];

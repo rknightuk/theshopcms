@@ -8,7 +8,7 @@ include("../inc/nav_cms.php");
 
 	<?php 
 		
-		include($_SERVER['DOCUMENT_ROOT']."/db/connect_db.php");
+		include("../db/connect_db.php");
 		
 		$product_id = $_GET['product_id'];
 		
@@ -39,7 +39,6 @@ include("../inc/nav_cms.php");
 					<label for='description'>Description:</label><textarea name='description' cols='27' rows='6'>$desc</textarea><br/>
 					<label for='price'>Price:</label><input type='text' name='price' value='$price'><br/>
 					<label for='stock'>Stock level:</label><input type='text' name='stock' value='$stock'><br/>
-					<label for='url'>Image URL:</label><input type='text' name='url' readonly='readonly' value='FIX THIS'><br/>
 					<input type='submit' name='submit' class='submit'>
 					</form>
 					</fieldset>";
