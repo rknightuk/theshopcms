@@ -28,3 +28,26 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","db/search_db.php?search="+searchterm+"&sortby="+sort,false);
 xmlhttp.send();
 }
+
+function delete_row(product_id, query)
+    {
+    if (!confirmDelete()) return false;
+    if (window.XMLHttpRequest)
+      {
+      xhr = new XMLHttpRequest();
+      }
+    xhr.onreadystatechange = function()
+      {
+      if (xhr.readyState==4 && xhr.status==200)
+        {
+        document.getElementById("feedback").innerHTML = "<p class='feedback_yes'>Successful delete</p>";
+        document.getElementById("table_view").innerHTML = xhr.responseText;
+        }
+      }
+    xhr.open("GET","/db/delete_db.php?product_id="+product_id+"&query="+query, true);
+    xhr.send();
+    }
+    
+    function confirmDelete()  {
+      return confirm("Are you sure you want to delete this product?");
+    }

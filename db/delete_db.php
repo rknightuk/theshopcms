@@ -1,6 +1,7 @@
 <?php
 
 	$product_id = $_GET['product_id'];
+	$resetquery = $_GET['query'];
 	
 	require('connect_db.php');
 	
@@ -12,7 +13,7 @@
 	
 	include("../db/connect_db.php");
 			
-	$query = "SELECT * FROM products ORDER BY category";
+	$query = $resetquery;
 			
 	include("../inc/layout_table.php");
 
