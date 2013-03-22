@@ -83,6 +83,13 @@
 	
 	<body>
 	
+	<?php
+
+	$query = file_get_contents("create.txt");
+
+	echo $query;
+
+	?>
 
 		<section class="search_product">
 
@@ -104,49 +111,6 @@
 			</section>
 						
 		</section>
-
-		<section class="search_product">
-
-			
-
-			<section class="img">
-				<img src="/img/products/sample_keyboard.png">
-			</section>
-
-			<section class="info">
-				<h4>How to tell if your cat is trying to kill you</h4>
-				<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
-			</section>
-
-			<section class="buy">
-				<p>£3.99 / 200 in stock</p>
-				<br/>
-				<p class="add_to_basket"><a href="#">Add to basket</a></p>
-			</section>
-						
-		</section>
-
-		<section class="search_product">
-
-			
-
-			<section class="img">
-				<img src="/img/products/sample_keyboard.png">
-			</section>
-
-			<section class="info">
-				<h4>How to tell if your cat is trying to kill you</h4>
-				<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
-			</section>
-
-			<section class="buy">
-				<p>£3.99 / 200 in stock</p>
-				<br/>
-				<p class="add_to_basket"><a href="#">Add to basket</a></p>
-			</section>
-						
-		</section>
-
 
 	</body>
 	

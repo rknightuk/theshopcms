@@ -76,13 +76,13 @@ a:hover	{
 	}
 	
 	.feedback_yes	{
-		background: #9bfd8a;
-		border: 1px solid #00ff49;
+		background: #C4FDBA;
+		border: 1px solid #6EFF97;
 	}
 	
 	.feedback_no	{
-		background: #ff9494;
-		border: 1px solid #ff5e5e;
+		background: #FDC7C7;
+		border: 1px solid #f99;
 	}
 
 .nav_admin	{
