@@ -39,7 +39,7 @@
 			
 			echo "<h2>Out of stock</h2>";
 			
-			include("../inc/table_view.php");
+			include("../inc/layout_table.php");
 
 			echo "</section>";
 
@@ -49,7 +49,7 @@
 			
 			echo "<h2>Low stock (< 5)</h2>";
 			
-			include("../inc/table_view.php");
+			include("../inc/layout_table.php");
 
 			echo "</section>";
 			

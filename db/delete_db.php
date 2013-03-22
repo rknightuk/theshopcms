@@ -14,6 +14,6 @@
 			
 	$query = "SELECT * FROM products ORDER BY category";
 			
-	include("../inc/table_view.php");
+	include("../inc/layout_table.php");
 
 ?>
