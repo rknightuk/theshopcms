@@ -2,9 +2,9 @@
 include("../inc/header.php");
 include("../inc/nav_cms.php");
 ?>
-	
-		<div id="table_view">
 		<h2>All products</h2>
+		<div id="table_view">
+		
 		<?php
 		
 			include("../db/connect_db.php");
