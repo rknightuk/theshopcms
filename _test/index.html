@@ -19,72 +19,63 @@
 
 		body	{
 			font-family: "Helvetica", Arial, sans-serif;
+			margin: 0 auto;
+			width: 730px;
 					}
 
-		.product	{
-	width: 30%;
-	height: auto;
-	float: left;
-    display: inline-block;
-    margin: 5px;
-    background-color: #f7f7f7;
-    border: 1px solid #dbdbdb;
-    text-align: center;
-    }
-    
-    .product p	{
-	    margin-top: 10px;
-	    font-weight: bold;
-    }
-    
-    .product .description	{
-	    font-weight: normal;
-	    min-height: 70px;
-	    padding: 0 5px;
-    }
-    
-    .product .img	{
-    	min-height: 200px;
-    	line-height: 200px;
-    	border-bottom: 1px solid #DBDBDB;
-    	border-top: 1px solid #DBDBDB;
-    	background-color: #fff;
-    }
+		.search_product	{
+			width: 95%;
+			height: 120px;
+			padding: 5px;
+		}
 
-    	.product img	{
-		    margin: auto;
-		    max-width: 95%;
-		    max-height: 190px;
-		    height: auto;
-		    margin-top: auto;
-		    margin-bottom: auto;
-		    vertical-align: middle;
-    	}
-    
-    .product h3	{
-	    text-align: center;
-	    width: 100%;
-	    padding-top: 10px;
-	    margin-top: 0;
-    }
+		.search_product:nth-child(even)	{
+			background-color: #f8f8f8;
+		}
 
-    .product .add_to_basket	a {
+		.search_product h4	{
+			margin-top: 10px;
+		}
+
+		.search_product .img 	{
+			max-height: 100px;
+			max-width: 170px;
+			height: auto;
+			width: auto;
+			line-height: 120px;
+			float: left;
+		}
+
+		.search_product img 	{
+			max-height: 100px;
+			max-width: 170px;
+			height: auto;
+			width: auto;
+			vertical-align: middle;
+		}
+
+		.search_product .info	{
+			float: left;
+			margin-left: 10px;
+			width: 340px;
+		}
+
+		.search_product .buy	{
+			float: right;
+			text-align: right;
+		}
+
+		.add_to_basket	a {
     	background: #dbd9d9;
     	border: 1px solid #bdbdbd;
     	padding: 10px;
     	text-decoration: none;
     }
 
-    .product .add_to_basket	a:hover {
+    .add_to_basket	a:hover {
     	background: #C9C7C7;
+    	color: #FF5321;
     }
-	
-	.product
-    .product:after {
-            content: "";
-            display: table;
-            clear: both;
-        }
 
 		</style>
 		
@@ -93,25 +84,68 @@
 	<body>
 	
 
-		<section class="product">
+		<section class="search_product">
 
-			<h3>Mouse</h3>
+			
 
 			<section class="img">
-						<img src="/img/products/sample_mouse.png"></section>
-						<p>£3.99 / 200 in stock</p>
-						<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
-						<p><a href="#">Add to basket</a></p>
-						</section>
+				<img src="/img/products/sample_keyboard.png">
+			</section>
 
-				<section class="product">
-					<h3>Mouse</h3>
-					<section class="img">
-					<img src="/img/products/sample_keyboard.png"></section>
-					<p>£3.99 / 200 in stock</p>
-					<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3"><br/>More info →</a></p>
-					<p class="add_to_basket"><a href="#">Add to basket</a></p>
-				</section>
+			<section class="info">
+				<h4>How to tell if your cat is trying to kill you</h4>
+				<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
+			</section>
+
+			<section class="buy">
+				<p>£3.99 / 200 in stock</p>
+				<br/>
+				<p class="add_to_basket"><a href="#">Add to basket</a></p>
+			</section>
+						
+		</section>
+
+		<section class="search_product">
+
+			
+
+			<section class="img">
+				<img src="/img/products/sample_keyboard.png">
+			</section>
+
+			<section class="info">
+				<h4>How to tell if your cat is trying to kill you</h4>
+				<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
+			</section>
+
+			<section class="buy">
+				<p>£3.99 / 200 in stock</p>
+				<br/>
+				<p class="add_to_basket"><a href="#">Add to basket</a></p>
+			</section>
+						
+		</section>
+
+		<section class="search_product">
+
+			
+
+			<section class="img">
+				<img src="/img/products/sample_keyboard.png">
+			</section>
+
+			<section class="info">
+				<h4>How to tell if your cat is trying to kill you</h4>
+				<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
+			</section>
+
+			<section class="buy">
+				<p>£3.99 / 200 in stock</p>
+				<br/>
+				<p class="add_to_basket"><a href="#">Add to basket</a></p>
+			</section>
+						
+		</section>
 
 
 	</body>

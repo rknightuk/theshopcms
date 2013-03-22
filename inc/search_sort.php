@@ -21,7 +21,7 @@ $query = "SELECT * FROM products
 	
 	if ($result) {
 			while ( $row = mysqli_fetch_array($result)){
-				include ("product_layout.php");
+				include ("search_layout.php");
 
 		}
 	}

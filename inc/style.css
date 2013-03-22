@@ -347,8 +347,57 @@ tr	{
 	text-align: center;
 }
 
+select	{
+	font-size: 20px;
+}
 
+/* SEARCH RESULTS LAYOUT */
 
+.search_product	{
+			width: 95%;
+			height: 120px;
+			padding: 5px;
+		}
+
+		.search_product:nth-child(even)	{
+			background-color: #f8f8f8;
+		}
+
+		.search_product h4	{
+			margin-top: 10px;
+		}
+
+		.search_product .img 	{
+			max-height: 100px;
+			max-width: 170px;
+			min-width: 170px;
+			height: auto;
+			width: auto;
+			line-height: 120px;
+			float: left;
+			text-align: center;
+		}
+
+		.search_product img 	{
+			max-height: 100px;
+			max-width: 170px;
+			height: auto;
+			width: auto;
+			vertical-align: middle;
+		}
+
+		.search_product .info	{
+			float: left;
+			margin-left: 10px;
+			width: 340px;
+		}
+
+		.search_product .buy	{
+			float: right;
+			text-align: right;
+		}
+
+/* END OF SEARCH RESULTS LAYOUT */
 
 
 

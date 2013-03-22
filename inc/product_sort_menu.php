@@ -1,6 +1,6 @@
 <nav id="sort">
 
-	<p>Sort products by: <select name="aa" onchange="<?php 
+	<p>Sort products by: <select name="product_sort" onchange="<?php 
 		if (isset($s)) {
 			echo "searchSort('$s', this.value)";
 		}
@@ -9,9 +9,13 @@
 		}
 		?>"> 
 				<option value="">Please select</option>
-				<option value="product_name">Name</option>
-				<option value="price">Price</option>
-				<option value="stock_level">Stock level</option>
+				<option value="product_name ASC">Name A - Z</option>
+				<option value="product_name DESC">Name Z - A</option>
+				<option value="price ASC">Price: Low - High</option>
+				<option value="price DESC">Price: High - Low</option>
+				<option value="stock_level ASC">Stock level: Low - High</option>
+				<option value="stock_level DESC">Stock level: High - Low</option>
+				<option value="category">Category</option>
 			</select></p>
 
 </nav>
