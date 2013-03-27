@@ -19,12 +19,12 @@ if ($result) {
   if ( isset( $_SESSION['cart'][$id] ) )
   { 
     $_SESSION['cart'][$id]['quantity']++;
-    echo '<p>Another '.$row["product_name"].' has been added to your cart</p>';
+    echo '<p>Another <em>"'.$row["product_name"].'"</em> has been added.</p>';
   } 
   else
   {
     $_SESSION['cart'][$id]= array ( 'quantity' => 1, 'price' => $row['price'] ) ;
-    echo '<p>A '.$row["product_name"].' has been added to your cart</p>' ;
+    echo '<p><em>"'.$row["product_name"].'</em>" has been added to your basket.</p>' ;
   }
 
 }
