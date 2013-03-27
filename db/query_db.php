@@ -6,9 +6,6 @@ if (isset($_GET['sortby'])) {
 if (isset($_GET['category'])) {
 	$category = $_GET["category"];
 }
-if (isset($_POST['search'])) {
-	$s = $_POST["search"];
-}
 
 
 if (!$category == 0) {

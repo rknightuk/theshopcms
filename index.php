@@ -1,6 +1,6 @@
 <?php 
 
-include("db/check_db.php");
+include ("db/check_db.php");
 include ("inc/header.php");
 include ("inc/nav_categories.php");
 

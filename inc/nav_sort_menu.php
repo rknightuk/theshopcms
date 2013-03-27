@@ -15,7 +15,7 @@
 				<option value="price DESC">Price: High - Low</option>
 				<option value="stock_level ASC">Stock level: Low - High</option>
 				<option value="stock_level DESC">Stock level: High - Low</option>
-				<option value="category">Category</option>
+				
 			</select></p>
 
 </nav>

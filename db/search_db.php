@@ -1,6 +1,7 @@
 <?php 
 require("../db/connect_db.php");
 
+// Get search term
 $s = $_GET['search'];
 $sortby = $_GET['sortby'];
 $sortbylabel = str_replace("_", " ", $sortby);
@@ -11,9 +12,6 @@ $query = "SELECT * FROM products
 						OR description LIKE '%".$s."%'
 						ORDER BY ".$sortby.";";
 
-	
-	//echo $query;
-	//echo "Category is: ".$category;
 	$result = mysqli_query($dbc, $query);
 
 	echo "<p class='feedback_yes'>Search results for <em>'$s'</em> sorted by $sortbylabel</p>";
@@ -22,7 +20,6 @@ $query = "SELECT * FROM products
 	if ($result) {
 			while ( $row = mysqli_fetch_array($result)){
 				include ("../inc/layout_search.php");
-
 		}
 	}
 
