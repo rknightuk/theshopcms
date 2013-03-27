@@ -51,3 +51,17 @@ function delete_row(product_id, query)
     function confirmDelete()  {
       return confirm("Are you sure you want to delete this product?");
     }
+
+function addToBasket(id)
+{
+  xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("basket_feedback").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","/add.php?id="+id,false);
+xmlhttp.send();
+}

@@ -18,7 +18,7 @@ echo '<section class="product">
 		echo '<p class="out_of_stock">Out of stock</p></section>';
 	}
 	else 	{
-		echo '<p class="add_to_basket"><a href="#">Add to basket</a></p>
+		echo '<p class="add_to_basket"><a href="#" onclick="addToBasket('.$row['product_id'].')">Add to basket</a></p>
 		</section>';
 	}
 

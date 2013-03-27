@@ -1,4 +1,9 @@
 <nav class="nav_main">
+
+			<section id="basket">
+
+				<p id="basket_feedback"></p>
+			</section>
 			
 			<ul>
 				<li><a href="#" onclick="changeCategory(0, 'product_id')">All Products</a></li>

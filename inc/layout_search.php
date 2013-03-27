@@ -19,7 +19,7 @@ echo '<section class="search_product">
 				echo '<p class="out_of_stock">Out of stock</p></section></section>';
 			}
 			else 	{
-				echo '<p class="add_to_basket"><a href="#">Add to basket</a></p>
+				echo '<p class="add_to_basket"><a href="#" onclick="addToBasket('.$row['product_id'].')">Add to basket</a></p>
 				</section></section>';
 			}
 

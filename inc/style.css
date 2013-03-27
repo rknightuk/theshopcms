@@ -225,10 +225,8 @@ select	{
 .product	{
 	width: 30%;
 	height: auto;
-	float: left;
     display: inline-block;
     margin: 5px;
-    /*background-color: #f7f7f7;*/
     border: 1px solid #dbdbdb;
     text-align: center;
     }
