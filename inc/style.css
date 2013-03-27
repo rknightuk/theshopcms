@@ -180,6 +180,16 @@ input.submit	{
 	width: 70px;
 }
 
+input.update	{
+	float: left;
+	width: 70px;
+}
+
+input.updateq	{
+	width: 50px;
+	text-align: center;
+}
+
 table
 {
 	background: #fff;
@@ -210,6 +220,10 @@ tbody tr:hover td
 
 tr	{
 	border-bottom: 1px solid #e5e5e5;
+}
+
+tr:nth-child(even){
+	background-color: #f8f8f8;
 }
 
 select	{
@@ -404,3 +418,12 @@ select	{
 	.product_info .out_of_stock	{
 		float: left;
 	}
+
+.basket	{
+	width: 170px;
+	height: auto;
+}
+
+.basket_total	{
+	text-align: right;
+}

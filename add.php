@@ -1,6 +1,6 @@
 <?php
 
-session_start() ;
+session_start();
 
 if (isset($_GET['id'])){
 	$id = $_GET['id'];
@@ -15,15 +15,15 @@ $result = mysqli_query($dbc, $query);
 if ($result) {
 	$row = mysqli_fetch_array( $result );
 
-  // Check cart for the same item
-  if ( isset( $_SESSION['cart'][$id] ) )
+  // Check basket for the same item
+  if ( isset( $_SESSION['basket'][$id] ) )
   { 
-    $_SESSION['cart'][$id]['quantity']++;
-    echo '<p>Another <em>"'.$row["product_name"].'"</em> has been added.</p>';
+    $_SESSION['basket'][$id]['quantity']++;
+    echo '<p><em>"'.$row["product_name"].'"</em> was already in your basket, so we\'ve added another one for you.</p>';
   } 
   else
   {
-    $_SESSION['cart'][$id]= array ( 'quantity' => 1, 'price' => $row['price'] ) ;
+    $_SESSION['basket'][$id]= array ( 'quantity' => 1, 'price' => $row['price'] ) ;
     echo '<p><em>"'.$row["product_name"].'</em>" has been added to your basket.</p>' ;
   }
 
