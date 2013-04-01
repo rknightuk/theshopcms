@@ -6,6 +6,8 @@ include ("inc/nav_categories.php");
 
 ?>
 
+<!--<?php print_r($_SESSION);?>-->
+
 <h3>Your basket</h3>
 
 <?php
@@ -28,7 +30,7 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 
 // Check if basket is empty
 if (!isset($_SESSION['basket'])){
-	echo "NO BASKET ITEMS";
+	echo "<p>There are currently no items in your basket.</p>";
 }
 else 	{
 	require ("db/connect_db.php");
