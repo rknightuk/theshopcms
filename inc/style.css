@@ -423,7 +423,7 @@ select	{
 		float: left;
 	}
 
-.basket	{
+#nav_basket	{
 	width: 170px;
 	height: auto;
 }

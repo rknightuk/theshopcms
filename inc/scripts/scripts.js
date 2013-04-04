@@ -59,7 +59,7 @@ xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-    document.getElementById("basket_feedback").innerHTML=xmlhttp.responseText;
+    document.getElementById("nav_basket").innerHTML=xmlhttp.responseText;
     }
   }
 xmlhttp.open("GET","/add.php?id="+id,false);
