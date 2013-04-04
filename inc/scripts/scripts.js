@@ -65,3 +65,16 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","/add.php?id="+id,false);
 xmlhttp.send();
 }
+
+function checkout()
+{
+  var checkout = document.getElementById("checkout")
+  checkout.innerHTML='<form action="checkout.php" method="POST"><h3>Your details</h3><label for="fname">Forname:</label><input type="text" name="fname"/><br/><label for="lname">Surname:</label><input type="text" name="lname"/><br/><label for="house_number">House Number:</label><input type="text" name="house_number"><br/><label for="lname">Postcode:</label><input type="text" name="pcode"/><br/><label for="email">Email:</label><input type="text" name="email"/><br/><label for="payment">Payment method:</label><select name="payment"><option value="">Please select</option><option value="visa_debit">Visa (Debit)</option><option value="mastercard_debit">Mastercard (Debit)</option><option value="visa_credit">Visa (Credit)</option><option value="mastercard_debit">Mastercard (Credit)</option><option value="PayPal">PayPal</option></select></br></section><br/><label></label><input type="submit" value="Confirm order"></form>';
+}
+
+
+
+
+
+
+

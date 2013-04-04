@@ -57,7 +57,7 @@
 				}
 
 				if (isset($total)) {
-					echo "<p class='basket_total'><strong>Total: &pound;$total</p>";
+					echo "<p class='basket_total'><strong>Total: &pound;$total</strong></p>";
 				}
 				else {
 					echo "<p class='basket_total'></p>";

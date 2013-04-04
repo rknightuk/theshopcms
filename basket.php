@@ -6,8 +6,6 @@ include ("inc/nav_categories.php");
 
 ?>
 
-<!--<?php print_r($_SESSION);?>-->
-
 <h3>Your basket</h3>
 
 <?php
@@ -35,7 +33,8 @@ if (!isset($_SESSION['basket'])){
 else 	{
 	require ("db/connect_db.php");
 
-echo "<form action='basket.php' method='post'>
+echo "<p><a href='#checkout'>Checkout</a> &darr;</p>
+<form action='basket.php' method='post'>
 <table>
 				<thead>
 				<tr>
@@ -61,16 +60,48 @@ foreach ($_SESSION['basket'] as $key => $value) {
 echo "
 <tr>
 <td></td>
-<td><input type='submit' class='update' value='Update'></td>
+<td><input type='submit' class='update' value='Update'></form></td>
 <td><strong>Total:</strong></td>
 <td><strong>&pound;$total</strong></td>
 </tr>
-</table></form>";
+</table>";
+
+
+echo '<section id="checkout">
+
+<!-- Customer details form -->
+<form action="checkout.php" method="post">
+<h3>Checkout: Your details</h3>
+
+<label for="fname">Forname:</label><input type="text" name="fname"/><br/>
+<label for="lname">Surname:</label><input type="text" name="lname"/><br/>
+<label for="house_number">House Number:</label><input type="text" name="house_number"><br/>
+<label for="pcode">Postcode:</label><input type="text" name="pcode"/><br/>
+<label for="email">Email:</label><input type="text" name="email"/><br/>
+
+
+<label for="payment">Payment method:</label>
+
+  <select name="payment">
+    <option value="">Please select</option>
+    <option value="visa_debit">Visa (Debit)</option>
+    <option value="mastercard_debit">Mastercard (Debit)</option>
+    <option value="visa_credit">Visa (Credit)</option>
+    <option value="mastercard_debit">Mastercard (Credit)</option>
+    <option value="PayPal">PayPal</option>
+  </select></br>
+
+
+<br/>
+
+<label></label><input type="submit" value="Confirm order">
+
+</form>
+
+</section>';
 }
 
 
 ?>
-
-
     
 <?php include('inc/footer.php');?>

@@ -159,7 +159,7 @@ input {
 	}
 
 label	{
-	width: 100px;
+	width: 150px;
 	float: left;
 	text-align: right;
 	padding: 5px;
@@ -188,6 +188,10 @@ input.update	{
 input.updateq	{
 	width: 50px;
 	text-align: center;
+}
+
+input.checkout 	{
+	width: 75px;
 }
 
 table
@@ -426,4 +430,9 @@ select	{
 
 .basket_total	{
 	text-align: right;
+}
+
+.summary	{
+	color: red;
+	font-weight: bold;
 }
