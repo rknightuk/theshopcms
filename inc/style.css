@@ -9,7 +9,18 @@ body	{
 	width: 960px;
 }
 
-header	{
+#head_main	{
+	position: fixed;
+	top: 0;
+	width: 960px;
+	height: auto;
+	padding: 10px 0 10px 0;
+	background-color: #fff;
+	z-index: 1000;
+	border-bottom: 2px solid #000;
+}
+
+.logo	{
 	position: relative;
 	float: left;
 	width: 20%;
@@ -99,9 +110,7 @@ header	{
 
 .clearfix	{
 	clear: both;
-	padding-top: 10px;
-	margin-bottom: 10px;
-	border-bottom: 2px solid #000;
+	margin-top: 100px;
 	
 }
 

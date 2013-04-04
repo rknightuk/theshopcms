@@ -21,28 +21,32 @@
 	
 	<body>
 		
-		<header>
-		
-			<h1><a href="/">theShop</a></h1>
-		
-		</header>
-		
-		<nav class="nav_admin">
+		<header id="head_main">
 
-			<ul>
-				<li><a href="/cms">CMS</a></li>
-				<li><a href="/admin">Admin</a></li>
-				<li><a href="/documents">Documentation</a></li>
-			</ul>
-		
-		</nav>
-		
-		<nav class="nav_search">
-		
-			<form method="post" action="/search.php" class="searchbox">
-				<input type="text" name="search" id="search" placeholder="Search The Shop">
-			</form>
-		
-		</nav>
+			<header class="logo">
+			
+				<h1><a href="/">theShop</a></h1>
+			
+			</header>
+			
+			<nav class="nav_admin">
+	
+				<ul>
+					<li><a href="/cms">CMS</a></li>
+					<li><a href="/admin">Admin</a></li>
+					<li><a href="/documents">Documentation</a></li>
+				</ul>
+			
+			</nav>
+			
+			<nav class="nav_search">
+			
+				<form method="post" action="/search.php" class="searchbox">
+					<input type="text" name="search" id="search" placeholder="Search The Shop">
+				</form>
+			
+			</nav>
+	
+	</header>
 		
 		<div class="clearfix"></div>
