@@ -1,9 +1,4 @@
 <nav class="nav_main">
-
-			<section id="nav_basket">
-
-				<?php include ("nav_basket.php");?>
-			</section>
 			
 			<h4>Browse by category</h4>
 			<ul>

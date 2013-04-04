@@ -19,12 +19,12 @@ if ($result) {
   if ( isset( $_SESSION['basket'][$id] ) )
   { 
     $_SESSION['basket'][$id]['quantity']++;
-    include ("inc/nav_basket.php");
+    include ("inc/nav_basket1.php");
   } 
   else
   {
     $_SESSION['basket'][$id]= array ( 'quantity' => 1, 'price' => $row['price'] ) ;
-    include ("inc/nav_basket.php");
+    include ("inc/nav_basket1.php");
   }
 
 }

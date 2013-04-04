@@ -29,13 +29,9 @@
 			
 			</header>
 			
-			<nav class="nav_admin">
+			<nav id="nav_basket">
 	
-				<ul>
-					<li><a href="/cms">CMS</a></li>
-					<li><a href="/admin">Admin</a></li>
-					<li><a href="/documents">Documentation</a></li>
-				</ul>
+				<?php include ("inc/nav_basket1.php");?>
 			
 			</nav>
 			
