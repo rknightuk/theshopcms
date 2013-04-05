@@ -101,3 +101,16 @@ function emptyBasket(source)
           showBasket();
         }
         }
+
+function validate(id) {
+
+  var idmsg = id+"msg";
+  document.getElementById(idmsg).style.visibility = 'visible';
+
+}
+
+function unvalidate(id){
+
+  var idmsg = id+"msg";
+  document.getElementById(idmsg).style.visibility = 'hidden';
+}

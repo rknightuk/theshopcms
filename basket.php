@@ -8,6 +8,13 @@ include ("inc/nav_categories.php");
 
 <h3>Your basket</h3>
 
+<script>
+	
+	
+
+
+</script>
+
 <?php
 
 // Check if quantities have been modified
@@ -72,14 +79,23 @@ echo "
 echo '<section id="checkout">
 
 <!-- Customer details form -->
-<form action="checkout.php" method="post">
+<form name="form" action="checkout.php" method="post">
 <h3>Checkout: Your details</h3>
 
-<label for="fname">Forname:</label><input type="text" name="fname"/><br/>
-<label for="lname">Surname:</label><input type="text" name="lname"/><br/>
-<label for="house_number">House Number:</label><input type="text" name="house_number"><br/>
-<label for="pcode">Postcode:</label><input type="text" name="pcode"/><br/>
-<label for="email">Email:</label><input type="text" name="email"/><br/>
+<label for="fname">Forname:</label><input type="text" id="fname" "name="fname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
+<span id="fnamemsg" class="msg">Please enter your first name</span><br/>
+
+<label for="lname">Surname:</label><input type="text" id="lname" name="lname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
+<span id="lnamemsg" class="msg">Please enter your surname</span><br/>
+
+<label for="house_number">House Number:</label><input type="text" id="house_number" name="house_number" onfocus="validate(this.id)" onblur="unvalidate(this.id)"> 
+<span id="house_numbermsg" class="msg">Please enter your house number</span><br/>
+
+<label for="pcode">Postcode:</label><input type="text" id="pcode" name="pcode" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
+<span id="pcodemsg" class="msg">Please enter your postcode</span><br/>
+
+<label for="email">Email:</label><input type="text" id="email" name="email" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
+<span id="emailmsg" class="msg">Please enter your email address</span><br/>
 
 <label></label><input type="submit" value="Confirm order">
 

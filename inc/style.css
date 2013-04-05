@@ -487,3 +487,7 @@ select	{
 .empty a:hover	{
 	background-color: #FCE7E7;
 }
+
+.msg	{
+	visibility: hidden;
+}
