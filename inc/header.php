@@ -17,6 +17,11 @@
 		<link rel="stylesheet" type="text/css" href="/inc/style.css" />
 		<script type="text/javascript" src="/inc/scripts/scripts.js"></script>
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<script type="text/javascript">
+				$(document).ready(function(){
+				  $(".basket_contents").hide();
+				});
+			</script>
 		
 	</head>
 	
@@ -29,23 +34,6 @@
 				<h1><a href="/">theShop</a></h1>
 			
 			</header>
-
-			<script type="text/javascript">
- 
-$(document).ready(function(){
- 
-        $(".basket_contents").hide();
-        $(".show_hide").show();
- 
-    $('.show_hide').click(function(){
-    $(".basket_contents").slideToggle();
-    });
- 
-});
- 
-</script>
-
-
 			
 			<nav id="nav_basket">
 	

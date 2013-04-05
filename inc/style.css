@@ -461,11 +461,8 @@ select	{
 .basket_contents	{
 	clear: both;
 	padding: 5px;
+	display: none;
 }
-
-.show_hide {
-	display:none;
-}	
 
 .right	{
 	text-align: right;

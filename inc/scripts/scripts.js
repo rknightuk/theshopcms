@@ -66,9 +66,6 @@ xmlhttp.open("GET","/add.php?id="+id,false);
 xmlhttp.send();
 }
 
-
-
-
-
-
-
+function showBasket(){
+  $(".basket_contents").slideToggle();
+}

@@ -79,21 +79,6 @@ echo '<section id="checkout">
 <label for="pcode">Postcode:</label><input type="text" name="pcode"/><br/>
 <label for="email">Email:</label><input type="text" name="email"/><br/>
 
-
-<label for="payment">Payment method:</label>
-
-  <select name="payment">
-    <option value="">Please select</option>
-    <option value="visa_debit">Visa (Debit)</option>
-    <option value="mastercard_debit">Mastercard (Debit)</option>
-    <option value="visa_credit">Visa (Credit)</option>
-    <option value="mastercard_debit">Mastercard (Credit)</option>
-    <option value="PayPal">PayPal</option>
-  </select></br>
-
-
-<br/>
-
 <label></label><input type="submit" value="Confirm order">
 
 </form>

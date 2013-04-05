@@ -1,0 +1,10 @@
+INSERT INTO `customers` (`cust_id`, `cust_fname`, `cust_lname`, `cust_email`, `house_no`, `house_pcode`)
+VALUES
+	(1,'Robb','Lewis','me@therobb.com',77,'PO2 8AS'),
+	(2,'Andy','Mesher','andy@andy.co.uk',3,'PO75BH'),
+	(3,'Mike','Sharp','msharp@hotmail.com',33,'PO19AS'),
+	(4,'Claire','Wraight','claire.wraight@hotmail.co.uk',108,'SO504PW'),
+	(5,'Jess','Harrison','jesh93@live.com',77,'PO28AS'),
+	(6,'Andy','Millward','millward@andym.co.uk',65,'PO34BH'),
+	(7,'Craig','Johnson','craigtheman@gmail.com',8,'RG270NA'),
+	(8,'Myke','Hurley','myke@70db.net',27,'LN274TV');

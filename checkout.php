@@ -10,7 +10,26 @@ $lname = $_POST['lname'];
 $house_no = $_POST['house_number'];
 $pcode = $_POST['pcode'];
 $email = $_POST['email'];
-$payment = $_POST['payment'];
+
+// Insert customer details
+
+// Check if returning customer
+
+$query = "SELECT cust_id, cust_email FROM customers WHERE cust_email = '$email'";
+
+$result = mysqli_query($dbc, $query);
+
+// If new customers
+if ($row = mysqli_fetch_array($result)){
+	$cust_id = $row['cust_id'];
+	echo "<p>Thanks for your repeat custom (customer #$cust_id).</p>";
+}
+else 	{
+	$query = "INSERT INTO customers (cust_fname, cust_lname, cust_email, house_no, house_pcode)
+			VALUES ('$fname', '$lname', '$email', '$house_no', '$pcode')";
+	mysqli_query($dbc, $query);
+	$cust_id = mysqli_insert_id($dbc);
+}
 
 // Order details
 	
@@ -24,8 +43,8 @@ $payment = $_POST['payment'];
 	$total = $total + ($row['price']*$_SESSION['basket'][$key]['quantity']);
 	}
 
-$query = "INSERT INTO orders (order_total, order_date)
-	VALUES ($total, now())";
+$query = "INSERT INTO orders (order_total, order_date, cust_id)
+	VALUES ($total, now(), $cust_id)";
 
 	mysqli_query($dbc, $query);
 
@@ -33,9 +52,10 @@ $query = "INSERT INTO orders (order_total, order_date)
 
 	// Insert order contents into order_contents
 
-	echo "<h3>Order details (order #9)</h3>
+	echo "<h3>Order details (order #$order_id)</h3>
 
 	<h4>Items ordered:</h4>
+	<p>Total: &pound;$total</p>
 	<ul>";
 
 	foreach ($_SESSION['basket'] as $key => $value) {
