@@ -37,7 +37,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 echo "
 </table>
 
-<span class='right'><p>This is a summary of your basket. <a href='/basket.php'>View your entire basket</a> or <a href='#' class='show_hide'>close this summary</a>.</p></span>";
+<span class='right'><p>This is a summary of your basket. <a href='/basket.php'>View your entire basket</a> or <a href='#' onclick='showBasket()'>close this summary</a>.</p></span>";
 }
 
 
