@@ -7,6 +7,7 @@ include ("inc/nav_categories.php");
 ?>
 	
 	<section class="content">
+
 		<script>window.onload=changeCategory(0, 'product_id')</script>
 			
 		</section>

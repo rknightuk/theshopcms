@@ -69,3 +69,17 @@ xmlhttp.send();
 function showBasket(){
   $(".basket_contents").slideToggle();
 }
+
+function markDelivered(id, query)
+        {
+          xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+          {
+          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            document.getElementById("orders").innerHTML=xmlhttp.responseText;
+            }
+          }
+        xmlhttp.open("GET","update_order.php?id="+id+"&query="+query,false);
+        xmlhttp.send();
+        }

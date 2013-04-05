@@ -47,6 +47,8 @@
 				cust_id int unsigned not null,
 				order_total DECIMAL (8, 2) not null,
 				order_date DATETIME not null,
+				delivered BOOLEAN default false,
+				delivered_date DATETIME,
 				foreign key (cust_id) references customers(cust_id)
 				);';
 		mysqli_query($dbc, $query)
