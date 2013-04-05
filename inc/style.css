@@ -445,7 +445,7 @@ select	{
 	}
 
 #nav_basket	{
-	width: 170px;
+	width: 200px;
 	height: auto;
 }
 
@@ -456,4 +456,17 @@ select	{
 .summary	{
 	color: red;
 	font-weight: bold;
+}
+
+.basket_contents	{
+	clear: both;
+	padding: 5px;
+}
+
+.show_hide {
+	display:none;
+}	
+
+.right	{
+	text-align: right;
 }

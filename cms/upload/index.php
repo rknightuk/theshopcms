@@ -1,7 +1,5 @@
-<?php include("../../db/check_db.php");?>
-
 <?php
-include ("../../inc/header.php");
+include ("../../inc/header_cms.php");
 include("../../inc/nav_cms.php");
 
 ?>

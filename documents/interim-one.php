@@ -1,4 +1,4 @@
-<?php include("../inc/header.php");?>
+<?php include("../inc/header_cms.php");?>
 <?php include("../inc/nav_docs.php");?>
 
 <h1 id="interimreport">WEBSCRP Interim Report - 22.11.2012 - 622197</h1>

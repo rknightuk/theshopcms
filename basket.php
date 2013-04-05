@@ -39,9 +39,9 @@ echo "<p><a href='#checkout'>Checkout</a> &darr;</p>
 				<thead>
 				<tr>
 				<th scope='col'>Product</th>
-				<th scope='col'>Price</th>
 				<th scope='col'>Quantity</th>
-				<th scope='col'>Sub-Total</th>
+				<th scope='col'>Price</th>
+				<th scope='col'>Subtotal</th>
 				</tr>
 				</thead>";
 $total = 0;

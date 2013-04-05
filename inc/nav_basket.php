@@ -21,7 +21,7 @@
 				if (isset($total)) {
 					echo "<p class='basket_total'><strong>Total: &pound;$total</strong> (".count($_SESSION['basket'])." items)</p>
 
-					<a href='basket.php'>View basket</a>";
+					<a href='basket.php'>View basket</a> / <a href='#'' class='show_hide'>Show summary</a>";
 				}
 				else {
 					echo "<p class='basket_total'><br/>Your basket is empty.</p>";
