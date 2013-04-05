@@ -32,6 +32,6 @@ echo "
 
 			<label for='url'>Image URL:</label><input type='text' name='url' readonly='readonly' value='$filename'><br/>
 
-			<input type='submit' name='submit' class='submit' disabled>
+			<input type='submit' name='submit' class='submit'>
 		
 		</form>";
