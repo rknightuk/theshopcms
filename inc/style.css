@@ -458,7 +458,7 @@ select	{
 	font-weight: bold;
 }
 
-.basket_contents	{
+#basket_contents	{
 	clear: both;
 	padding: 5px;
 	display: none;
@@ -466,4 +466,24 @@ select	{
 
 .right	{
 	text-align: right;
+}
+
+.empty 	{
+	text-align: right;
+	font-size: 80%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+.empty a:link,
+.empty a:hover,
+.empty a:visited	{
+	color: #f00;
+	padding: 5px;
+	border: 1px solid #f00;
+	text-decoration: none;
+}
+
+.empty a:hover	{
+	background-color: #FCE7E7;
 }

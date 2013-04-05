@@ -67,7 +67,7 @@ xmlhttp.send();
 }
 
 function showBasket(){
-  $(".basket_contents").slideToggle("fast");
+  $("#basket_contents").slideToggle("1000");
 }
 
 function markDelivered(id, query)
@@ -82,4 +82,22 @@ function markDelivered(id, query)
           }
         xmlhttp.open("GET","update_order.php?id="+id+"&query="+query,false);
         xmlhttp.send();
+        }
+
+function emptyBasket(source)
+        {
+          xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+          {
+          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            document.getElementById(source).innerHTML=xmlhttp.responseText;
+            }
+          }
+        xmlhttp.open("GET","/empty_basket.php?source="+source,false);
+        xmlhttp.send();
+        var sourcePage = source;
+        if (sourcePage == 'nav_basket'){
+          showBasket();
+        }
         }

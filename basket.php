@@ -64,7 +64,9 @@ echo "
 <td><strong>Total:</strong></td>
 <td><strong>&pound;$total</strong></td>
 </tr>
-</table>";
+</table>
+
+<p class='empty'><a href='#' onclick=emptyBasket('content'); return false;>Empty Basket</a></p>";
 
 
 echo '<section id="checkout">

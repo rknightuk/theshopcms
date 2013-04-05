@@ -49,7 +49,7 @@
 			
 			</nav>
 
-			<header class="basket_contents">
+			<header id="basket_contents">
 
 				<?php include ("inc/basketsummary.php");?>
 
