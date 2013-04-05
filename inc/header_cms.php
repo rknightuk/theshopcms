@@ -29,19 +29,18 @@
 			
 			</header>
 			
-			<nav id="nav_basket">
+			<nav class="nav_admin">
 	
-				<?php include ("inc/nav_basket.php");?>
+				<ul>
+					<li><a href="/">Home</a></li>
+					<li><a href="/cms">CMS</a></li>
+					<li><a href="/admin">Admin</a></li>
+					<li><a href="/documents">Documentation</a></li>
+				</ul>
 			
 			</nav>
 			
-			<nav class="nav_search">
 			
-				<form method="post" action="/search.php" class="searchbox">
-					<input type="text" name="search" id="search" placeholder="Search The Shop">
-				</form>
-			
-			</nav>
 	
 	</header>
 		

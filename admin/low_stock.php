@@ -1,4 +1,4 @@
-<?php include("../inc/header.php");?>
+<?php include("../inc/header_cms.php");?>
 <?php include("../inc/nav_admin.php");?>
 		
 		<h2>Low stock ( < 20 available )</h2>

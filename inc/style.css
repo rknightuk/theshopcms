@@ -107,6 +107,13 @@ body	{
 	margin-top: 0;
 }
 
+.nav_admin	{
+	position: relative;
+	float: right;
+	width: 350px;
+	margin-top: 15px;
+}
+
 	.nav_admin ul li	{
 		margin: 0;
 		padding: 10px 5px 10px 5px;
