@@ -67,7 +67,7 @@ xmlhttp.send();
 }
 
 function showBasket(){
-  $(".basket_contents").slideToggle();
+  $(".basket_contents").slideToggle("fast");
 }
 
 function markDelivered(id, query)
