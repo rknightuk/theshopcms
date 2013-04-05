@@ -9,7 +9,7 @@ $query = "UPDATE orders SET delivered = true, delivered_date = now() WHERE order
 
 mysqli_query($dbc, $query);
 
-echo "<p class='feedback_yes'>Order #$id mark as delivered</p>";
+echo "<p class='feedback_yes'>Order #$id marked as delivered</p>";
 
 $query = $resetquery;
 
