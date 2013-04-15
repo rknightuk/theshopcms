@@ -23,7 +23,7 @@ $result = mysqli_query($dbc, $query);
 					<a href='#' onclick=showDetails('".$row['cust_id']."','customer')>Customer details</a></td>";
 
 					// Checks if page is open orders or achived
-					if ($open == "yes"){
+					if (isset($open)){
 						echo "<td><a href='#' onclick=markDelivered('".$row['order_id']."','".urlencode($query)."'); return false;>Mark as delivered</a></td>";
 					}
 					else {

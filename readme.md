@@ -2,7 +2,7 @@
 
 A university assignment to create a shop and content management system flexible enough to sell anything from scuba gear to rubber chickens. User accounts have been deliberately omitted; sales of digital goods and services are also omitted.
 
-*NB: This manual is also available at `/documents/manual`cle*
+*NB: This manual is also available at `/documents/manual`*
 
 ##Compatibility
 
