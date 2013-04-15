@@ -35,21 +35,39 @@ NB: If your username and password are different to those shown above, please edi
 
 ##Usage
 
-*NB: All references to `yourshop` herein refers to the specific domain or directory in which the product is installed.*
+*NB:*
 
-###Adding, editing and deleting products
+- *All references to `yourshop` herein refers to the specific domain or directory in which the product is installed.*
+- *'CMS' refers to the page at `yourshop/cms`.*
+- *'Admin page' refers to the page at `yourshop/admin`.*
 
-###Updating product stock levels
+###Content management
 
-###Managing orders
+####Adding a product
 
-*NB: Open orders refers to any order which has been placed but not delivered. Archived orders refers to those that have been delivered. 'Admin page' refers to the page at `yourshop/admin`.*
+To add a new product go to `yourshop/cms/add`. You will be presented with an image upload box. Choose the image you wish to use for the new product. Complete the form that is then show with the details of the new product and select 'submit'. If the product was added successfully a message will confirm this.
+
+####Editing and deleting a product
+
+To edit or delete a product go to `yourshop/cms/edit.php`. To edit a product select 'edit' next to the specific product you wish to update. Modify the information in the form show, select 'submit' and a message will confirm the edit.
+
+To delete a product, select 'edit' next to the specific product you wish to delete. A message will confirm the deletion.
+
+####Updating product stock levels
+
+###Administration
+
+####Managing orders
+
+*NB: Open orders refers to any order which has been placed but not delivered. Archived orders refers to those that have been delivered.*
 
 To view open orders go to `yourshop/admin/open_orders.php` or select 'Open orders' from Admin page. If the order has been delivered, select 'Mark as delivered' and the order will be archived. 
 
 To view archived orders go to `yourshop/admin/archived_orders.php` or select 'Archived orders' from Admin page.
 
-For both open and archived orders, customer and order details can be view:
+For both open and archived orders, customer and order details can be viewed:
 
 - Order details can be view by selecting 'order details'.
 - Customers details can be viewed by selecting 'customer details'.
+
+####Modifying colours, themes and shop name
