@@ -10,6 +10,9 @@
 			echo "<section id='orders'>";
 			
 			$query = "SELECT * FROM orders WHERE delivered = false ORDER BY order_date";
+
+			// Sets "mark as delivered" to be shown
+			$open = "yes";
 			
 			include ("../inc/layout_orders.php");
 

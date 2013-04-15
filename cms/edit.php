@@ -1,6 +1,11 @@
 <?php 
 include("../inc/header_cms.php");
 include("../inc/nav_cms.php");
+
+if(isset($_GET["updated"]))
+		{
+			echo "<p class='feedback_yes'>Item successfully updated.</p>";
+		}
 ?>
 		<h2>All products</h2>
 		<div id="table_view">

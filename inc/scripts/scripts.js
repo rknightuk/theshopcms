@@ -114,3 +114,18 @@ function unvalidate(id){
   var idmsg = id+"msg";
   document.getElementById(idmsg).style.visibility = 'hidden';
 }
+
+
+function showDetails(id, type)
+        {
+          xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+          {
+          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            document.getElementById("details").innerHTML=xmlhttp.responseText;
+            }
+          }
+        xmlhttp.open("GET","details.php?id="+id+"&type="+type,false);
+        xmlhttp.send();
+        }

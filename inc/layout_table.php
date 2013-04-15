@@ -23,7 +23,7 @@ echo "<span id='feedback'></span>";
 					<td>£".$row['price']."</td>
 					<td>".$row['stock_level']."</td>
 					<td><small><a href='/cms/edit_product.php?product_id=".$row['product_id']."'>edit</a><br/>
-					<a href='#' onclick=delete_row('".$row['product_id']."','".urlencode($query)."'); return false;>delete</a></small></td></tr>";
+					<a href='#' onclick=delete_row('".$row['product_id']."','".urlencode($query)."');>delete</a></small></td></tr>";
 				}
 				echo "</table>";
 			}?>
