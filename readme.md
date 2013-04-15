@@ -2,6 +2,8 @@
 
 A university assignment to create a shop and content management system flexible enough to sell anything from scuba gear to rubber chickens. User accounts have been deliberately omitted; sales of digital goods and services are also omitted.
 
+*NB: This manual is also available at `/documents/manual`*
+
 ##Compatibility
 
 Tested with:
@@ -35,13 +37,9 @@ NB: If your username and password are different to those shown above, please edi
 
 ##Usage
 
-*NB:*
+*NB: All references to `yourshop` herein refers to the specific domain or directory in which the product is installed.*
 
-- *All references to `yourshop` herein refers to the specific domain or directory in which the product is installed.*
-- *'CMS' refers to the page at `yourshop/cms`.*
-- *'Admin page' refers to the page at `yourshop/admin`.*
-
-###Content management
+###Content management (`yourshop/cms`)
 
 ####Adding a product
 
@@ -55,7 +53,7 @@ To delete a product, select 'edit' next to the specific product you wish to dele
 
 ####Updating product stock levels
 
-###Administration
+###Administration (`yourshop/admin`)
 
 ####Managing orders
 
