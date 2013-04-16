@@ -91,7 +91,7 @@ echo '<section id="checkout">
 <label for="house_number">House Number:</label><input type="text" id="house_number" name="house_number" onfocus="validate(this.id)" onblur="unvalidate(this.id)"> 
 <span id="house_numbermsg" class="msg">Please enter your house number</span><br/>
 
-<label for="pcode">Postcode:</label><input type="text" id="pcode" name="pcode" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
+<label for="pcode">Postcode:</label><input maxlength="8" type="text" id="pcode" name="pcode" onfocus="validate(this.id)" onblur="unvalidate(this.id)" onkeyup="toCaps()"/> 
 <span id="pcodemsg" class="msg">Please enter your postcode</span><br/>
 
 <label for="email">Email:</label><input type="text" id="email" name="email" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 

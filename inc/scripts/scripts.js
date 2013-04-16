@@ -129,3 +129,9 @@ function showDetails(id, type)
         xmlhttp.open("GET","details.php?id="+id+"&type="+type,false);
         xmlhttp.send();
         }
+
+function toCaps()
+{
+  var x=document.getElementById("pcode");
+  x.value=x.value.toUpperCase();
+}
