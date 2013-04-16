@@ -18,10 +18,12 @@ $result = mysqli_query($dbc, $query);
 				while ( $row = mysqli_fetch_array($result)){
 					echo "<tr><td>".$row['order_id']."</td>
 					<td>".$row['order_date']."</td>
-					<td>£".$row['order_total']."</td>
-					<td><a href='#' onclick=showDetails('".$row['order_id']."','order')>Order details</a><br/>
-					<a href='#' onclick=showDetails('".$row['cust_id']."','customer')>Customer details</a></td>";
+					<td>£".$row['order_total']."</td>";?>
 
+					<td><a href='#' onclick="showDetails('<?php echo $row['order_id'];?>','order'); return false;">Order details</a><br/>
+					<a href='#' onclick="showDetails('<?php echo $row['cust_id'];?>','customer'); return false;">Customer details</a></td>
+
+					<?php
 					// Checks if page is open orders or achived
 					if (isset($open)){
 						echo "<td><a href='#' onclick=markDelivered('".$row['order_id']."','".urlencode($query)."'); return false;>Mark as delivered</a></td>";
@@ -33,7 +35,7 @@ $result = mysqli_query($dbc, $query);
 				}
 				echo "</table>
 
-				<p id='details'>Hello</p>";
+				<p id='details'></p>";
 			}
 
 ?>

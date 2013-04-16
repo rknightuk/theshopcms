@@ -1,18 +1,17 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [The Shop CMS](#the-shop-cms)
-	- [Compatibility](#compatibility)
-	- [Installation](#installation)
-		- [Prerequisites of installation](#prerequisites-of-installation)
-		- [Installation](#installation-1)
-	- [Usage](#usage)
-		- [Content management (yourshop/cms)](#content-management-yourshopcms)
-			- [Adding a product](#adding-a-product)
-			- [Editing and deleting a product](#editing-and-deleting-a-product)
-			- [Updating product stock levels](#updating-product-stock-levels)
-		- [Administration (yourshop/admin)](#administration-yourshopadmin)
-			- [Managing orders](#managing-orders)
-			- [Modifying colours, themes and shop name](#modifying-colours-themes-and-shop-name)
+- [Compatibility](#compatibility)
+- [Installation](#installation)
+	- [Prerequisites of installation](#prerequisites-of-installation)
+	- [Installation](#installation-1)
+- [Usage](#usage)
+	- [Content management (yourshop/cms)](#content-management-yourshopcms)
+		- [Adding a product](#adding-a-product)
+		- [Editing and deleting a product](#editing-and-deleting-a-product)
+		- [Updating product stock levels](#updating-product-stock-levels)
+	- [Administration (yourshop/admin)](#administration-yourshopadmin)
+		- [Managing orders](#managing-orders)
+		- [Modifying colours, themes and shop name](#modifying-colours-themes-and-shop-name)
 
 #The Shop CMS
 
