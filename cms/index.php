@@ -4,7 +4,7 @@ include("../inc/nav_cms.php");
 
 if(isset($_GET["successadd"]))
 		{
-			echo "<p class='feedback_yes'>Item successfully added.</p>";
+			echo "<p class='feedback_yes'><em>".$_GET['successadd']."</em> successfully added.</p>";
 		}
 ?>
 			

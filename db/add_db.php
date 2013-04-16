@@ -1,15 +1,15 @@
 <?php
 	
-	header("Location: /cms?successadd");
-	
-	require("connect_db.php");
-	
 	$name = $_POST['name'];
 	$cat = $_POST['category'];
 	$desc = $_POST['description'];
 	$url = $_POST['url'];
 	$price = $_POST['price'];
 	$stock = $_POST['stock'];
+
+	header("Location: /cms?successadd=$name");
+	
+	require("connect_db.php");
 	
 	echo "$name, $cat, $desc, $url, $price, $stock";
 	

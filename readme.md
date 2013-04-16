@@ -58,15 +58,19 @@ NB: If your username and password are different to those shown above, please edi
 
 ####Adding a product
 
-To add a new product go to `yourshop/cms/add`. You will be presented with an image upload box. Choose the image you wish to use for the new product. Complete the form that is then show with the details of the new product and select 'submit'. If the product was added successfully a message will confirm this.
+To add a new product go to `yourshop/cms/add` or select 'add new product' from the CMS page. You will be presented with an image upload box. Choose the image you wish to use for the new product. Complete the form that is then show with the details of the new product and select 'submit'. If the product was added successfully a message will confirm this.
 
 ####Editing and deleting a product
 
-To edit or delete a product go to `yourshop/cms/edit.php`. To edit a product select 'edit' next to the specific product you wish to update. Modify the information in the form show, select 'submit' and a message will confirm the edit.
+To edit or delete a product go to `yourshop/cms/edit.php`. or select 'edit products' from the CMS page. To edit a product select 'edit' next to the specific product you wish to update. Modify the information in the form show, select 'submit' and a message will confirm the edit.
 
 To delete a product, select 'edit' next to the specific product you wish to delete. A message will confirm the deletion.
 
 ####Updating product stock levels
+
+*NB: The update stock page requires you enter only the amount of **new** stock that has been delivered and not the total amount of stock*
+
+To update the stock level of a product go to `yourshop/cms/update_stock.php` or select 'update stock' from the CMS page. Choose the product you wish to update from the dropdown menu, type in the amount of stock that has been delivered and select 'update'. A message will confirm the update. 
 
 ###Administration (`yourshop/admin`)
 
@@ -74,7 +78,7 @@ To delete a product, select 'edit' next to the specific product you wish to dele
 
 *NB: Open orders refers to any order which has been placed but not delivered. Archived orders refers to those that have been delivered.*
 
-To view open orders go to `yourshop/admin/open_orders.php` or select 'Open orders' from Admin page. If the order has been delivered, select 'Mark as delivered' and the order will be archived. 
+To view open orders go to `yourshop/admin/open_orders.php` or select 'Open orders' from the Admin page. If the order has been delivered, select 'Mark as delivered' and the order will be archived. 
 
 To view archived orders go to `yourshop/admin/archived_orders.php` or select 'Archived orders' from Admin page.
 
