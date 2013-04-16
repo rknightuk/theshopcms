@@ -8,7 +8,10 @@ require ("../db/connect_db.php");
 if ($type == "order"){
 	echo "<h2>Order #$id details</h2>";
 	
-	$query = "SELECT * FROM order_contents WHERE order_id = $id";
+	$query = "SELECT order_contents.order_id, order_contents.product_id, order_contents.quantity, order_contents.product_price, products.product_id, products.product_name
+		FROM order_contents, products
+		WHERE order_id = $id
+		AND order_contents.product_id = products.product_id";
 	$result = mysqli_query($dbc, $query);
 
 	echo "<table>
@@ -21,7 +24,7 @@ if ($type == "order"){
 				</tr>";
 
 	while ($row = mysqli_fetch_array($result)){
-		echo "</thead><tr><td><a href='/product.php?product_id=".$row['product_id']."'>PRODUCT NAME</td>
+		echo "</thead><tr><td><a href='/product.php?product_id=".$row['product_id']."'>".$row['product_name']."</td>
 				<td>".$row['quantity']."</td>
 				<td>&pound;".$row['product_price']."</td>
 				<td>&pound;".$row['product_price']*$row['quantity']."</td></tr>

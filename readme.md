@@ -74,6 +74,8 @@ To update the stock level of a product go to `yourshop/cms/update_stock.php` or 
 
 ###Administration (`yourshop/admin`)
 
+Sales figures for the most recent 10 orders, the most popular product and the amount of products in your shop are shown on the Admin home page.
+
 ####Managing orders
 
 *NB: Open orders refers to any order which has been placed but not delivered. Archived orders refers to those that have been delivered.*

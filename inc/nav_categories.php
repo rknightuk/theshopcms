@@ -28,8 +28,7 @@
 				}
 
 				</script>
-				<a href="#" onclick="nukedb()">NUKE THE DB!</button>
-				<a href="clearsession.php">CLEAR SESSION!</a>
+				<a href="#" onclick="nukedb()">NUKE THE DB!</button></a>
 
 
 		</nav>
