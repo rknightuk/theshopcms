@@ -157,7 +157,6 @@ footer	{
 	width: 100%;
 	border-top: 2px solid #000;
 	clear: both;
-	background: url('/inc/img/uop.jpg') no-repeat right center;
 }
 	
 a, a:link, a:visited, a:active	{
@@ -249,6 +248,12 @@ tr	{
 
 tr:nth-child(even){
 	background-color: #f8f8f8;
+}
+
+.sales tr {
+	background: #fff;
+	border: none;
+	text-align: center;
 }
 
 select	{

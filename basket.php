@@ -82,7 +82,7 @@ echo '<section id="checkout">
 <form name="form" action="checkout.php" method="post">
 <h3>Checkout: Your details</h3>
 
-<label for="fname">Forname:</label><input type="text" id="fname" "name="fname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
+<label for="fname">Forname:</label><input type="text" id="fname" name="fname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
 <span id="fnamemsg" class="msg">Please enter your first name</span><br/>
 
 <label for="lname">Surname:</label><input type="text" id="lname" name="lname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 

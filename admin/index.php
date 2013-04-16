@@ -3,7 +3,12 @@
 			
 		<h2>10 most recent orders</h2>
 
-			<canvas id="recent_orders" height="250" width="500"></canvas>
+		<table class="sales">
+			<tr><td>Order total<td>
+			<td><canvas id="recent_orders" height="250" width="650"></canvas></td></tr>
+			<tr><td colspan="2"></td><td>Order number</td></tr>
+		</table>
+			
 
 			<?php
 
