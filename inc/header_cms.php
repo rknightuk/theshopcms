@@ -16,6 +16,7 @@
 		<link rel="shortcut icon" href="img/favicon.ico">
 		<link rel="stylesheet" type="text/css" href="/inc/style.css" />
 		<script type="text/javascript" src="/inc/scripts/scripts.js"></script>
+		<script type="text/javascript" src="/inc/scripts/chart.js"></script>
 		
 	</head>
 	
