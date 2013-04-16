@@ -4,7 +4,7 @@
 		<h2>10 most recent orders</h2>
 
 		<table class="sales">
-			<tr><td>Order total<td>
+			<tr><td>Order<br/>total<br/>(£)<td>
 			<td><canvas id="recent_orders" height="250" width="650"></canvas></td></tr>
 			<tr><td colspan="2"></td><td>Order number</td></tr>
 		</table>
