@@ -1,11 +1,21 @@
 <?php
 
+if(!isset($_SESSION)) {
+     session_start();
+}
 // Check if basket is empty
 if (!isset($_SESSION['basket'])){
 	echo "<p>There are currently no items in your basket.</p>";
 }
 else 	{
-	require ("db/connect_db.php");
+
+	if (isset($_GET['reload'])){
+		require ("../db/connect_db.php");
+	}
+	else {
+		require ("db/connect_db.php");
+	}
+	
 
 echo "
 <table>

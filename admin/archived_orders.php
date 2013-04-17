@@ -1,7 +1,7 @@
 <?php include("../inc/header_cms.php");?>
 <?php include("../inc/nav_admin.php");?>
 		
-		<h2>Open orders</h2>
+		<h2>Archived orders</h2>
 
 		<?php
 		

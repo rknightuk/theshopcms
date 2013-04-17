@@ -256,6 +256,10 @@ tr:nth-child(even){
 	text-align: center;
 }
 
+.sales td 	{
+	padding: 0;
+}
+
 select	{
 	font-size: 20px;
 }

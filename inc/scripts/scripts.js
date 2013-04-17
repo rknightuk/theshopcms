@@ -68,6 +68,7 @@ xmlhttp.send();
 
 function showBasket(){
   $("#basket_contents").slideToggle("1000");
+  reloadBasket();
 }
 
 function markDelivered(id, query)
@@ -134,4 +135,17 @@ function toCaps()
 {
   var x=document.getElementById("pcode");
   x.value=x.value.toUpperCase();
+}
+
+function reloadBasket(){
+  xmlhttp = new XMLHttpRequest();
+        xmlhttp.onreadystatechange=function()
+          {
+          if (xmlhttp.readyState==4 && xmlhttp.status==200)
+            {
+            document.getElementById("basket_contents").innerHTML=xmlhttp.responseText;
+            }
+          }
+        xmlhttp.open("GET","inc/basketsummary.php?reload=yes",false);
+        xmlhttp.send();
 }

@@ -11,13 +11,6 @@ if (isset($_GET['category'])) {
 if (!$category == 0) {
 	$query = "SELECT * FROM products WHERE category = '".$category."' ORDER BY ".$sortby."";
 }
-elseif (isset($_POST['search'])) {
-	$query = "SELECT * FROM products
-						WHERE category LIKE '%".$s."%' 
-						OR product_name LIKE '%".$s."%'
-						OR description LIKE '%".$s."%';";
-
-}
 else 	{
 	$query = "SELECT * FROM products ORDER BY ".$sortby."";
 }

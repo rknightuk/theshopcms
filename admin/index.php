@@ -43,10 +43,10 @@
 			?>],
 			datasets : [
 				{
-					fillColor : "rgba(151,187,205,0.5)",
-					strokeColor : "rgba(151,187,205,1)",
-					pointColor : "rgba(151,187,205,1)",
-					pointStrokeColor : "#fff",
+					fillColor : "rgba(255, 83, 33, 0.5)",
+					strokeColor : "rgba(255, 83, 33, 0.8)",
+					pointColor : "rgba(255, 83, 33, 0.8)",
+					pointStrokeColor : "#8f8f8f",
 					data : [<?php
 			$arrlength=count($totals);
 			
