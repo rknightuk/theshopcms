@@ -6,14 +6,8 @@ include ("inc/nav_categories.php");
 
 ?>
 
+<section id="checkout_basket">
 <h3>Your basket</h3>
-
-<script>
-	
-	
-
-
-</script>
 
 <?php
 
@@ -62,9 +56,9 @@ foreach ($_SESSION['basket'] as $key => $value) {
 	<td>&pound;".$row['price']."</td>
 	<td>&pound;".$row['price']*$_SESSION['basket'][$key]['quantity']."</td></tr>";
 	$total = $total + ($row['price']*$_SESSION['basket'][$key]['quantity']);
-}
+}?>
 
-echo "
+
 <tr>
 <td></td>
 <td><input type='submit' class='update' value='Update'></form></td>
@@ -73,13 +67,13 @@ echo "
 </tr>
 </table>
 
-<p class='empty'><a href='#' onclick=emptyBasket('content'); return false;>Empty Basket</a></p>";
+<p class='empty'><a href='#' onclick=emptyBasket('content'); return false;>Empty Basket</a></p>
 
 
-echo '<section id="checkout">
+<section id="checkout">
 
 <!-- Customer details form -->
-<form name="form" action="checkout.php" method="post">
+<form id="basket" onsubmit="return submitForm('checkout.php', '#basket', '#content')">
 <h3>Checkout: Your details</h3>
 
 <label for="fname">Forname:</label><input type="text" id="fname" name="fname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
@@ -101,10 +95,12 @@ echo '<section id="checkout">
 
 </form>
 
-</section>';
-}
+</section>'
+<?php }
 
 
 ?>
+
+</section>
     
 <?php include('inc/footer.php');?>

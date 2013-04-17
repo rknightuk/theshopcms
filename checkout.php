@@ -1,8 +1,9 @@
 <?php 
 
-include ("db/check_db.php");
-include ("inc/header.php");
-include ("inc/nav_categories.php");
+if(!isset($_SESSION)) {
+     session_start();
+}
+
 require ("db/connect_db.php");
 
 $fname = $_POST['fname'];
@@ -91,6 +92,3 @@ $query = "INSERT INTO orders (order_total, order_date, cust_id)
 	session_destroy();
 
 ?>
-
-
-<?php include('inc/footer.php');?>

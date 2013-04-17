@@ -149,3 +149,11 @@ function reloadBasket(){
         xmlhttp.open("GET","inc/basketsummary.php?reload=yes",false);
         xmlhttp.send();
 }
+
+function submitForm(url, formID, area) {
+    $.ajax({type:'POST', url: url, data:$(formID).serialize(), success: function(response) {
+        $(area).html(response);
+    }});
+
+    return false;
+}
