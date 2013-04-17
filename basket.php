@@ -63,7 +63,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 <td></td>
 <td><input type='submit' class='update' value='Update'></form></td>
 <td><strong>Total:</strong></td>
-<td><strong>&pound;$total</strong></td>
+<td><strong>&pound;<?php echo $total;?></strong></td>
 </tr>
 </table>
 
