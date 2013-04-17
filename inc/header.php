@@ -1,11 +1,12 @@
 <?php session_start();?>
+<?php $config = parse_ini_file( "inc/config.ini" );?>
 <!DOCTYPE HTML>
 <html>
 
 	<head>
 
 	
-		<title></title>
+		<title><?php echo $config['title']?></title>
 		
 		<meta charset="UTF-8">
 		
@@ -26,12 +27,12 @@
 	</head>
 	
 	<body>
-		
+
 		<header id="head_main">
 
 			<header class="logo">
 			
-				<h1><a href="/">theShop</a></h1>
+				<h1><a href="/"><?php echo $config['title'];?></a></h1>
 			
 			</header>
 			
@@ -44,7 +45,7 @@
 			<nav class="nav_search">
 			
 				<form method="post" action="/search.php" class="searchbox">
-					<input type="text" name="search" id="search" placeholder="Search The Shop">
+					<input type="text" name="search" id="search" placeholder="<?php echo $config['search_placehold']?>">
 				</form>
 			
 			</nav>

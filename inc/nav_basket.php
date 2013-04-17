@@ -24,6 +24,6 @@
 					<p><a href='basket.php'>View basket</a> / <a href='#' onclick='showBasket(); return false;'>Show summary</a></p>";
 				}
 				else {
-					echo "<p class='basket_total'><br/>Your basket is empty.</p>";
+					echo "<p class='basket_total'><br/>".$config['no_items_msg']."</p>";
 				}
 				?>

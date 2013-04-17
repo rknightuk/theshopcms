@@ -71,6 +71,7 @@ $query = "INSERT INTO orders (order_total, order_date, cust_id)
 
 		mysqli_query($dbc, $query);
 
+		// Remove stock from database
 		$query = "UPDATE products 
 			SET stock_level = stock_level - $quantity WHERE product_id = $key;";
 

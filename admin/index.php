@@ -1,11 +1,12 @@
 <?php include("../inc/header_cms.php");?>
 <?php include("../inc/nav_admin.php");?>
 			
-		<h2>10 most recent orders</h2>
+		<h2>Administration</h2>
+		<h3>Sales figures for most recent orders</h3>
 
 		<table class="sales">
 			<tr><td>Order<br/>total<br/>(£)<td>
-			<td><canvas id="recent_orders" height="250" width="650"></canvas></td></tr>
+			<td><canvas id="canvas" height="250" width="650"></canvas></td></tr>
 			<tr><td colspan="2"></td><td>Order number</td></tr>
 		</table>
 			
@@ -29,10 +30,9 @@
 			?>
 
 	<!-- Sales chart generated using Chart.js (https://github.com/nnnick/Chart.js) -->
-
 	<script>
 
-		var lineChartData = {
+		var barChartData = {
 			labels : [<?php
 			$arrlength=count($ids);
 			
@@ -45,8 +45,6 @@
 				{
 					fillColor : "rgba(255, 83, 33, 0.5)",
 					strokeColor : "rgba(255, 83, 33, 0.8)",
-					pointColor : "rgba(255, 83, 33, 0.8)",
-					pointStrokeColor : "#8f8f8f",
 					data : [<?php
 			$arrlength=count($totals);
 			
@@ -57,16 +55,16 @@
 			?>]
 				}
 			]
-			
+
 		}
 
-	var myLine = new Chart(document.getElementById("recent_orders").getContext("2d")).Line(lineChartData);
-	
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+
 	</script>
 
 	<?php
 
-	$query = "SELECT count(product_id) FROM products";
+	$query = "SELECT count(product_id), stock_level FROM products WHERE stock_level > 0";
 	$result = mysqli_query($dbc, $query);
 
 	while ($row = mysqli_fetch_array($result)){

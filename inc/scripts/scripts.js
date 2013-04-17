@@ -64,11 +64,11 @@ xmlhttp.onreadystatechange=function()
   }
 xmlhttp.open("GET","/add.php?id="+id,false);
 xmlhttp.send();
+reloadBasket();
 }
 
 function showBasket(){
   $("#basket_contents").slideToggle("1000");
-  reloadBasket();
 }
 
 function markDelivered(id, query)

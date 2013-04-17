@@ -1,11 +1,12 @@
 <?php session_start();?>
+<?php $config = parse_ini_file( "../inc/config.ini" );?>
 <!DOCTYPE HTML>
 <html>
 
 	<head>
 
 	
-		<title></title>
+		<title><?php echo $config['title'];?></title>
 		
 		<meta charset="UTF-8">
 		
@@ -17,6 +18,7 @@
 		<link rel="stylesheet" type="text/css" href="/inc/style.css" />
 		<script type="text/javascript" src="/inc/scripts/scripts.js"></script>
 		<script type="text/javascript" src="/inc/scripts/chart.js"></script>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
 		
 	</head>
 	
@@ -26,7 +28,7 @@
 
 			<header class="logo">
 			
-				<h1><a href="/">theShop</a></h1>
+				<h1><a href="/"><?php echo $config['title'];?></a></h1>
 			
 			</header>
 			
