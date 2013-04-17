@@ -16,7 +16,7 @@ echo '<section class="search_product">
 				<br/>';
 
 			if ($row['stock_level'] == 0){
-				echo '<p class="out_of_stock">Out of stock</p></section></section>';
+				echo '<p class="out_of_stock"><a href="#" onclick="outStock(); return false;">Out of stock</a></p></section></section>';
 			}
 			else 	{
 				echo '<p class="add_to_basket"><a href="#" onclick="addToBasket('.$row['product_id'].'); return false;">Add to basket</a></p>

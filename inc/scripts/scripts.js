@@ -156,4 +156,12 @@ function submitForm(url, formID, area) {
     }});
 
     return false;
+    var url = url;
+        if (url == '../inc/outofstock.php'){
+          outStock();
+        }
 }
+
+function outStock(){
+    $("#outstockmsg").slideToggle("fast");
+  }

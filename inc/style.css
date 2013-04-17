@@ -433,17 +433,21 @@ select	{
 		font-weight: normal;
 	}
 
+	.out_of_stock a {
+		background: #FFC7C6;
+		text-align: center;
+		padding: 10px 25px;
+		border: 1px solid #F99;
+		text-decoration: none;
+		font-weight: normal;
+	}
+
 	.add_to_basket a:hover	{
 		border-color: #dbdbdb;
 	}
 
-	.out_of_stock	{
-		background: #FFC7C6;
-		width: 115px;
-		margin: 0 auto;
-		margin-bottom: 12px;
-		border: 1px solid #f99;
-		text-align: center;
+	.out_of_stock a:hover	{
+		border-color: #f99;
 	}
 
 	p.out_of_stock	{
@@ -500,4 +504,19 @@ select	{
 
 .msg	{
 	visibility: hidden;
+}
+
+#outstockmsg	{
+	position: fixed;
+	top: 10px;
+	width: 370px;
+	height: auto;
+	margin-left: 285px;
+	margin-right: 285px;
+	padding: 10px 0 10px 0;
+	background-color: #fff;
+	z-index: 1001;
+	border: 2px solid #DA5D43;
+	padding: 5px;
+	text-align: center;
 }

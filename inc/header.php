@@ -21,12 +21,27 @@
 		<script type="text/javascript">
 				$(document).ready(function(){
 				  $(".basket_contents").hide();
+				  $("#outstockmsg").hide();
 				});
 			</script>
 		
 	</head>
 	
 	<body>
+
+		<div id="outstockmsg">
+
+			<p>This item is currently out of stock.<br/>Enter your email below to be notified when it's available.</p>
+
+			<form id="outofstock" onsubmit="return submitForm('../inc/outofstock.php','#outofstock','#outstockmsg')">
+
+				<input type="text" placeholder="you@email.com" name="email">
+				<input type="submit" value="Notify me!">
+
+			</form>
+
+			<p><a href="#" onclick="outStock(); return false;"><small>no thanks</small></a></p>
+		</div>
 
 		<header id="head_main">
 
