@@ -1,18 +1,5 @@
 **Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
 
-- [Compatibility](#compatibility)
-- [Installation](#installation)
-	- [Prerequisites of installation](#prerequisites-of-installation)
-	- [Installation](#installation-1)
-- [Usage](#usage)
-	- [Content management (yourshop/cms)](#content-management-yourshopcms)
-		- [Adding a product](#adding-a-product)
-		- [Editing and deleting a product](#editing-and-deleting-a-product)
-		- [Updating product stock levels](#updating-product-stock-levels)
-	- [Administration (yourshop/admin)](#administration-yourshopadmin)
-		- [Managing orders](#managing-orders)
-		- [Modifying colours, themes and shop name](#modifying-colours-themes-and-shop-name)
-
 #The Shop CMS
 
 A university assignment to create a shop and content management system flexible enough to sell anything from scuba gear to rubber chickens. User accounts have been deliberately omitted; sales of digital goods and services are also omitted.
@@ -54,29 +41,41 @@ NB: If your username and password are different to those shown above, please edi
 
 *NB: All references to `yourshop` herein refers to the specific domain or directory in which the product is installed.*
 
-###Content management (`yourshop/cms`)
+##Settings
 
-####Adding a product
+###Site settings
 
-To add a new product go to `yourshop/cms/add` or select 'add new product' from the CMS page. You will be presented with an image upload box. Choose the image you wish to use for the new product. Complete the form that is then show with the details of the new product and select 'submit'. If the product was added successfully a message will confirm this.
+Site settings can be found at `yourshop/admin/settings_site.php` or by selecting 'site settings' from the Admin page. Here you can modify three elements: 
 
-####Editing and deleting a product
+- **Site title `default: Shoppr`** This is the main title of your shop. It is displayed in the top left of all pages as well as applied to the `<title>` attribute.
+- **Search placeholder text `default: Search products`** This is the text that is displayed as default in the search box on the main shopping pages.
+- **Empty basket message `default: Your basket is empty`** This is the message that is displayed in the basket area (top right of shop pages) when there are no items in the basket.
+
+###Appearance settings
+
+##Content management (`yourshop/cms`)
+
+###Adding a product
+
+To add a new product go to `yourshop/cms/add_product.php` or select 'add new product' from the CMS page. You will be presented with an image upload box. Choose the image you wish to use for the new product. Complete the form that is then show with the details of the new product and select 'submit'. If the product was added successfully a message will confirm this.
+
+###Editing and deleting a product
 
 To edit or delete a product go to `yourshop/cms/edit.php`. or select 'edit products' from the CMS page. To edit a product select 'edit' next to the specific product you wish to update. Modify the information in the form show, select 'submit' and a message will confirm the edit.
 
 To delete a product, select 'edit' next to the specific product you wish to delete. A message will confirm the deletion.
 
-####Updating product stock levels
+###Updating product stock levels
 
 *NB: The update stock page requires you enter only the amount of **new** stock that has been delivered and not the total amount of stock*
 
 To update the stock level of a product go to `yourshop/cms/update_stock.php` or select 'update stock' from the CMS page. Choose the product you wish to update from the dropdown menu, type in the amount of stock that has been delivered and select 'update'. A message will confirm the update. 
 
-###Administration (`yourshop/admin`)
+##Administration (`yourshop/admin`)
 
 Sales figures for the most recent 10 orders, the most popular product and the amount of products in your shop are shown on the Admin home page.
 
-####Managing orders
+###Managing orders
 
 *NB: Open orders refers to any order which has been placed but not delivered. Archived orders refers to those that have been delivered.*
 
@@ -88,5 +87,3 @@ For both open and archived orders, customer and order details can be viewed:
 
 - Order details can be view by selecting 'order details'.
 - Customers details can be viewed by selecting 'customer details'.
-
-####Modifying colours, themes and shop name
