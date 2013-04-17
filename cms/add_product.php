@@ -1,6 +1,6 @@
 <?php
-include ("../../inc/header_cms.php");
-include("../../inc/nav_cms.php");
+include ("../inc/header_cms.php");
+include("../inc/nav_cms.php");
 
 ?>
 
@@ -16,6 +16,6 @@ include("../../inc/nav_cms.php");
 	</div>
 	
   
-  <script src="upload.js"></script>
+  <script src="../inc/scripts/upload.js"></script>
 
-<?php include('../../inc/footer.php');?>
+<?php include('../inc/footer.php');?>

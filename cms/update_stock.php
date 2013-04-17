@@ -2,15 +2,24 @@
 include("../inc/header_cms.php");
 include("../inc/nav_cms.php");
 
-if(isset($_GET["updated"]))
-		{
-			echo "<p class='feedback_yes'>Item successfully updated.</p>";
-		}
 ?>
+
+<script>
+
+	function submitForm() {
+    $.ajax({type:'POST', url: '../db/update_stock.php', data:$('#stock_input').serialize(), success: function(response) {
+        $('#stock_update').html(response);
+    }});
+
+    return false;
+}
+
+</script>
+
 		<h2>Update product stock</h2>
 		<div id="stock_update">
 		
-			<form action="../db/update_stock.php" method="post">
+			<form id="stock_input" onsubmit="return submitForm()">
 
 				<?php
 					

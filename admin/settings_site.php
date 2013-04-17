@@ -4,7 +4,7 @@
 <script>
 	
 	function submitForm() {
-    $.ajax({type:'POST', url: 'settings_update.php', data:$('#myForm').serialize(), success: function(response) {
+    $.ajax({type:'POST', url: 'settings_update.php', data:$('#settings_update').serialize(), success: function(response) {
         $('#settings').html(response);
     }});
 
@@ -17,7 +17,7 @@
   		{
   			if (xmlhttp.readyState==4 && xmlhttp.status==200)
    		 {
-   			 document.getElementById("settings").innerHTML=xmlhttp.responseText;
+   			 document.getElementById("settings_update").innerHTML=xmlhttp.responseText;
     		}
   		}
 		xmlhttp.open("GET","settings_reset.php",false);
@@ -28,7 +28,7 @@
 	<h2>Update site settings</h2>
 
 	<div id="settings">
-		<form id="myForm" onsubmit="return submitForm()">
+		<form id="settings_update" onsubmit="return submitForm()">
 
 			<label for="title">Shop title:</label><input type="text" maxlength="13" id="title" name="title" placeholder="<?php echo $config['title'];?>"><br/>
 			<label for="search_placehold">Search box text:</label><input type="text" id="search_placehold" name="search_placehold" placeholder="<?php echo $config['search_placehold'];?>"><br/>

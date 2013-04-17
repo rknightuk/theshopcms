@@ -35,7 +35,7 @@
     	echo "<li>New value: '".$value."'</li>";
 	}
 
-	echo "<p><a href='settings.php'>Modify settings</a>";
+	echo "<p><a href='settings_site.php'>Modify settings</a>";
 
 	fclose( $open );
 
