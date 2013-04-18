@@ -47,9 +47,9 @@ NB: If your username and password are different to those shown above, please edi
 
 Site settings can be found at `yourshop/admin/settings_site.php` or by selecting 'site settings' from the Admin page. Here you can modify three elements: 
 
-- **Site title `default: Shoppr`** This is the main title of your shop. It is displayed in the top left of all pages as well as applied to the `<title>` attribute.
-- **Search placeholder text `default: Search products`** This is the text that is displayed as default in the search box on the main shopping pages.
-- **Empty basket message `default: Your basket is empty`** This is the message that is displayed in the basket area (top right of shop pages) when there are no items in the basket.
+- **Site title** `default: Shoppr` This is the main title of your shop. It is displayed in the top left of all pages as well as applied to the `<title>` attribute.
+- **Search placeholder text** `default: Search products` This is the text that is displayed as default in the search box on the main shopping pages.
+- **Empty basket message** `default: Your basket is empty` This is the message that is displayed in the basket area (top right of shop pages) when there are no items in the basket.
 
 ###Appearance settings
 
