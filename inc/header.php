@@ -1,12 +1,31 @@
 <?php session_start();?>
 <?php $config = parse_ini_file( "inc/config.ini" );?>
+
+<?php 
+
+$basketurl = "/basket.php";
+$currentpage = $_SERVER['REQUEST_URI'];
+
+if (isset($_GET['product_id'])) {
+	$title = " - Product #".$_GET['product_id'];
+}
+elseif ($basketurl==$currentpage) {
+	$title = " - Basket";
+}
+else {
+	$title = " - Home";
+}
+
+?>
+
+
 <!DOCTYPE HTML>
 <html>
 
 	<head>
 
 	
-		<title><?php echo $config['title']?></title>
+		<title><?php echo $config['title'].$title;?> </title>
 		
 		<meta charset="UTF-8">
 		
@@ -47,7 +66,7 @@
 
 			<header class="logo">
 			
-				<h1><a href=""><?php echo $config['title'];?></a></h1>
+				<h1><a href="index.php"><?php echo $config['title'];?></a></h1>
 			
 			</header>
 			

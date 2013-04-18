@@ -1,5 +1,8 @@
-<?php include("../inc/header_cms.php");?>
-<?php include("../inc/nav_admin.php");?>
+<?php
+$title = " - Admin: Low stock";
+
+include("../inc/header_cms.php");
+include("../inc/nav_admin.php");?>
 		
 		<h2>Low stock ( < 20 available )</h2>
 		<div id="table_view">

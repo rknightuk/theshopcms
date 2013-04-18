@@ -1,5 +1,10 @@
-<?php include("../inc/header_cms.php");?>
-<?php include("../inc/nav_admin.php");?>
+<?php 
+$title = " - Admin";
+
+include("../inc/header_cms.php");
+include("../inc/nav_admin.php");
+
+?>
 			
 		<h2>Administration</h2>
 		<h3>Sales figures for most recent orders</h3>

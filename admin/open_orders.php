@@ -1,5 +1,8 @@
-<?php include("../inc/header_cms.php");?>
-<?php include("../inc/nav_admin.php");?>
+<?php
+$title = " - Admin: Open orders";
+
+include("../inc/header_cms.php");
+include("../inc/nav_admin.php");?>
 		
 		<h2>Open orders</h2>
 

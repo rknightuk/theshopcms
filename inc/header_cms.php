@@ -1,12 +1,20 @@
-<?php session_start();?>
-<?php $config = parse_ini_file( "../inc/config.ini" );?>
+<?php session_start();
+
+if (!isset($title)){
+	$title = "";
+}
+$config = parse_ini_file( "../inc/config.ini" );
+
+?>
+
+
 <!DOCTYPE HTML>
 <html>
 
 	<head>
 
 	
-		<title><?php echo $config['title'];?></title>
+		<title><?php echo $config['title'].$title;?></title>
 		
 		<meta charset="UTF-8">
 		

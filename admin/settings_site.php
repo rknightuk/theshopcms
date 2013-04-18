@@ -1,5 +1,8 @@
-<?php include("../inc/header_cms.php");?>
-<?php include("../inc/nav_admin.php");?>
+<?php
+$title = " - Admin: Site settings";
+
+include("../inc/header_cms.php");
+include("../inc/nav_admin.php");?>
 
 <script>
 

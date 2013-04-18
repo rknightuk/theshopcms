@@ -1,4 +1,6 @@
 <?php 
+$title = " - CMS: Edit products";
+
 include("../inc/header_cms.php");
 include("../inc/nav_cms.php");
 
