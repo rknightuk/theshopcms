@@ -46,7 +46,7 @@ include("inc/nav_categories.php");
 				$query = "SELECT product_id, product_name, photo_url FROM products WHERE category = '$category' AND product_id != '$product' ORDER BY RAND() LIMIT 3";
 				$result = mysqli_query($dbc, $query);
 				
-				if ($result) {
+				if (mysqli_num_rows($result) > 0) {
 					echo "<section class='related'><h3>Related products</h3>";
 					while ( $row = mysqli_fetch_array($result)){
 						echo '<section class="product_related"><h5>'.$row['product_name'].' / <a href="product.php?product_id='.$row['product_id'].'">View &raquo;</a></h5>
