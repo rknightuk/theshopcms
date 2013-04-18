@@ -166,16 +166,16 @@ function outStock(){
     $("#outstockmsg").slideToggle("fast");
   }
 
-function editProduct(id)
+function editProduct(id, query)
 {
   xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
-    document.getElementById("edit_view").innerHTML=xmlhttp.responseText;
+    document.getElementById("stock_view").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","../cms/edit_product.php?product_id="+id,false);
+xmlhttp.open("GET","../cms/edit_product.php?product_id="+id+"&query="+query,false);
 xmlhttp.send();
 }

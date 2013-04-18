@@ -59,7 +59,7 @@ function validateProduct()
 function init()
 {
   var panel=document.getElementById("feedback_form");
-  panel.innerHTML="<strong>!</strong> Please choose an image";
+  panel.innerHTML="<strong>!</strong> Please enter product details";
 
   var form=document.getElementById("addproduct");
   form.onsubmit=validateProduct;

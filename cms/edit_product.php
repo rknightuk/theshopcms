@@ -1,5 +1,7 @@
 <?php 
 		
+		$resetquery = $_GET['query'];
+
 		include("../db/connect_db.php");
 		
 		$product_id = $_GET['product_id'];
@@ -25,7 +27,7 @@
 				$stock = $row['stock_level'];
 				echo "<fieldset>
 					<legend>Edit </legend>";?>
-					<form method="post" id="editproduct" onsubmit='return submitForm("../db/update_db.php?product_id=<?php echo $id;?>","#editproduct","#edit_view")'>
+					<form method="post" id="editproduct" onsubmit='return submitForm("../db/update_db.php?product_id=<?php echo $id;?>&query=<?php echo $resetquery;?>","#editproduct","#stock_view")'>
 
 					<?php echo "<label for='name'>Product name:</label><input type='text' name='name' value='$prod'><br/>
 					<label for='category'>Category:</label><input type='text' name='category' value='$cat'><br/>

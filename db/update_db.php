@@ -2,6 +2,7 @@
 	
 	require("connect_db.php");
 	
+	$resetquery = $_GET['query'];
 	$name = $_POST['name'];
 	$cat = $_POST['category'];
 	$desc = $_POST['description'];
@@ -17,7 +18,7 @@
 			or die("Can't update product");
 
 			echo "<p class='feedback_yes'>$name successfully updated<p>";
-			$query = "SELECT * FROM products ORDER BY category";
+			$query = $resetquery;
 			include "../inc/layout_table.php";
 
 ?>

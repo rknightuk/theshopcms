@@ -5,7 +5,7 @@ include("../inc/header_cms.php");
 include("../inc/nav_admin.php");?>
 		
 		<h2>Low stock ( < 20 available )</h2>
-		<div id="table_view">
+		<div id="stock_view">
 
 		<?php
 		
@@ -14,8 +14,6 @@ include("../inc/nav_admin.php");?>
 			echo "<section id='low_stock'>";
 			
 			$query = "SELECT * FROM products WHERE stock_level < 20 ORDER BY stock_level";
-			
-			
 			
 			include("../inc/layout_table.php");
 
