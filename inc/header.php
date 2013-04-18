@@ -15,9 +15,9 @@
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/inc/style.css" />
-		<script type="text/javascript" src="/inc/scripts/scripts.js"></script>
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="inc/style.css" />
+		<script type="text/javascript" src="inc/scripts/scripts.js"></script>
+		<script src="inc/scripts/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript">
 				$(document).ready(function(){
 				  $(".basket_contents").hide();
@@ -47,7 +47,7 @@
 
 			<header class="logo">
 			
-				<h1><a href="/"><?php echo $config['title'];?></a></h1>
+				<h1><a href=""><?php echo $config['title'];?></a></h1>
 			
 			</header>
 			

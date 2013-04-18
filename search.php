@@ -27,6 +27,10 @@ include("inc/nav_categories.php");
 						}
 					}
 
+				else 	{
+					echo '<p class="feedback_yes">Please type in your search term above and press enter</p>';
+				}
+
 				?>
 				
 				

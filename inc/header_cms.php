@@ -15,10 +15,10 @@
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="/inc/style.css" />
-		<script type="text/javascript" src="/inc/scripts/scripts.js"></script>
-		<script type="text/javascript" src="/inc/scripts/chart.js"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="../inc/style.css" />
+		<script type="text/javascript" src="../inc/scripts/scripts.js"></script>
+		<script type="text/javascript" src="../inc/scripts/chart.js"></script>
+		<script src="../inc/scripts/jquery-1.9.1.min.js"></script>
 		
 	</head>
 	
@@ -28,17 +28,17 @@
 
 			<header class="logo">
 			
-				<h1><a href="/"><?php echo $config['title'];?></a></h1>
+				<h1><a href="../"><?php echo $config['title'];?></a></h1>
 			
 			</header>
 			
 			<nav class="nav_admin">
 	
 				<ul>
-					<li><a href="/">Home</a></li>
-					<li><a href="/cms">CMS</a></li>
-					<li><a href="/admin">Admin</a></li>
-					<li><a href="/documents">Documentation</a></li>
+					<li><a href="../">Home</a></li>
+					<li><a href="../cms">CMS</a></li>
+					<li><a href="../admin">Admin</a></li>
+					<li><a href="../documents">Documentation</a></li>
 				</ul>
 			
 			</nav>

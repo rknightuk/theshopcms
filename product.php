@@ -20,7 +20,7 @@ include("inc/nav_categories.php");
 				if ($result) {
 					while ( $row = mysqli_fetch_array($result)){
 						echo '<section class="product_ind"><h2>'.$row['product_name'].'</h2>
-						<img src="/img/products/'.$row['photo_url'].'"/>
+						<img src="img/products/'.$row['photo_url'].'"/>
 						</section>
 						
 						<section class="product_info">
@@ -49,8 +49,8 @@ include("inc/nav_categories.php");
 				if ($result) {
 					echo "<section class='related'><h3>Related products</h3>";
 					while ( $row = mysqli_fetch_array($result)){
-						echo '<section class="product_related"><h5>'.$row['product_name'].' / <a href="/product.php?product_id='.$row['product_id'].'">View &raquo;</a></h5>
-						<section class="img"><img src="/img/products/'.$row['photo_url'].'"/></section><br/>
+						echo '<section class="product_related"><h5>'.$row['product_name'].' / <a href="product.php?product_id='.$row['product_id'].'">View &raquo;</a></h5>
+						<section class="img"><img src="img/products/'.$row['photo_url'].'"/></section><br/>
 						</section>';
 						
 					}

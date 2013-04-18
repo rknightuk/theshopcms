@@ -78,7 +78,7 @@ $query = "INSERT INTO orders (order_total, order_date, cust_id)
 
 		mysqli_query($dbc, $query);
 
-		echo '<li>'.$quantity.' x <a href="/product.php?product_id='.$row['product_id'].'">'.$row['product_name'].'</a></li>';
+		echo '<li>'.$quantity.' x <a href="product.php?product_id='.$row['product_id'].'">'.$row['product_name'].'</a></li>';
 	}
 
 	echo "</ul>

@@ -33,7 +33,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 
 	$result = mysqli_query($dbc, $query);
 	$row = mysqli_fetch_array($result);
-	echo "<tr><td><a href='/product.php?product_id=".$row['product_id']."'>".$row['product_name']."</td>
+	echo "<tr><td><a href='product.php?product_id=".$row['product_id']."'>".$row['product_name']."</td>
 	<td>".$_SESSION['basket'][$key]['quantity']."</td>
 	<td>&pound;".$row['price']."</td>
 	<td>&pound;".$row['price']*$_SESSION['basket'][$key]['quantity']."</td></tr>";
@@ -47,7 +47,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 echo "
 </table>
 
-<span class='right'><p>This is a summary of your basket. <a href='/basket.php'>View your entire basket</a> or <a href='#' onclick='showBasket(); return false;'>close this summary</a>.</p></span><p class='empty'><a href='#' onclick=emptyBasket('nav_basket'); return false;>Empty Basket</a></p>";
+<span class='right'><p>This is a summary of your basket. <a href='basket.php'>View your entire basket</a> or <a href='#' onclick='showBasket(); return false;'>close this summary</a>.</p></span><p class='empty'><a href='#' onclick=emptyBasket('nav_basket'); return false;>Empty Basket</a></p>";
 }
 
 

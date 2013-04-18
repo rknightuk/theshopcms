@@ -18,11 +18,11 @@ echo "<span id='feedback'></span>";
 				</thead>";
 				while ( $row = mysqli_fetch_array($result)){
 					echo "<tr><td>".$row['category']."</td>
-					<td><a href='/product.php?product_id=".$row['product_id']."'>".$row['product_name']."</a></td>
+					<td><a href='../product.php?product_id=".$row['product_id']."'>".$row['product_name']."</a></td>
 					<td>".$row['description']."</td>
 					<td>£".$row['price']."</td>
 					<td>".$row['stock_level']."</td>
-					<td><small><a href='/cms/edit_product.php?product_id=".$row['product_id']."'>edit</a><br/>
+					<td><small><a href='../cms/edit_product.php?product_id=".$row['product_id']."'>edit</a><br/>
 					<a href='#' onclick=delete_row('".$row['product_id']."','".urlencode($query)."');>delete</a></small></td></tr>";
 				}
 				echo "</table>";
