@@ -520,3 +520,8 @@ select	{
 	padding: 5px;
 	text-align: center;
 }
+
+#feedback_form	{
+	color: #ff0000;
+	font-weight: bold;
+}

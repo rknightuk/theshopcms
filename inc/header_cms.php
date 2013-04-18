@@ -7,12 +7,10 @@ $config = parse_ini_file( "../inc/config.ini" );
 
 ?>
 
-
 <!DOCTYPE HTML>
 <html>
 
 	<head>
-
 	
 		<title><?php echo $config['title'].$title;?></title>
 		
@@ -27,6 +25,48 @@ $config = parse_ini_file( "../inc/config.ini" );
 		<script type="text/javascript" src="../inc/scripts/scripts.js"></script>
 		<script type="text/javascript" src="../inc/scripts/chart.js"></script>
 		<script src="../inc/scripts/jquery-1.9.1.min.js"></script>
+		<script type="text/javascript">
+
+function validateProduct()
+
+{
+  if( this.elements["name"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product name"; return false;
+  }
+  if( this.elements["category"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product category"; return false; 
+  }
+  if( this.elements["description"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product description"; return false; 
+  }
+  if( this.elements["price"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product price"; return false; 
+  }
+  if( this.elements["stock"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product stock level"; return false; 
+  }
+  else {
+  	return submitForm('../../db/add_db.php', '#addproduct', '#response');
+  }
+
+}
+
+function init()
+{
+  var panel=document.getElementById("feedback_form");
+  panel.innerHTML="<strong>!</strong> Please choose an image";
+
+  var form=document.getElementById("addproduct");
+  form.onsubmit=validateProduct;
+
+}
+
+</script>
 		
 	</head>
 	

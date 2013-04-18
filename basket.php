@@ -6,6 +6,52 @@ include ("inc/nav_categories.php");
 
 ?>
 
+<script type="text/javascript">
+
+function validateCustomer()
+
+{
+  if( this.elements["fname"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter your first name"; return false;
+  }
+  if( this.elements["lname"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter your last name"; return false; 
+  }
+  if( this.elements["house_number"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter your house number"; return false; 
+  }
+  if( this.elements["pcode"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter your postcode"; return false; 
+  }
+  
+  if( ( this.elements["email"].value.indexOf("@") === -1 )
+   || ( this.elements["email"].value.indexOf(".") === -1 ) )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter a valid email address"; return false;
+  }
+  else {
+  	return submitForm('checkout.php', '#basket', '#content');
+  }
+
+}
+
+function init()
+{
+  var panel=document.getElementById("feedback_form");
+  panel.innerHTML="<strong>!</strong> Please enter your details";
+
+  var form=document.getElementById("basket");
+  form.onsubmit=validateCustomer;
+
+}
+onload=init;
+
+</script>
+
 <section id="checkout_basket">
 <h3>Your basket</h3>
 
@@ -52,7 +98,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 	$result = mysqli_query($dbc, $query);
 	$row = mysqli_fetch_array($result);
 	echo "<tr><td><a href='product.php?product_id=".$row['product_id']."'>".$row['product_name']."</td>
-	<td><input class='updateq' type='text' maxlength='3' name='qty[".$row['product_id']."]' value='".$_SESSION['basket'][$key]['quantity']."'></td>
+	<td><input class='updateq' type='number' maxlength='3' name='qty[".$row['product_id']."]' value='".$_SESSION['basket'][$key]['quantity']."'></td>
 	<td>&pound;".$row['price']."</td>
 	<td>&pound;".$row['price']*$_SESSION['basket'][$key]['quantity']."</td></tr>";
 	$total = $total + ($row['price']*$_SESSION['basket'][$key]['quantity']);
@@ -74,7 +120,10 @@ foreach ($_SESSION['basket'] as $key => $value) {
 
 <!-- Customer details form -->
 <form id="basket" onsubmit="return submitForm('checkout.php', '#basket', '#content')">
+
 <h3>Checkout: Your details</h3>
+
+<p id="feedback_form"></p>
 
 <label for="fname">Forname:</label><input type="text" id="fname" name="fname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
 <span id="fnamemsg" class="msg">Please enter your first name</span><br/>
@@ -82,7 +131,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 <label for="lname">Surname:</label><input type="text" id="lname" name="lname" onfocus="validate(this.id)" onblur="unvalidate(this.id)"/> 
 <span id="lnamemsg" class="msg">Please enter your surname</span><br/>
 
-<label for="house_number">House Number:</label><input type="text" id="house_number" name="house_number" onfocus="validate(this.id)" onblur="unvalidate(this.id)"> 
+<label for="house_number">House Number:</label><input type="number" id="house_number" name="house_number" onfocus="validate(this.id)" onblur="unvalidate(this.id)"> 
 <span id="house_numbermsg" class="msg">Please enter your house number</span><br/>
 
 <label for="pcode">Postcode:</label><input maxlength="8" type="text" id="pcode" name="pcode" onfocus="validate(this.id)" onblur="unvalidate(this.id)" onkeyup="toCaps()"/> 
@@ -95,7 +144,7 @@ foreach ($_SESSION['basket'] as $key => $value) {
 
 </form>
 
-</section>'
+</section>
 <?php }
 
 

@@ -6,17 +6,15 @@
 	$url = $_POST['url'];
 	$price = $_POST['price'];
 	$stock = $_POST['stock'];
-
-	header("Location: /cms?successadd=$name");
 	
 	require("connect_db.php");
-	
-	echo "$name, $cat, $desc, $url, $price, $stock";
 	
 	$query = "INSERT INTO products (product_name, category, description, photo_url, price, stock_level)
 			VALUES ('$name', '$cat', '$desc', '$url', $price, $stock);";
 		
 	mysqli_query($dbc, $query)
 			or die("Can't create new product");
+
+	echo "<p class='feedback_yes'><em>".$name."</em> successfully added.</p>"
 
 ?>

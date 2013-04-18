@@ -12,8 +12,6 @@
 		<!--[if lt IE 9]>
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
-		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="style.css" />
 
 		<style type="text/css">
 
@@ -23,94 +21,46 @@
 			width: 730px;
 					}
 
-		.search_product	{
-			width: 95%;
-			height: 120px;
-			padding: 5px;
-		}
-
-		.search_product:nth-child(even)	{
-			background-color: #f8f8f8;
-		}
-
-		.search_product h4	{
-			margin-top: 10px;
-		}
-
-		.search_product .img 	{
-			max-height: 100px;
-			max-width: 170px;
-			height: auto;
-			width: auto;
-			line-height: 120px;
-			float: left;
-		}
-
-		.search_product img 	{
-			max-height: 100px;
-			max-width: 170px;
-			height: auto;
-			width: auto;
-			vertical-align: middle;
-		}
-
-		.search_product .info	{
-			float: left;
-			margin-left: 10px;
-			width: 340px;
-		}
-
-		.search_product .buy	{
-			float: right;
-			text-align: right;
-		}
-
-		.add_to_basket	a {
-    	background: #dbd9d9;
-    	border: 1px solid #bdbdbd;
-    	padding: 10px;
-    	text-decoration: none;
-    }
-
-    .add_to_basket	a:hover {
-    	background: #C9C7C7;
-    	color: #FF5321;
-    }
-
 		</style>
 		
 	</head>
 	
 	<body>
-	
-	<?php
 
-	$query = file_get_contents("create.txt");
+		<script type="text/javascript">
 
-	echo $query;
+			function validate()
+			{
+				if (this.elements['name'].value === "")
+				{
+					alert("Fuck off!"); return false;
+				}
 
-	?>
+				if ((this.elements['email'].value.indexOf("@") === -1)
+					|| (this.elements['email'].value.indexOf(".") === -1))
+				{
+					alert("Email incorrect"); return false;
+				}
 
-		<section class="search_product">
+			}
 
-			
+			function init()
+			{
+				var panel = document.getElementById("feedback");
+				panel.innerHTML = "Please enter your email address";
+				var form = document.getElementById("contact");
+				form.onsubmit = validate;
+			}
+		</script>
 
-			<section class="img">
-				<img src="/img/products/sample_keyboard.png">
-			</section>
+		<h2>Testing validation</h2>
+		<form id="contact" action="whateever.php" method="post">
+			<input type="text" name="name"><br/>
+			<input type="text" name="email"><br/>
+			<input type="submit" value="Go!">
+		</form>
 
-			<section class="info">
-				<h4>How to tell if your cat is trying to kill you</h4>
-				<p class="description">Two button USB mouse with black finish. <a href="/product.php?product_id=3">More info →</a></p>
-			</section>
-
-			<section class="buy">
-				<p>£3.99 / 200 in stock</p>
-				<br/>
-				<p class="add_to_basket"><a href="#">Add to basket</a></p>
-			</section>
-						
-		</section>
+		<div id="feedback"></div>
 
 	</body>
 	

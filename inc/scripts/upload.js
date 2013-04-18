@@ -20,7 +20,7 @@
 				if ( window.FileReader ) {
 					reader = new FileReader();
 					reader.onloadend = function (e) { 
-						showUploadedItem(e.target.result, file.fileName);
+						
 					};
 					reader.readAsDataURL(file);
 				}
@@ -38,7 +38,8 @@
 				processData: false,
 				contentType: false,
 				success: function (res) {
-					document.getElementById("response").innerHTML = res; 
+					document.getElementById("response").innerHTML = res;
+					init();
 				}
 			});
 		}

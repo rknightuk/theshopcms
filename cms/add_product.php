@@ -16,7 +16,8 @@ include("../inc/nav_cms.php");
     	</form>
 
   	</div>
-	
+
+  	<p id='feedback_form'></p>	
   
   <script src="../inc/scripts/upload.js"></script>
 
