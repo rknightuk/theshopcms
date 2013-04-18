@@ -87,3 +87,7 @@ For both open and archived orders, customer and order details can be viewed:
 
 - Order details can be view by selecting 'order details'.
 - Customers details can be viewed by selecting 'customer details'.
+
+##References
+
+Burgess, A. (2011, July 25). Uploading Files with AJAX. *Net Tuts+.* Retrieved from  http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/
