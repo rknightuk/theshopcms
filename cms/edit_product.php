@@ -1,12 +1,4 @@
-<?php
-
-include("../inc/header_cms.php");
-include("../inc/nav_cms.php");
-
-?>
-
-
-	<?php 
+<?php 
 		
 		include("../db/connect_db.php");
 		
@@ -32,9 +24,10 @@ include("../inc/nav_cms.php");
 				$price = $row['price'];
 				$stock = $row['stock_level'];
 				echo "<fieldset>
-					<legend>Edit </legend>
-					<form method='post' action='/db/update_db.php?product_id=$id'>
-					<label for='name'>Product name:</label><input type='text' name='name' value='$prod'><br/>
+					<legend>Edit </legend>";?>
+					<form method="post" id="editproduct" onsubmit='return submitForm("../db/update_db.php?product_id=<?php echo $id;?>","#editproduct","#edit_view")'>
+
+					<?php echo "<label for='name'>Product name:</label><input type='text' name='name' value='$prod'><br/>
 					<label for='category'>Category:</label><input type='text' name='category' value='$cat'><br/>
 					<label for='description'>Description:</label><textarea name='description' cols='27' rows='6'>$desc</textarea><br/>
 					<label for='price'>Price:</label><input type='text' name='price' value='$price'><br/>
@@ -46,7 +39,4 @@ include("../inc/nav_cms.php");
 			}
 	
 	
-	?>	
-			
-		
-<?php include("../inc/footer.php");?>
+	?>

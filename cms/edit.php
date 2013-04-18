@@ -10,7 +10,7 @@ if(isset($_GET["updated"]))
 		}
 ?>
 		<h2>All products</h2>
-		<div id="table_view">
+		<div id="edit_view">
 		
 		<?php
 		

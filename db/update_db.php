@@ -1,13 +1,10 @@
 <?php
 	
-	header("Location: /cms/edit.php?updated");
-	
 	require("connect_db.php");
 	
 	$name = $_POST['name'];
 	$cat = $_POST['category'];
 	$desc = $_POST['description'];
-	$url = $_POST['url'];
 	$price = $_POST['price'];
 	$stock = $_POST['stock'];
 	$id = $_GET['product_id'];
@@ -18,5 +15,9 @@
 		
 	mysqli_query($dbc, $query)
 			or die("Can't update product");
+
+			echo "<p class='feedback_yes'>$name successfully updated<p>";
+			$query = "SELECT * FROM products ORDER BY category";
+			include "../inc/layout_table.php";
 
 ?>
