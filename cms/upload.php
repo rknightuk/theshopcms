@@ -25,7 +25,7 @@ $filename = $_FILES['images']['name'][$key];?>
 
 			<label for='description'>Description:</label><textarea cols='27' rows='6' name='description' id='description'/> </textarea><br/>
 
-			<label for='price'>Price:</label><input type='number' name='price' id='price'/> <br/>
+			<label for='price'>Price:</label><input type='number' step='any' name='price' id='price'/> <br/>
 
 			<label for='stock'>Stock level:</label><input type='number' name='stock' id='stock'/> <br/>
 

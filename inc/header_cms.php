@@ -66,6 +66,45 @@ function init()
 
 }
 
+function validateEdit()
+
+{
+  if( this.elements["name"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product name"; return false;
+  }
+  if( this.elements["category"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product category"; return false; 
+  }
+  if( this.elements["description"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product description"; return false; 
+  }
+  if( this.elements["price"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product price"; return false; 
+  }
+  if( this.elements["stock"].value === "" )
+  { 
+    document.getElementById("feedback_form").innerHTML = "! Please enter product stock level"; return false; 
+  }
+  else {
+  	return submitForm("../db/update_db.php","#editproduct","#stock_view");
+  }
+
+}
+
+function initEdit()
+{
+  var panel=document.getElementById("feedback_form");
+  panel.innerHTML="<strong>!</strong> Please edit details";
+
+  var form=document.getElementById("editproduct");
+  form.onsubmit=validateEdit;
+
+}
+
 </script>
 		
 	</head>

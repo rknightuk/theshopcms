@@ -95,3 +95,5 @@ Burgess, A. (2011, July 25). Uploading Files with AJAX. *Net Tuts+.* Retrieved f
 Kitamura, E. (2013). Datalist Experiment. *Eiji Kitamura Demos.* Retrieved from http://demo.agektmr.com/datalist/
 
 *Can I Use...Datalist Element.* (2013). Retrieved from http://caniuse.com/#feat=datalist
+
+Simone, T. D. (2012, March 2). HTML5 input type=number and decimals/floats in Chrome. *Isotoma Blog.* Retrieved from http://blog.isotoma.com/2012/03/html5-input-typenumber-and-decimalsfloats-in-chrome/

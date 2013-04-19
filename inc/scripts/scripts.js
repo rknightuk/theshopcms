@@ -174,6 +174,7 @@ xmlhttp.onreadystatechange=function()
   if (xmlhttp.readyState==4 && xmlhttp.status==200)
     {
     document.getElementById("stock_view").innerHTML=xmlhttp.responseText;
+    initEdit();
     }
   }
 xmlhttp.open("GET","../cms/edit_product.php?product_id="+id+"&query="+query,false);
