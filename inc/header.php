@@ -79,9 +79,22 @@ else {
 			<nav class="nav_search">
 			
 				<form method="post" action="/search.php" class="searchbox">
-					<input type="text" name="search" id="search" placeholder="<?php echo $config['search_placehold']?>">
-				</form>
-			
+					<input type="text" name="search" list="searching" value="" id="search" placeholder="<?php echo $config['search_placehold']?>">
+				
+            <datalist id="searching">
+              <?php 
+
+              	require ("db/connect_db.php");
+              	$query = "SELECT product_name FROM products";
+              	$result = mysqli_query($dbc, $query);
+              	while ($row = mysqli_fetch_array($result)){
+              		echo "<option value='".$row['product_name']."'></option>";
+              	}
+
+              ?>
+            </datalist>
+            </form>
+
 			</nav>
 
 			<header id="basket_contents">

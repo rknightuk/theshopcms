@@ -90,4 +90,8 @@ For both open and archived orders, customer and order details can be viewed:
 
 ##References
 
-Burgess, A. (2011, July 25). Uploading Files with AJAX. *Net Tuts+.* Retrieved from  http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/
+Burgess, A. (2011, July 25). Uploading Files with AJAX. *Net Tuts+.* Retrieved from http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/
+
+Kitamura, E. (2013). Datalist Experiment. *Eiji Kitamura Demos.* Retrieved from http://demo.agektmr.com/datalist/
+
+*Can I Use...Datalist Element.* (2013). Retrieved from http://caniuse.com/#feat=datalist
