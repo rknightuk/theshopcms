@@ -101,3 +101,5 @@ Simone, T. D. (2012, March 2). HTML5 input type=number and decimals/floats in Ch
 http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#client-side-form-validation
 
 http://www.tyleringram.com/blog/basic-php-and-mysql-pagination-tutorial
+
+http://stackoverflow.com/questions/3254047/round-number-up-to-the-nearest-multiple-of-3

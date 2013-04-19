@@ -8,7 +8,7 @@ if (isset($_GET['category'])) {
 }
 
 $page = $_GET['page'];
-$items_per_page = 3;
+$items_per_page = 9;
 
 $query = "SELECT count(product_id) FROM products";
 if (!$category == 0){
