@@ -525,3 +525,21 @@ select	{
 	color: #ff0000;
 	font-weight: bold;
 }
+
+.pagi_links a, .pagi_links_current	{
+	padding: 5px 10px;
+	text-decoration: none;
+	background: #f7f7f7;
+	text-align: center;
+	text-decoration: none;
+	font-weight: normal;
+}
+
+.pagi_links a {
+	border: 1px solid #FF5321;
+}
+
+.pagi_links a:hover, .pagi_links_current {
+	border: 1px solid #dbdbdb;
+	color: #939393;
+}

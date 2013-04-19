@@ -4,8 +4,11 @@
 		if (isset($s)) {
 			echo "searchSort('$s', this.value)";
 		}
+		elseif ($page == 1) {
+			echo "changeCategory('$category', this.value, 1)";
+		}
 		else {
-			echo "changeCategory('$category', this.value)";
+			echo "sortPaged('$category', this.value, $page, '".urlencode($query)."')";
 		}
 		?>"> 
 				<option value="">Please select</option>

@@ -99,3 +99,5 @@ Kitamura, E. (2013). Datalist Experiment. *Eiji Kitamura Demos.* Retrieved from 
 Simone, T. D. (2012, March 2). HTML5 input type=number and decimals/floats in Chrome. *Isotoma Blog.* Retrieved from http://blog.isotoma.com/2012/03/html5-input-typenumber-and-decimalsfloats-in-chrome/
 
 http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#client-side-form-validation
+
+http://www.tyleringram.com/blog/basic-php-and-mysql-pagination-tutorial

@@ -22,6 +22,8 @@ while ($row = mysqli_fetch_array($result)){
 
 $pages = ceil($no_items/$items_per_page);
 
+//echo "pages:".$pages." and items per page: ".$items_per_page;
+
 $limit = ($items_per_page * $page) - $items_per_page;
 
 for($i = 1; $i <= $pages; $i++) {
@@ -35,26 +37,8 @@ for($i = 1; $i <= $pages; $i++) {
     }
     }
 
-if (isset($_GET['query']) && !$_GET['query'] == "") {
-	$resetquery = $_GET['query'];
-}
-
 if (!$category == 0) {
 	$query = "SELECT * FROM products WHERE category = '".$category."' ORDER BY ".$sortby." LIMIT ".$limit.", ".$items_per_page."";
-}
-elseif (isset($resetquery)){
-	$query = $resetquery;
-	$result = mysqli_query($dbc, $query);
-	$test = "LIMIT ".$limit.", ".$items_per_page;
-	$query = str_replace($test, "", $query);
-		$x = explode(" ORDER",$query);
-		$query = $x[0];
-		$query = str_replace("products", "products WHERE product_id = 'x'", $query);
-	while ($row = mysqli_fetch_array($result)){
-		$query .= " OR product_id = ".$row['product_id'];
-	}
-	$query .= " ORDER BY ".$sortby;
-	echo "</br>".$query;
 }
 else 	{
 	$query = "SELECT * FROM products ORDER BY ".$sortby." LIMIT ".$limit.", ".$items_per_page."";

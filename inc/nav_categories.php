@@ -2,7 +2,7 @@
 			
 			<h4>Browse by category</h4>
 			<ul>
-				<li><a href="#" onclick="changeCategory(0, 'product_id')">All Products</a></li>
+				<li><a href="#" onclick="changeCategory(0, 'product_id', 1)">All Products</a></li>
 				<?php
 			
 				include("db/connect_db.php");
@@ -12,9 +12,9 @@
 				$result = mysqli_query($dbc, $query);
 				
 				if ($result) {
-					while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
-						echo '<li><a href="#" onclick=changeCategory("'.$row['category'].'","product_id")>'.$row['category'].'</a></li>';
-					}
+					while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){;?>
+						<li><a href="#" onclick="changeCategory('<?php echo $row['category'];?>', 'product_id', 1)"><?php echo $row['category'];?></a></li>
+					<?php }
 				}
 			
 			?>

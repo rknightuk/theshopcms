@@ -1,4 +1,4 @@
-function changeCategory(category, sort)
+function changeCategory(category, sort, page)
 {
 	document.getElementById("content").innerHTML = "Loading "+category+"...";
   xmlhttp = new XMLHttpRequest();
@@ -9,7 +9,22 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("content").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","db/query_db.php?category="+category+"&sortby="+sort,false);
+xmlhttp.open("GET","db/query_db.php?category="+category+"&sortby="+sort+"&page="+page,false);
+xmlhttp.send();
+}
+
+function sortPaged(category, sort, page, query)
+{
+  document.getElementById("content").innerHTML = "Loading "+category+"...";
+  xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("content").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("GET","db/query_db.php?category="+category+"&sortby="+sort+"&page="+page+"&query="+query,false);
 xmlhttp.send();
 }
 
