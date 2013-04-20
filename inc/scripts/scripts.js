@@ -132,7 +132,7 @@ function unvalidate(id){
 }
 
 
-function showDetails(id, type)
+function showDetails(order_id, cust_id)
         {
           xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange=function()
@@ -142,7 +142,7 @@ function showDetails(id, type)
             document.getElementById("details").innerHTML=xmlhttp.responseText;
             }
           }
-        xmlhttp.open("GET","details.php?id="+id+"&type="+type,false);
+        xmlhttp.open("GET","details.php?order_id="+order_id+"&cust_id="+cust_id,false);
         xmlhttp.send();
         }
 

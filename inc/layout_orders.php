@@ -20,8 +20,7 @@ $result = mysqli_query($dbc, $query);
 					<td>".$row['order_date']."</td>
 					<td>£".$row['order_total']."</td>";?>
 
-					<td><a href='#' onclick="showDetails('<?php echo $row['order_id'];?>','order'); return false;">Order details</a><br/>
-					<a href='#' onclick="showDetails('<?php echo $row['cust_id'];?>','customer'); return false;">Customer details</a></td>
+					<td><a href='#' onclick="showDetails('<?php echo $row['order_id'];?>','<?php echo $row['cust_id'];?>'); return false;">Order details</a></td>
 
 					<?php
 					// Checks if page is open orders or achived

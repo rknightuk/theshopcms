@@ -1,16 +1,28 @@
 <?php
 
-$type = $_GET['type'];
-$id = $_GET['id'];
+$order_id = $_GET['order_id'];
+$cust_id = $_GET['cust_id'];
 
 require ("../db/connect_db.php");
 
-if ($type == "order"){
-	echo "<h2>Order #$id details</h2>";
+	echo "<h3>Order #$order_id details</h3>";
+
+	echo "<p>Customer #$cust_id: </p>";
+	
+	$query = "SELECT * FROM customers WHERE cust_id = $cust_id";
+	$result = mysqli_query($dbc, $query);
+
+	while ($row = mysqli_fetch_array($result)){
+		echo "<p>Name: ".$row['cust_fname']." ".$row['cust_lname']."</p>
+		<p>Contact: <a href='mailto:".$row['cust_email']."'>".$row['cust_email']."</a></p>
+		<p>Address: ".$row['house_no'].", ".$row['house_pcode']."</p>"
+		;
+
+	}
 	
 	$query = "SELECT order_contents.order_id, order_contents.product_id, order_contents.quantity, order_contents.product_price, products.product_id, products.product_name
 		FROM order_contents, products
-		WHERE order_id = $id
+		WHERE order_id = $order_id
 		AND order_contents.product_id = products.product_id";
 	$result = mysqli_query($dbc, $query);
 
@@ -32,22 +44,5 @@ if ($type == "order"){
 	}
 
 	echo "</tr></table>";
-
-}
-
-else {
-	echo "<h2>Customer #$id details</h2>";
-	
-	$query = "SELECT * FROM customers WHERE cust_id = $id";
-	$result = mysqli_query($dbc, $query);
-
-	while ($row = mysqli_fetch_array($result)){
-		echo "<p>".$row['cust_fname']." ".$row['cust_lname']."</p>
-		<p><a href='mailto:".$row['cust_email']."'>".$row['cust_email']."</a></p>
-		<p>Address: ".$row['house_no'].", ".$row['house_pcode']."</p>"
-		;
-
-	}
-}
 
 ?>
