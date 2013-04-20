@@ -265,7 +265,7 @@ select	{
 	font-size: 20px;
 }
 
-#sort	{
+#sort, #pagination	{
 	text-align: center;
 }
 
@@ -526,7 +526,7 @@ select	{
 	font-weight: bold;
 }
 
-.pagi_links a, .pagi_links_current	{
+#pagination a, .pagi_links_current	{
 	padding: 5px 10px;
 	text-decoration: none;
 	background: #f7f7f7;
@@ -535,11 +535,11 @@ select	{
 	font-weight: normal;
 }
 
-.pagi_links a {
+#pagination a {
 	border: 1px solid #FF5321;
 }
 
-.pagi_links a:hover, .pagi_links_current {
+#pagination a:hover, .pagi_links_current {
 	border: 1px solid #dbdbdb;
 	color: #939393;
 }
