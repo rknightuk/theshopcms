@@ -521,7 +521,7 @@ select	{
 	text-align: center;
 }
 
-#feedback_form	{
+#feedback_form, .feedback_msg	{
 	color: #ff0000;
 	font-weight: bold;
 }

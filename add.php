@@ -23,8 +23,8 @@ if ($result) {
   { 
     $_SESSION['basket'][$id]['quantity']++;
     if ($_SESSION['basket'][$id]['quantity'] > $row['stock_level']){
-      $stock_error = "! Not enough stock";
-      $_SESSION['basket'][$id]['quantity']--;
+      $stock_error = "<p class='feedback_msg'>! Not enough stock</p>";
+      $_SESSION['basket'][$id]['quantity'] = $row['stock_level'];
     }
     include ("inc/nav_basket.php");
   } 

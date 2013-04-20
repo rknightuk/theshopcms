@@ -20,7 +20,7 @@
 
 				if (isset($total)) {
 					if (isset($stock_error)){
-						echo "<p id='feedback_form'>$stock_error</p>";
+						echo "$stock_error";
 					}
 					else {
 						echo "<p class='basket_total'><strong>Total: &pound;$total</strong> (".count($_SESSION['basket'])." items)</p>";

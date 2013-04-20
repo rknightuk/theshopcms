@@ -4,6 +4,10 @@ include ("db/check_db.php");
 include ("inc/header.php");
 include ("inc/nav_categories.php");
 
+if (isset($stock_error)){
+  unset($stock_error);
+}
+
 ?>
 
 <script type="text/javascript">
@@ -68,10 +72,25 @@ if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
     $qty = (int) $item_qty;
 
     # Change quantity or delete if zero.
-    if ( $qty == 0 ) { unset ($_SESSION['basket'][$id]); } 
-    elseif ( $qty > 0 ) { $_SESSION['basket'][$id]['quantity'] = $qty; }
+    if ( $qty <= 0 ) { unset ($_SESSION['basket'][$id]); } 
+    elseif ( $qty > 0 ) { 
+      require("db/connect_db.php");
+      $query = "SELECT price, stock_level FROM products WHERE product_id = ".$item_id;
+      $result = mysqli_query($dbc, $query);
+
+      $_SESSION['basket'][$id]['quantity'] = $qty; 
+
+      if ($result) {
+        $row = mysqli_fetch_array( $result );
+        if ($_SESSION['basket'][$id]['quantity'] > $row['stock_level']){
+          $stock_error = "<p class='feedback_msg'>! Not enough stock</p>";
+          echo $stock_error;
+          $_SESSION['basket'][$id]['quantity'] = $row['stock_level'];
+        }
+    }
+      }
+    }
   }
-}
 
 // Check if basket is empty
 if (!isset($_SESSION['basket'])){
