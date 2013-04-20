@@ -24,6 +24,6 @@ VALUES ("USB Cable", "Computing", "2M USB cable in black", "sample_usbcable.png"
 ("Wooden Desk", "Furniture", "Wooden desk for computers and such.", "sample_desk.jpg", 54.99, 7),
 ("Chair", "Furniture", "Lovely blue chair made from wood. And screws.", "sample_chair.jpg", 15.99, 19),
 ("Double Bed", "Furniture", "Medium genuine leather jacket with detail stitching.", "sample_bed.jpg", 90.00, 2),
-("Ottoman", "Furniture", "Red Chuck Taylor Converse in mens size 9", "sample_ottoman.jpg", 34.99, 3),
-("Shelf", "Furniture", "Classic style mens Casio watch, with plastic strap.", "sample_shelf.jpg", 9.99, 15),
-("Media Unit", "Furniture", "Silver unisex bracelet with detailing.", "sample_media.jpg", 49.99, 17);
+("Ottoman", "Furniture", "Brown wooden ottoman with storage.", "sample_ottoman.jpg", 34.99, 3),
+("Shelf", "Furniture", "Lovely contemporary shelf. Wooden.", "sample_shelf.jpg", 9.99, 15),
+("Media Unit", "Furniture", "Beautiful wooden media unit. Just lovely.", "sample_media.jpg", 49.99, 17);

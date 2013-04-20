@@ -5,6 +5,7 @@
 	$title = $_POST['title'];
 	$search_placehold = $_POST['search_placehold'];
 	$no_items_msg = $_POST['no_items_msg'];
+	$items_per_page = $_POST['items_per_page'];
 
 	if (!$title == ""){
 		$config['title'] = $title;
@@ -23,6 +24,12 @@
 	}
 	else 	{
 		$config['no_items_msg'] = $config['no_items_msg'];
+	}
+	if (!$items_per_page == ""){
+		$config['items_per_page'] = $items_per_page;
+	}
+	else 	{
+		$config['items_per_page'] = $config['items_per_page'];
 	}
 
 	$open = fopen( "../inc/config.ini", "w" );

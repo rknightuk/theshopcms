@@ -1,5 +1,8 @@
-<?php session_start();?>
-<?php $config = parse_ini_file( "inc/config.ini" );?>
+<?php 
+
+session_start();
+$config = parse_ini_file( "inc/config.ini" );
+?>
 
 <?php 
 

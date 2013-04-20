@@ -1,5 +1,6 @@
 <?php 
 require("../db/connect_db.php");
+$config = parse_ini_file( "../inc/config.ini" );
 if (isset($_GET['sortby'])) {
 	$sortby = $_GET['sortby'];
 }
@@ -8,7 +9,7 @@ if (isset($_GET['category'])) {
 }
 
 $page = $_GET['page'];
-$items_per_page = 9;
+$items_per_page = $config['items_per_page'];
 
 // Rounds $items_per_page to nearest 3
 
