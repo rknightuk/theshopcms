@@ -14,7 +14,7 @@ $items_per_page = $config['items_per_page'];
 // Rounds $items_per_page to nearest 3
 
 if($items_per_page > 0){
-        $items_per_page = ceil($items_per_page/3.0) * 3;
+       $items_per_page = ceil($items_per_page/3.0) * 3;
     }
     else if( $items_per_page < 0){
     	$items_per_page = floor(n/3.0) * 3;
@@ -42,7 +42,7 @@ $limit = ($items_per_page * $page) - $items_per_page;
 
 echo "<nav id='pagination'><p>";
 
-// Check if -1 navigation arrow is needed.
+// Check if active -1 navigation arrow is needed.
 if ($page == 1){
     echo "<span class='pagi_links_current'>&laquo;</span> ";
 }
@@ -50,8 +50,10 @@ else {;?>
     <a href="#" onclick="changeCategory('<?php echo $category;?>','product_id', <?php echo ($page-1);?>)">&laquo;</a>
 <?php }
 
-for($i = 1; $i <= $pages; $i++) {
-    if($i > 0) {
+// Modify $i if first page
+if ($page == 1){
+for($i = $page - 1; $i <= $pages; $i++) {
+    if($i > 0 && $i < ($page + 3)) {
     	if ($page == $i){
     		echo "<span class='pagi_links_current'>$i</span>";
     	}
@@ -60,16 +62,43 @@ for($i = 1; $i <= $pages; $i++) {
     	<?php }
     }
     }
+}
+// Modify $i if not first or last page
+elseif ($page > 1 && $page < $pages){
+    for($i = $page - 1; $i <= $pages; $i++) {
+    if($i > 0 && $i < ($page + 2)) {
+        if ($page == $i){
+            echo "<span class='pagi_links_current'>$i</span>";
+        }
+        else {;?>
+            <a href="#" onclick="changeCategory('<?php echo $category;?>','product_id', <?php echo $i;?>)"><?php echo $i;?></a>
+        <?php }
+    }
+    }
+}
+// Modify $i if last page
+else {
+    for($i = $page - 2; $i <= $pages; $i++) {
+    if($i > 0 && $i < ($page + 2)) {
+        if ($page == $i){
+            echo "<span class='pagi_links_current'>$i</span>";
+        }
+        else {;?>
+            <a href="#" onclick="changeCategory('<?php echo $category;?>','product_id', <?php echo $i;?>)"><?php echo $i;?></a>
+        <?php }
+    }
+    }
+}
 
-// Check if +1 navigation arrow is needed
+// Check if active +1 navigation arrow is needed
 if ($page == $pages){
     echo " <span class='pagi_links_current'>&raquo;</span> ";
 }
 else {;?>
-    <span class="pagi_links"><a href="#" onclick="changeCategory('<?php echo $category;?>','product_id', <?php echo ($page+1);?>)">&raquo;</a></span>
+    <a href="#" onclick="changeCategory('<?php echo $category;?>','product_id', <?php echo ($page+1);?>)">&raquo;</a>
 <?php }
 
-echo "</p></nav>";
+echo "</p><p class='page_numbers'>$page of $pages</p></nav>";
 
 if (!$category == 0) {
 	$query = "SELECT * FROM products WHERE category = '".$category."' ORDER BY ".$sortby." LIMIT ".$limit.", ".$items_per_page."";
