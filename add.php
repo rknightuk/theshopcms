@@ -5,10 +5,13 @@ session_start();
 if (isset($_GET['id'])){
 	$id = $_GET['id'];
 }
+if (isset($stock_error)){
+  unset($stock_error);
+}
 
 require("db/connect_db.php");
 
-$query = "SELECT * FROM products WHERE product_id = ".$id;
+$query = "SELECT price, stock_level FROM products WHERE product_id = ".$id;
 
 $result = mysqli_query($dbc, $query);
 
@@ -19,6 +22,10 @@ if ($result) {
   if ( isset( $_SESSION['basket'][$id] ) )
   { 
     $_SESSION['basket'][$id]['quantity']++;
+    if ($_SESSION['basket'][$id]['quantity'] > $row['stock_level']){
+      $stock_error = "! Not enough stock";
+      $_SESSION['basket'][$id]['quantity']--;
+    }
     include ("inc/nav_basket.php");
   } 
   else

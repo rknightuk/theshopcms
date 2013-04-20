@@ -1,0 +1,7 @@
+SELECT order_date, delivered_date, DATEDIFF(order_date, delivered_date)
+FROM orders
+WHERE delivered = true AND order_id = 1
+
+http://www.w3resource.com/mysql/date-and-time-functions/mysql-datediff-function.php
+
+http://www.ajaxload.info/
