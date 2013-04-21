@@ -50,6 +50,7 @@ Site settings can be found at `yourshop/admin/settings_site.php` or by selecting
 - **Site title** `default: Shoppr` This is the main title of your shop. It is displayed in the top left of all pages as well as applied to the `<title>` attribute.
 - **Search placeholder text** `default: Search products` This is the text that is displayed as default in the search box on the main shopping pages.
 - **Empty basket message** `default: Your basket is empty` This is the message that is displayed in the basket area (top right of shop pages) when there are no items in the basket.
+- **Items per page** `default: 9` This is the number of products shown on each page, rounded up to the nearest mulitple of 3.
 
 ###Appearance settings
 
