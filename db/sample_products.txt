@@ -19,11 +19,22 @@ VALUES ("USB Cable", "Computing", "2M USB cable in black", "sample_usbcable.png"
 ("Leather Jacket (M)", "Clothing", "Medium genuine leather jacket with detail stitching.", "sample_jacket.png", 75.00, 120),
 ("Red Converse Size 9", "Clothing", "Red Chuck Taylor Converse in mens size 9", "sample_converse.png", 34.99, 12),
 ("Men's Black Casio Watch", "Clothing", "Classic style mens Casio watch, with plastic strap.", "sample_casio.png", 12.75, 9),
-("Unisex bracelet", "Clothing", "Silver unisex bracelet with detailing.", "sample_bracelet.png", 29.98, 98),
+("Unisex bracelet", "Jewellery", "Silver unisex bracelet with detailing.", "sample_bracelet.png", 29.98, 98),
 
 ("Wooden Desk", "Furniture", "Wooden desk for computers and such.", "sample_desk.jpg", 54.99, 7),
 ("Chair", "Furniture", "Lovely blue chair made from wood. And screws.", "sample_chair.jpg", 15.99, 19),
 ("Double Bed", "Furniture", "Medium genuine leather jacket with detail stitching.", "sample_bed.jpg", 90.00, 2),
 ("Ottoman", "Furniture", "Brown wooden ottoman with storage.", "sample_ottoman.jpg", 34.99, 3),
 ("Shelf", "Furniture", "Lovely contemporary shelf. Wooden.", "sample_shelf.jpg", 9.99, 15),
-("Media Unit", "Furniture", "Beautiful wooden media unit. Just lovely.", "sample_media.jpg", 49.99, 17);
+("Media Unit", "Furniture", "Beautiful wooden media unit. Just lovely.", "sample_media.jpg", 49.99, 17),
+
+("Sparkly Bracelet", "Jewellery", "Fashion bracelet.", "sample_braceletspark.png", 4.99, 27),
+("Ruby Ring", "Jewellery", "Beautiful ruby ring, only available in size M.", "sample_ring.png", 159.00, 3),
+("Cute Aklet", "Jewellery", "Beautiful anklet, perfect accessory.", "sample_anklet.png", 9.99, 11),
+("Armchair", "Furniture", "Comfortable armchair, perfect for any house.", "sample_armchair.png", 130.00, 7),
+("Beauty Station", "Furniture", "Fashionable beauty station with plenty of space.", "sample_beautystation.png", 49.99, 41),
+("Mini Cables", "Computing", "Mini cables, ideal for the person on the go. They fit easily into any bad compartment.", "sample_minicables.png", 3.99, 60),
+("Where's Wally? Book", "Books", "Fun book that the whole family can enjoy.", "sample_whereswally.png", 8.99, 17),
+("Joke Book", "Books", "Jokes that will make all your friends laugh.", "sample_jokebook.png", 6.99, 22),
+("Green eggs and Ham Book", "Books", "Brilliantly funny book written by Dr Seuss. A book every child will enjoy.", "sample_greeneggsandhambook.png", 12.99, 8),
+("Noughts and Crosses", "Books", "Written by Malorie Blackman, a story about two young adults forbidden from being together.", "sample_noughtsandcrossesbook.png", 8.99, 14);

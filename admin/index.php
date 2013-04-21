@@ -6,6 +6,12 @@ include("../inc/nav_admin.php");
 require ("../db/connect_db.php");
 
 ?>
+
+<script>
+	function refresh(month){
+location.href="index.php?month=" + month;
+}
+</script>
 			
 		<h2>Administration</h2>
 
@@ -34,64 +40,26 @@ require ("../db/connect_db.php");
 		echo "</ol>";
 
 		?>
-		<h3>Sales figures for most recent orders</h3>
 
-		<table class="sales">
-			<tr><td>Order<br/>total<br/>(£)<td>
-			<td><canvas id="recent_sales" height="250" width="650"></canvas></td></tr>
-			<tr><td colspan="2"></td><td>Order number</td></tr>
-		</table>
-			
-
+		<select name="sales_charts" onchange="refresh(this.value)">
+			<option value>Select month to view sales</value>
 			<?php
 
-				$query = "SELECT order_id, order_total FROM orders LIMIT 10";
+				$query = "SELECT DISTINCT MONTHNAME(order_date) AS month, YEAR(order_date) AS year FROM orders
+				WHERE MONTHNAME(order_date) NOT LIKE MONTHNAME(CURDATE())";
 
 				$result = mysqli_query($dbc, $query);
 
-				$ids = array();
-				$totals = array();
-
 				while ($row = mysqli_fetch_array($result)){
-					$ids[] = $row['order_id'];
-					$totals[] = $row['order_total'];
+					echo "<option value='".$row['month']."'>".$row['month']." ".$row['year']."</option>";
 				}
 
 			?>
-
-	<!-- Sales chart generated using Chart.js (https://github.com/nnnick/Chart.js) -->
-	<!-- Recent sales -->
-	<script>
-
-		var barChartData = {
-			labels : [<?php
-			$arrlength=count($ids);
+		</select> <a href="index.php">this month</a>
 			
-			for($x=0;$x<$arrlength;$x++)
-			  {
-			  echo $ids[$x].",";
-			  }
-			?>],
-			datasets : [
-				{
-					fillColor : "rgba(255, 83, 33, 0.5)",
-					strokeColor : "rgba(255, 83, 33, 0.8)",
-					data : [<?php
-			$arrlength=count($totals);
-			
-			for($x=0;$x<$arrlength;$x++)
-			  {
-			  echo $totals[$x].",";
-			  }
-			?>]
-				}
-			]
-
-		}
-
-	var myLine = new Chart(document.getElementById("recent_sales").getContext("2d")).Bar(barChartData);
-
-	</script>
+		<section id="sales_chart">
+				<?php include ("sales_chart.php");?>
+		</section>
 
 	<?php
 
