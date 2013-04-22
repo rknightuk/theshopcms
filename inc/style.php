@@ -75,7 +75,7 @@ body	{
 	width: 350px;
 	height: 35px;
 	font-size: 150%;
-	background: url('/inc/img/search.png') top left no-repeat;
+	background: url('../inc/img/search.png') top left no-repeat;
 	padding-left: 40px;
 	background-color: #fff;
 }

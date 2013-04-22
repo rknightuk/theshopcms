@@ -41,7 +41,7 @@ VALUES ("USB Cable", "Computing", "2M USB cable in black", "sample_usbcable.png"
 
 ("Rubber Chicken", "Random", "Yellow rubber chicken. Perfect for when you need a rubber chicken.", "sample_rubberchicken.jpg", 7.99, 104),
 ("Mu Folding USB Plug", "Computing", "Mu Folding Plug. Perfect for keeping in your handbag or gentlemen's satchel.", "sample_muplug.png", 14.99, 37),
-("G1 Pool Table", "Random", "G1 Glass pool table. Plays the same as medium weight felt. Lovely. And expensive.", "sample_glasspool.png", 10000.00, 1),
+("G1 Pool Table", "Random", "G1 Glass pool table. Plays the same as medium weight felt. Lovely. And expensive.", "sample_glasspool.png", 10000.00, 0),
 ("Giant Gummy Worm", "Random", "Giant huge gigantic gummy worm. yumtastic.", "sample_giantworm.png", 8.49, 87),
 ("Divers Helment", "Random", "Divers Helmet that meets all safety standards as required in 1894.", "sample_divershelmet.jpg", 150.00, 2),
 ("50 Shades Poster", "Random", "50 shades of gray poster. Nothing like the book, except it's printed on paper.", "sample_50shades.png", 12.99, 56);

@@ -1,66 +1,33 @@
-**Table of Contents**  *generated with [DocToc](http://doctoc.herokuapp.com/)*
+##Shoppr: Installation and User Manual
 
-#The Shop CMS
+*You are to specify and construct HTML and PHP web-pages that support an easily-updated and customized "online shopping" capability for selling whatever kind of physical product your client wishes.* User accounts have been deliberately omitted; sales of digital goods and services are also omitted. Tested browsers: Chrome 26.0.1410.65, Safari 6.0.2 and Firefox 20.0.1. Built with: Apache 2.2.23, PHP 5.4.10, MySQL 5.5.29. No other versions have been tested.
 
-A university assignment to create a shop and content management system flexible enough to sell anything from scuba gear to rubber chickens. User accounts have been deliberately omitted; sales of digital goods and services are also omitted.
+**Table of Contents**
 
-*NB: This manual is also available at `/documents/manual`*
-
-##Compatibility
-
-Tested with:
-
-- Chrome 26.0.1410.65
-- Safari 6.0.2
-- Firefox 20.0.1
-
-Built using:
-
-- Apache 2.2.23
-- PHP 5.4.10
-- MySQL 5.5.29
-
-No other versions have been tested.
-
-##Installation
+- [Prerequisites of installation](#prerequisites-of-installation)
+- [Content management (yourshop/cms)](#content-management-yourshopcms)
+	- [Adding, editing and deleting a product](#adding-editing-and-deleting-a-product)
+	- [Updating product stock levels](#updating-product-stock-levels)
+- [Administration (yourshop/admin)](#administration-yourshopadmin)
+	- [Managing orders](#managing-orders)
+	- [Site settings](#site-settings)
+	- [Appearance settings](#appearance-settings)
 
 ###Prerequisites of installation
 
-- MySQL username is `root`
-- MySQL password is blank
-
-NB: If your username and password are different to those shown above, please edit line 3 and 14 of `db/check_db.php` and line 3 of `db/connect_db.php`.
-
-###Installation
+MySQL username and password must be set to `root` and blank, respectively. If your MySQL username and password are different, please edit line 3 and 14 of `db/check_db.php` and line 3 of `db/connect_db.php`.
 
 1. Copy `theshopcms` in its entirety to `htdocs` on your server or within your Apache/XAMPP/MAMP installation.
 2. Visit the URL of the folder in your browser. (e.g. yourserver/theshopcms)
 3. The database, relevant tables with be automatically created; sample data for products and orders will be inserted into the tables.
 
-##Usage
-
 *NB: All references to `yourshop` herein refers to the specific domain or directory in which the product is installed.*
-
-##Settings
-
-###Site settings
-
-Site settings can be found at `yourshop/admin/settings_site.php` or by selecting 'site settings' from the Admin page. Here you can modify three elements: 
-
-- **Site title** `default: Shoppr` This is the main title of your shop. It is displayed in the top left of all pages as well as applied to the `<title>` attribute.
-- **Search placeholder text** `default: Search products` This is the text that is displayed as default in the search box on the main shopping pages.
-- **Empty basket message** `default: Your basket is empty` This is the message that is displayed in the basket area (top right of shop pages) when there are no items in the basket.
-- **Items per page** `default: 9` This is the number of products shown on each page, rounded up to the nearest mulitple of 3.
-
-###Appearance settings
 
 ##Content management (`yourshop/cms`)
 
-###Adding a product
+####Adding, editing and deleting a product
 
 To add a new product go to `yourshop/cms/add_product.php` or select 'add new product' from the CMS page. You will be presented with an image upload box. Choose the image you wish to use for the new product. Complete the form that is then show with the details of the new product and select 'submit'. If the product was added successfully a message will confirm this.
-
-###Editing and deleting a product
 
 To edit or delete a product go to `yourshop/cms/edit.php`. or select 'edit products' from the CMS page. To edit a product select 'edit' next to the specific product you wish to update. Modify the information in the form show, select 'submit' and a message will confirm the edit.
 
@@ -74,33 +41,25 @@ To update the stock level of a product go to `yourshop/cms/update_stock.php` or 
 
 ##Administration (`yourshop/admin`)
 
-Sales figures for the most recent 10 orders, the most popular product and the amount of products in your shop are shown on the Admin home page.
+On the admin home page the first chart shows the current months sales per order. By selecting another month from the dropdown menu, the chart will adjust to show the selected months orders and sales. The second chart on the page shows the average delivery time based on all delivered orders and compares them to the industry average.
 
-###Managing orders
+####Managing orders
 
 *NB: Open orders refers to any order which has been placed but not delivered. Archived orders refers to those that have been delivered.*
 
-To view open orders go to `yourshop/admin/open_orders.php` or select 'Open orders' from the Admin page. If the order has been delivered, select 'Mark as delivered' and the order will be archived. 
+To view open orders go to `yourshop/admin/open_orders.php` or select 'Open orders' from the Admin page. If the order has been delivered, select 'Mark as delivered' and the order will be archived. To view archived orders go to `yourshop/admin/archived_orders.php` or select 'Archived orders' from Admin page. For both open and archived orders, customer and order details can be viewed by selecting 'order details' next to the appropriate order.
 
-To view archived orders go to `yourshop/admin/archived_orders.php` or select 'Archived orders' from Admin page.
 
-For both open and archived orders, customer and order details can be viewed:
+####Site settings
 
-- Order details can be view by selecting 'order details'.
-- Customers details can be viewed by selecting 'customer details'.
+Site settings can be found at `yourshop/admin/settings_site.php` or by selecting 'site settings' from the Admin page. Here you can modify three elements: 
 
-##References
+- **Site title** `default: Shoppr` This is the main title of your shop. It is displayed in the top left of all pages as well as applied to the `<title>` attribute.
+- **Search placeholder text** `default: Search products` This is the text that is displayed as default in the search box on the main shopping pages.
+- **Empty basket message** `default: Your basket is empty` This is the message that is displayed in the basket area (top right of shop pages) when there are no items in the basket.
+- **Products per page** `default: 6` This is the number of products shown on each page, rounded up to the nearest mulitple of 3.
+- **Products per row** `default: 3` This is the number of products per row. Choices are 2, 3 or 4.
 
-Burgess, A. (2011, July 25). Uploading Files with AJAX. *Net Tuts+.* Retrieved from http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/
+####Appearance settings
 
-Kitamura, E. (2013). Datalist Experiment. *Eiji Kitamura Demos.* Retrieved from http://demo.agektmr.com/datalist/
-
-*Can I Use...Datalist Element.* (2013). Retrieved from http://caniuse.com/#feat=datalist
-
-Simone, T. D. (2012, March 2). HTML5 input type=number and decimals/floats in Chrome. *Isotoma Blog.* Retrieved from http://blog.isotoma.com/2012/03/html5-input-typenumber-and-decimalsfloats-in-chrome/
-
-http://www.whatwg.org/specs/web-apps/current-work/multipage/forms.html#client-side-form-validation
-
-http://www.tyleringram.com/blog/basic-php-and-mysql-pagination-tutorial
-
-http://stackoverflow.com/questions/3254047/round-number-up-to-the-nearest-multiple-of-3
+Appearance settings can be found at `yourshop/admin/settings_appearance.php` or by selecting 'appearance settings' from the Admin page. Here the colours for the background, header, text, hyperlinks and product border can be changed. Three themes are also installed and can be used by pressing the corresponding button.

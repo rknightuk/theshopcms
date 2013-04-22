@@ -21,7 +21,7 @@
 	elseif ($theme == "hotdog") {
 		
 		$style_config['backgroundcolor'] = "FF0000";
-		$style_config['bodytextcolor'] = "FFFFFF";
+		$style_config['bodytextcolor'] = "000000";
 		$style_config['headercolor'] = "FFFFFF";
 		$style_config['linkcolor'] = "FFCC00";
 		$style_config['productborder'] = "FFCC00";

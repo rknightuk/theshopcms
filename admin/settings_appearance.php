@@ -12,7 +12,7 @@ include("../inc/nav_admin.php");?>
   		{
   			if (xmlhttp.readyState==4 && xmlhttp.status==200)
    		 {
-   			 document.getElementById("settings_update").innerHTML=xmlhttp.responseText;
+   			 document.getElementById("settings_style").innerHTML=xmlhttp.responseText;
     		}
   		}
 		xmlhttp.open("GET","settings_reset.php?source="+source,false);
@@ -50,6 +50,8 @@ include("../inc/nav_admin.php");?>
 
 		</form>
 
+		<p class="empty"><a href="#" onclick="resetSettings('appearance')">SET TO DEFAULT</a></p>
+
 		<span class="themes">
 		<h2>Built-in Themes</h2>
 
@@ -71,7 +73,6 @@ include("../inc/nav_admin.php");?>
 
 		<button onclick="changeTheme('hotdog')">Switch to Hot Dog theme</button>
 
-		<p class="empty"><a href="#" onclick="resetSettings('appearance')">SET TO DEFAULT</a></p>
 	</div>
 		
 <?php include("../inc/footer.php");?>

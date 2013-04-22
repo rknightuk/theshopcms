@@ -1,6 +1,6 @@
 function changeCategory(category, sort, page)
 {
-	document.getElementById("content").innerHTML = "Loading "+category+"...";
+	document.getElementById("content").innerHTML = "<img class='loading' src='inc/img/loading.gif'>";
   xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
@@ -15,7 +15,7 @@ xmlhttp.send();
 
 function sortPaged(category, sort, page, query)
 {
-  document.getElementById("content").innerHTML = "Loading "+category+"...";
+  document.getElementById("content").innerHTML = "<img class='loading' src='inc/img/loading.gif'>";
   xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
@@ -31,7 +31,7 @@ xmlhttp.send();
 
 function searchSort(searchterm, sort)
 {
-	document.getElementById("content").innerHTML = "Loading "+searchterm+"...";
+	document.getElementById("content").innerHTML = "<img class='loading' src='inc/img/loading.gif'>";
   xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
@@ -46,6 +46,7 @@ xmlhttp.send();
 
 function delete_row(product_id, query)
     {
+    document.getElementById("feedback").innerHTML = "<img class='loading' src='../inc/img/loading.gif'>";
     if (!confirmDelete()) return false;
     if (window.XMLHttpRequest)
       {
@@ -59,7 +60,7 @@ function delete_row(product_id, query)
         document.getElementById("table_view").innerHTML = xhr.responseText;
         }
       }
-    xhr.open("GET","/db/delete_db.php?product_id="+product_id+"&query="+query, true);
+    xhr.open("GET","../db/delete_db.php?product_id="+product_id+"&query="+query, true);
     xhr.send();
     }
     
@@ -77,7 +78,7 @@ xmlhttp.onreadystatechange=function()
     document.getElementById("nav_basket").innerHTML=xmlhttp.responseText;
     }
   }
-xmlhttp.open("GET","/add.php?id="+id,false);
+xmlhttp.open("GET","add.php?id="+id,false);
 xmlhttp.send();
 reloadBasket();
 }
@@ -88,6 +89,7 @@ function showBasket(){
 
 function markDelivered(id, query)
         {
+          document.getElementById("orders").innerHTML = "<img class='loading' src='../inc/img/loading.gif'>";
           xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange=function()
           {
@@ -119,14 +121,12 @@ function emptyBasket(source)
         }
 
 function validate(id) {
-
   var idmsg = id+"msg";
   document.getElementById(idmsg).style.visibility = 'visible';
 
 }
 
 function unvalidate(id){
-
   var idmsg = id+"msg";
   document.getElementById(idmsg).style.visibility = 'hidden';
 }
@@ -134,6 +134,7 @@ function unvalidate(id){
 
 function showDetails(order_id, cust_id)
         {
+          document.getElementById("details").innerHTML = "<img class='loading' src='../inc/img/loading.gif'>";
           xmlhttp = new XMLHttpRequest();
         xmlhttp.onreadystatechange=function()
           {
@@ -183,6 +184,7 @@ function outStock(){
 
 function editProduct(id, query)
 {
+  document.getElementById("stock_view").innerHTML = "<img class='loading' src='../inc/img/loading.gif'>";
   xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
@@ -201,6 +203,7 @@ function setCategory(category){
   }
 
 function orderStatus(){
+  document.getElementById("order_status").innerHTML = "<img class='loading' src='inc/img/loading.gif'>";
   xmlhttp = new XMLHttpRequest();
 xmlhttp.onreadystatechange=function()
   {
