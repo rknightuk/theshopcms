@@ -12,7 +12,7 @@
 				$result = mysqli_query($dbc, $query);
 				
 				if ($result) {
-					while ( $row = mysqli_fetch_array($result, MYSQLI_ASSOC)){;?>
+					while ( $row = mysqli_fetch_array($result)){;?>
 						<li><a href="#" onclick="changeCategory('<?php echo $row['category'];?>', 'product_id', 1)"><?php echo $row['category'];?></a></li>
 					<?php }
 				}
@@ -20,6 +20,9 @@
 			?>
 			</ul>
 
+			<h4>Accounts and orders</h4>
+
+			<a href="order_status.php">Order status</a>
 				<script>
 
 				function nukedb(){

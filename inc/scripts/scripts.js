@@ -195,3 +195,21 @@ xmlhttp.onreadystatechange=function()
 xmlhttp.open("GET","../cms/edit_product.php?product_id="+id+"&query="+query,false);
 xmlhttp.send();
 }
+
+function setCategory(category){
+    document.getElementById('category').value = category;
+  }
+
+function orderStatus(){
+  xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("order_status").innerHTML=xmlhttp.responseText;
+    initEdit();
+    }
+  }
+xmlhttp.open("GET","order_status.php",false);
+xmlhttp.send();
+}
