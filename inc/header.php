@@ -37,7 +37,7 @@ else {
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="inc/style.css" />
+		<link rel="stylesheet" type="text/css" href="inc/style.php" />
 		<script type="text/javascript" src="inc/scripts/scripts.js"></script>
 		<script src="inc/scripts/jquery-1.9.1.min.js"></script>
 		<script type="text/javascript">

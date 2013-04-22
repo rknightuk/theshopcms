@@ -4,6 +4,7 @@ if (!isset($title)){
 	$title = "";
 }
 $config = parse_ini_file( "../inc/config.ini" );
+$style_config = parse_ini_file( "../inc/style_config.ini" );
 
 ?>
 
@@ -21,10 +22,11 @@ $config = parse_ini_file( "../inc/config.ini" );
 			<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 		<![endif]-->
 		<link rel="shortcut icon" href="img/favicon.ico">
-		<link rel="stylesheet" type="text/css" href="../inc/style.css" />
+		<link rel="stylesheet" type="text/css" href="../inc/style.php" />
 		<script type="text/javascript" src="../inc/scripts/scripts.js"></script>
 		<script type="text/javascript" src="../inc/scripts/chart.js"></script>
 		<script src="../inc/scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="../inc/scripts/jscolor/jscolor.js"></script>
 		<script type="text/javascript">
 
 function validateProduct()

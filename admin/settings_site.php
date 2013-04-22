@@ -6,7 +6,7 @@ include("../inc/nav_admin.php");?>
 
 <script>
 
-	function resetSettings(){
+	function resetSettings(source){
   		xmlhttp = new XMLHttpRequest();
 		xmlhttp.onreadystatechange=function()
   		{
@@ -15,7 +15,7 @@ include("../inc/nav_admin.php");?>
    			 document.getElementById("settings_update").innerHTML=xmlhttp.responseText;
     		}
   		}
-		xmlhttp.open("GET","settings_reset.php",false);
+		xmlhttp.open("GET","settings_reset.php?source="+source,false);
 		xmlhttp.send();
 		}
 </script>
@@ -33,7 +33,7 @@ include("../inc/nav_admin.php");?>
 
 		</form>
 
-		<p class="empty"><a href="#" onclick="resetSettings()">SET TO DEFAULT</a></p>
+		<p class="empty"><a href="#" onclick="resetSettings('site')">SET TO DEFAULT</a></p>
 	</div>
 		
 <?php include("../inc/footer.php");?>

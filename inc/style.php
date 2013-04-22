@@ -1,12 +1,16 @@
+<?php header("Content-type: text/css"); ?>
+<?php $style_config = parse_ini_file( "style_config.ini" ); ?>
+
 /* General page styles */
 
 body	{
 	margin: 0 auto;
 	margin-top: 20px;
-	color: #000;
+	color: #<?=$style_config['bodytextcolor']?>;
 	font-family: Helvetica, Arial, sans-serif;
 	font-size: 14px;
 	width: 960px;
+	background-color: #<?=$style_config['backgroundcolor'];?>;
 }
 
 #head_main	{
@@ -15,12 +19,12 @@ body	{
 	width: 960px;
 	height: auto;
 	padding: 10px 0 10px 0;
-	background-color: #fff;
+	background-color: #<?=$style_config['backgroundcolor'];?>;
 	z-index: 1000;
 	border-bottom: 2px solid #000;
-	-webkit-box-shadow: 0 8px 6px -6px #DA5D43;
-	   -moz-box-shadow: 0 8px 6px -6px #DA5D43;
-	        box-shadow: 0 8px 6px -6px #DA5D43;
+	-webkit-box-shadow: 0 8px 6px -6px #<?=$style_config['linkcolor'];?>;
+	   -moz-box-shadow: 0 8px 6px -6px #<?=$style_config['linkcolor'];?>;
+	        box-shadow: 0 8px 6px -6px #<?=$style_config['linkcolor'];?>;
 }
 
 .logo	{
@@ -37,11 +41,11 @@ body	{
 	
 	h1 a:link, h1 a:visited, h1 a:active	{
 		text-decoration: none;
-		color: #000;
+		color: #<?=$style_config['headercolor']?>;
 	}
 	
 	h1 a:hover	{
-		color: #ff532c;
+		color: #<?=$style_config['linkcolor'];?>;
 		text-decoration: underline;
 		text-decoration: none;
 	}
@@ -145,7 +149,7 @@ body	{
 		margin-bottom: 5px;
 		text-align: center;
 		text-decoration: none;
-		border: 1px solid #ff532c;
+		border: 1px solid #<?=$style_config['linkcolor'];?>;
 	}
 	
 	.nav_main a:hover	{
@@ -160,7 +164,7 @@ footer	{
 }
 	
 a, a:link, a:visited, a:active	{
-	color: #ff532c;
+	color: #<?=$style_config['linkcolor']?>;
 	text-decoration: underline;
 }
 
@@ -276,7 +280,7 @@ select	{
 	height: auto;
     display: inline-block;
     margin: 5px;
-    border: 1px solid #dbdbdb;
+    border: 1px solid #<?=$style_config['productborder'];?>;
     text-align: center;
     }
     
@@ -428,26 +432,22 @@ select	{
 		background: #f7f7f7;
 		text-align: center;
 		padding: 10px 20px;
-		border: 1px solid #FF5321;
+		border: 1px solid #<?=$style_config['linkcolor'];?>;
 		text-decoration: none;
 		font-weight: normal;
 	}
 
 	.out_of_stock a {
-		background: #FFC7C6;
+		background: #d3d3d3;
 		text-align: center;
 		padding: 10px 25px;
-		border: 1px solid #F99;
+		border: 1px solid #<?=$style_config['linkcolor'];?>;
 		text-decoration: none;
 		font-weight: normal;
 	}
 
-	.add_to_basket a:hover	{
+	.add_to_basket a:hover, .out_of_stock a:hover	{
 		border-color: #dbdbdb;
-	}
-
-	.out_of_stock a:hover	{
-		border-color: #f99;
 	}
 
 	p.out_of_stock	{
@@ -516,7 +516,7 @@ select	{
 	padding: 10px 0 10px 0;
 	background-color: #fff;
 	z-index: 1001;
-	border: 2px solid #DA5D43;
+	border: 2px solid #<?=$style_config['linkcolor'];?>;
 	padding: 5px;
 	text-align: center;
 }
@@ -536,7 +536,7 @@ select	{
 }
 
 #pagination a {
-	border: 1px solid #FF5321;
+	border: 1px solid #<?=$style_config['linkcolor']?>;
 }
 
 #pagination a:hover, .pagi_links_current {
