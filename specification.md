@@ -10,15 +10,15 @@
 
 **Add to basket**: Items can be added to the basket from all product views and stock levels are checked on addition to avoid errors.
 
-**Basket summary and basket page:** The first five items in the basket can be viewed in the basket summary. This is to allow customers to get a quick overview of thier basket without having to visit another page. Basket item quantities can be modified and are checked against stock levels to avoid errors. Checkout is integrated with the basket page for ease of use.
+**Basket summary and basket page:** The first five items in the basket can be viewed in the basket summary. This is to allow customers to get a quick overview of their basket without having to visit another page. Basket item quantities can be modified and are checked against stock levels to avoid errors. Checkout is integrated with the basket page for ease of use.
 
-**Individual product pages and related items:** Each product has it's own product page and related items are shown at the bottom of the page. These pages allow the customer to see a full description of the product and related items might suggest a product they had not seen yet, which in turn would increase sales.
+**Individual product pages and related items:** Each product has its own product page and related items are shown at the bottom of the page. These pages allow the customer to see a full description of the product and related items might suggest a product they had not seen yet, which in turn would increase sales.
 
-**Pagination:** Product views with multiple items are split up into seperate pages and can be navigated via the arrows (and numbered links) at the top of the page. By implementing this pages will load faster therefore making the experience better for the customer.
+**Pagination:** Product views with multiple items are split up into separate pages and can be navigated via the arrows (and numbered links) at the top of the page. By implementing this pages will load faster therefore making the experience better for the customer.
 
-**Order tracking:** Customers can check if their order has been delivered using their order ID and email address. This reduces the amount of support email customers send, as they can confirm the status of thier order instantly.
+**Order tracking:** Customers can check if their order has been delivered using their order ID and email address. This reduces the amount of support email customers send, as they can confirm the status of their order instantly.
 
-**Out of stock message:** On selection of the 'out of stock' message, a user can input thier email address and be notified when the product is back in stock. This reassures the customer know that they will be able to buy the product and also reduces the risk of the customers looking for the product on another shop.
+**Out of stock message:** On selection of the 'out of stock' message, a user can input their email address and be notified when the product is back in stock. This reassures the customer know that they will be able to buy the product and also reduces the risk of the customers looking for the product on another shop.
 
 ###CMS
 
@@ -26,7 +26,7 @@
 
 **Edit, delete and update stock:** Information about a product can be edited or deleted and new stock can be added to a product. This is implemented to make product management as easy as possible. 
 
-**Summary of products:** This overview shows the user a simple overview of the products they have and which have low or high stock levels. This is to give the user an easy way to forsee problems with stock levels.
+**Summary of products:** This overview shows the user a simple overview of the products they have and which have low or high stock levels. This is to give the user an easy way to foresee problems with stock levels.
 
 ###Admin
 

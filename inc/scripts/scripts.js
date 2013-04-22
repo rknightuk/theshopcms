@@ -112,7 +112,7 @@ function emptyBasket(source)
             document.getElementById(source).innerHTML=xmlhttp.responseText;
             }
           }
-        xmlhttp.open("GET","/empty_basket.php?source="+source,false);
+        xmlhttp.open("GET","empty_basket.php?source="+source,false);
         xmlhttp.send();
         var sourcePage = source;
         if (sourcePage == 'nav_basket'){
