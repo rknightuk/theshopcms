@@ -10,17 +10,28 @@ if (isset($_GET['category'])) {
 
 $page = $_GET['page'];
 $items_per_page = $config['items_per_page'];
+$items_per_row = $config['items_per_row'];
 
-// Rounds $items_per_page to nearest 3
+if ($items_per_row = 23){
+    $items_per_row = 4;
+}
+elseif ($items_per_row = 31) {
+    $items_per_row = 3;
+}
+else {
+    $items_per_row = 2;
+}
+
+// Rounds $items_per_page to nearest "items_per_row"
 
 if($items_per_page > 0){
-       $items_per_page = ceil($items_per_page/3.0) * 3;
+       $items_per_page = ceil($items_per_page/$items_per_row) * $items_per_row;
     }
     else if( $items_per_page < 0){
-    	$items_per_page = floor(n/3.0) * 3;
+    	$items_per_page = floor(n/$items_per_row) * $items_per_row;
     }
     else {
-    	$items_per_page = 3;
+    	$items_per_page = $items_per_row;
     }
 
 

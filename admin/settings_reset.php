@@ -10,6 +10,8 @@
 	$config['title'] = "Shoppr";
 	$config['search_placehold'] = "Search products"; 
 	$config['no_items_msg'] = "Your basket is empty";
+	$config['items_per_page'] = "6";
+	$config['items_per_row'] = "31";
 
 	$open = fopen( "../inc/config.ini", "w" );
 

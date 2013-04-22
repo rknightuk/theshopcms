@@ -22,4 +22,4 @@ echo '<section class="product">
 		</section>';
 	}
 
-	?>
+?>

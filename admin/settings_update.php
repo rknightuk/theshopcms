@@ -11,6 +11,7 @@
 		$search_placehold = $_POST['search_placehold'];
 		$no_items_msg = $_POST['no_items_msg'];
 		$items_per_page = $_POST['items_per_page'];
+		$items_per_row = $_POST['items_per_row'];
 
 	if (!$title == ""){
 		$config['title'] = $title;
@@ -35,6 +36,12 @@
 	}
 	else 	{
 		$config['items_per_page'] = $config['items_per_page'];
+	}
+	if (!$items_per_row == ""){
+		$config['items_per_row'] = $items_per_row;
+	}
+	else 	{
+		$config['items_per_row'] = $config['items_per_row'];
 	}
 
 	$open = fopen( "../inc/config.ini", "w" );

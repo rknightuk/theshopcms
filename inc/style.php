@@ -1,5 +1,8 @@
 <?php header("Content-type: text/css"); ?>
-<?php $style_config = parse_ini_file( "style_config.ini" ); ?>
+<?php
+$style_config = parse_ini_file( "style_config.ini" );
+$config = parse_ini_file( "config.ini" );
+?>
 
 /* General page styles */
 
@@ -276,7 +279,7 @@ select	{
 /* Product grid layout */
 
 .product	{
-	width: 30%;
+	width: <?=$config['items_per_row']?>%;
 	height: auto;
     display: inline-block;
     margin: 5px;
