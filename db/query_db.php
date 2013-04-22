@@ -34,7 +34,8 @@ if($items_per_page > 0){
     	$items_per_page = $items_per_row;
     }
 
-
+// Start of pagination
+    
 $query = "SELECT count(product_id) FROM products";
 if (!$category == 0){
 	$query .= " WHERE category = '".$category."'";

@@ -285,6 +285,7 @@ select	{
     margin: 5px;
     border: 1px solid #<?=$style_config['productborder'];?>;
     text-align: center;
+    background-color: #fff;
     }
     
     .product p	{
@@ -551,3 +552,7 @@ select	{
 		color: #bababa;
 		font-size: 80%;
 	}
+
+.themes img {
+	border: 1px solid #000;
+}

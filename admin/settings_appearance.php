@@ -18,6 +18,20 @@ include("../inc/nav_admin.php");?>
 		xmlhttp.open("GET","settings_reset.php?source="+source,false);
 		xmlhttp.send();
 		}
+
+	function changeTheme(theme){
+  		xmlhttp = new XMLHttpRequest();
+		xmlhttp.onreadystatechange=function()
+  		{
+  			if (xmlhttp.readyState==4 && xmlhttp.status==200)
+   		 {
+   			 document.getElementById("settings_style").innerHTML=xmlhttp.responseText;
+    		}
+  		}
+		xmlhttp.open("GET","changetheme.php?theme="+theme,false);
+		xmlhttp.send();
+		}
+
 </script>
 	
 	<h2>Update appearance settings</h2>
@@ -35,6 +49,27 @@ include("../inc/nav_admin.php");?>
 			<label></label><input type="submit" class="button" value="Update settings">
 
 		</form>
+
+		<span class="themes">
+		<h2>Built-in Themes</h2>
+
+		<h3>Darkness</h3>
+
+		<img src="../inc/img/theme_darkness.png">
+
+		<button onclick="changeTheme('darkness')">Switch to Darkness theme</button>
+
+		<h3>Fluffy</h3>
+
+		<img src="../inc/img/theme_fluffy.png">
+
+		<button onclick="changeTheme('fluffy')">Switch to Fluffy theme</button>
+
+		<h3>Hot Dog</h3>
+
+		<img src="../inc/img/theme_hotdog.png">
+
+		<button onclick="changeTheme('hotdog')">Switch to Hot Dog theme</button>
 
 		<p class="empty"><a href="#" onclick="resetSettings('appearance')">SET TO DEFAULT</a></p>
 	</div>
