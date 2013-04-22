@@ -8,8 +8,8 @@ require ("../db/connect_db.php");
 ?>
 
 <script>
-	function refresh(month){
-location.href="index.php?month=" + month;
+	function refresh(monthyear){
+location.href="index.php?monthyear=" + monthyear+"#sales_top";
 }
 </script>
 			
@@ -46,12 +46,13 @@ location.href="index.php?month=" + month;
 			<?php
 
 				$query = "SELECT DISTINCT MONTHNAME(order_date) AS month, YEAR(order_date) AS year FROM orders
-				WHERE MONTHNAME(order_date) NOT LIKE MONTHNAME(CURDATE())";
+				WHERE MONTHNAME(order_date) NOT LIKE MONTHNAME(CURDATE())
+				OR YEAR(order_date) NOT LIKE YEAR(CURDATE())";
 
 				$result = mysqli_query($dbc, $query);
 
 				while ($row = mysqli_fetch_array($result)){
-					echo "<option value='".$row['month']."'>".$row['month']." ".$row['year']."</option>";
+					echo "<option value='".$row['month'].",".$row['year']."'>".$row['month']." ".$row['year']."</option>";
 				}
 
 			?>
@@ -97,13 +98,13 @@ location.href="index.php?month=" + month;
 			labels : [""],
 			datasets : [
 				{
-					fillColor : "rgba(220,220,220,0.5)",
-					strokeColor : "rgba(220,220,220,1)",
+					fillColor : "rgba(255, 83, 33, 0.5)",
+					strokeColor : "rgba(255, 83, 33, 0.8)",
 					data : [<?php echo $average;?>]
 				},
 				{
-					fillColor : "rgba(151,187,205,0.5)",
-					strokeColor : "rgba(151,187,205,1)",
+					fillColor : "rgba(220,220,220,0.5)",
+					strokeColor : "rgba(220,220,220,1)",
 					data : [4.2]
 				}
 			]

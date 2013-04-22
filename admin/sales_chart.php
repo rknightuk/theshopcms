@@ -1,12 +1,15 @@
 <?php
 
 	require ("../db/connect_db.php");
-	if(isset($_GET['month'])){
-		$month = $_GET['month'];
-		$query = "SELECT order_id, order_total FROM orders WHERE MONTHNAME(order_date) = '".$month."'";
+	if(isset($_GET['monthyear'])){
+		list($month, $year) = explode(",", $_GET['monthyear'], 2);
+		$query = "SELECT order_id, order_total FROM orders WHERE MONTHNAME(order_date) = '".$month."'
+AND YEAR(order_date) = '".$year."'";
 	}
 	else {
-		$query = "SELECT order_id, order_total FROM orders WHERE MONTHNAME(order_date) = MONTHNAME(CURDATE())";
+		$query = "SELECT order_id, order_total FROM orders
+			WHERE MONTHNAME(order_date) = MONTHNAME(CURDATE())
+			AND YEAR(order_date) = YEAR(CURDATE())";
 	}
 
 	$result = mysqli_query($dbc, $query);
@@ -21,10 +24,10 @@
 
 ?>
 
-	<h3>Sales figures for <?php 
+	<h3 id="sales_top">Sales figures for <?php 
 
-	if (isset($month)){
-		echo $month;
+	if (isset($month) && isset($year)){
+		echo $month." ".$year;
 	}
 	else {
 		echo "this month";

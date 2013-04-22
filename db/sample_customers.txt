@@ -7,4 +7,10 @@ VALUES
 	(5,'Jess','Harrison','jesh93@live.com',77,'PO28AS'),
 	(6,'Andy','Millward','millward@andym.co.uk',65,'PO34BH'),
 	(7,'Craig','Johnson','craigtheman@gmail.com',8,'RG270NA'),
-	(8,'Myke','Hurley','myke@70db.net',27,'LN274TV');
+	(8,'Myke','Hurley','myke@70db.net',27,'LN274TV'),
+	(9, 'Joe', 'Bloggs', 'joe@bloggs.com', 56, 'PO15 5QU'),
+(10, 'Steve', 'James', 'steve.james@email.net', 102, 'RG24FG'),
+(11, 'Lit', 'Kester', 'lit@emailthing.net', 1, 'LG29NA'),
+(12, 'Gary', 'Alderman', 'gary@garyweb.com', 3, 'PO195GB'),
+(13, 'Louis', 'Jay', 'louis.jeff@hotmail.com', 678, 'MN18FD'),
+(14, 'Katie', 'Smith', 'ksmith@smithy.com', 88, 'PO55SJ');
