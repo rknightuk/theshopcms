@@ -82,7 +82,7 @@ else {
 			<nav class="nav_search">
 			
 				<form method="post" action="search.php" class="searchbox">
-					<input type="text" name="search" list="searching" value="" id="search" placeholder="<?php echo $config['search_placehold']?>">
+					<input type="text" name="search" list="searching" value="" id="search" placeholder="<?php echo $config['search_placehold']?>" required>
 				
             <datalist id="searching">
               <?php 
