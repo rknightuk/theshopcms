@@ -20,11 +20,11 @@
 	}
 	elseif ($theme == "hotdog") {
 		
-		$style_config['backgroundcolor'] = "FF0000";
+		$style_config['backgroundcolor'] = "FFE600";
 		$style_config['bodytextcolor'] = "000000";
 		$style_config['headercolor'] = "FFFFFF";
-		$style_config['linkcolor'] = "FFCC00";
-		$style_config['productborder'] = "FFCC00";
+		$style_config['linkcolor'] = "FF0000";
+		$style_config['productborder'] = "FF0000";
 	}
 
 	$style_open = fopen( "../inc/style_config.ini", "w" );
