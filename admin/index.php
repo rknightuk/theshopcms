@@ -64,7 +64,7 @@ location.href="index.php?monthyear=" + monthyear+"#sales_top";
 
 	<?php
 
-	$query = "SELECT order_date, delivered_date, DATEDIFF(order_date, delivered_date)
+	$query = "SELECT order_date, delivered_date, DATEDIFF(delivered_date, order_date)
 		FROM orders
 		WHERE delivered = true";
 
@@ -75,7 +75,7 @@ location.href="index.php?monthyear=" + monthyear+"#sales_top";
 
 	while ($row = mysqli_fetch_array($result)){
 
-			$delivery_time += ($row['DATEDIFF(order_date, delivered_date)'] * -1);
+			$delivery_time += $row['DATEDIFF(delivered_date, order_date)'];
 			$number_of_orders++;
 			}
 
