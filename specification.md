@@ -1,6 +1,6 @@
-##Final Specification and rationale
+#Shoppr : Final Specification and rationale
 
-###Shop
+##Shop
 
 **View all products and browse by category:** Ability to view all products and organise them by category.
 
@@ -20,7 +20,7 @@
 
 **Out of stock message:** On selection of the 'out of stock' message, a user can input their email address and be notified when the product is back in stock. This reassures the customer know that they will be able to buy the product and also reduces the risk of the customers looking for the product on another shop.
 
-###CMS
+##CMS
 
 **Add new product:** New products can be added including a product image. 
 
@@ -28,7 +28,7 @@
 
 **Summary of products:** This overview shows the user a simple overview of the products they have and which have low or high stock levels. This is to give the user an easy way to foresee problems with stock levels.
 
-###Admin
+##Admin
 
 **Popular products, monthly sales and average delivery time chart:** These charts show information on monthly sales (which the user can select) and the average delivery time based on the industry average. These give the user an easy-to-read overview of how the shop is doing.
 

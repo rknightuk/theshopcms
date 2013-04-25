@@ -1,4 +1,4 @@
-<!-- Upload script modified from http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/ -->
+<!-- Upload script heaviliy modified from http://net.tutsplus.com/tutorials/javascript-ajax/uploading-files-with-ajax/ -->
 
 (function () {
 	var input = document.getElementById("images"), 

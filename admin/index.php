@@ -8,9 +8,9 @@ require ("../db/connect_db.php");
 ?>
 
 <script>
-	function refresh(monthyear){
-location.href="index.php?monthyear=" + monthyear+"#sales_top";
-}
+	function getChart(monthyear){
+	    $("#sales_chart").load("sales_chart.php?monthyear="+monthyear);
+	  }
 </script>
 			
 		<h2>Administration</h2>
@@ -41,13 +41,10 @@ location.href="index.php?monthyear=" + monthyear+"#sales_top";
 
 		?>
 
-		<select name="sales_charts" onchange="refresh(this.value)">
-			<option value>Select month to view sales</value>
+		<select name="sales_charts" onchange="getChart(this.value)">
 			<?php
 
-				$query = "SELECT DISTINCT MONTHNAME(order_date) AS month, YEAR(order_date) AS year FROM orders
-				WHERE MONTHNAME(order_date) NOT LIKE MONTHNAME(CURDATE())
-				OR YEAR(order_date) NOT LIKE YEAR(CURDATE())";
+				$query = "SELECT DISTINCT MONTHNAME(order_date) AS month, YEAR(order_date) AS year FROM orders";
 
 				$result = mysqli_query($dbc, $query);
 
@@ -56,7 +53,7 @@ location.href="index.php?monthyear=" + monthyear+"#sales_top";
 				}
 
 			?>
-		</select> <a href="index.php">this month</a>
+		</select>
 			
 		<section id="sales_chart">
 				<?php include ("sales_chart.php");?>
