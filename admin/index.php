@@ -41,7 +41,7 @@ require ("../db/connect_db.php");
 
 		?>
 
-		<select name="sales_charts" onchange="getChart(this.value)">
+		Show sales figures for: <select name="sales_charts" onchange="getChart(this.value)">
 			<?php
 
 				$query = "SELECT DISTINCT MONTHNAME(order_date) AS month, YEAR(order_date) AS year FROM orders";
