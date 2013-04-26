@@ -23,16 +23,6 @@
 			<h4>Accounts and orders</h4>
 
 			<a href="order_status.php">Order status</a>
-				<script>
-
-				function nukedb(){
-					alert('This will delete the database. Are you totally fucking sure?');
-					window.location= 'nukedb.php';
-				}
-
-				</script>
-				<a href="#" onclick="nukedb()">NUKE THE DB!</button></a>
-
 
 		</nav>
 		
