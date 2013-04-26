@@ -118,9 +118,11 @@ foreach ($_SESSION['basket'] as $key => $value) {
 	$row = mysqli_fetch_array($result);
 	echo "<tr><td><a href='product.php?product_id=".$row['product_id']."'>".$row['product_name']."</td>
 	<td><input class='updateq' type='number' maxlength='3' name='qty[".$row['product_id']."]' value='".$_SESSION['basket'][$key]['quantity']."'></td>
-	<td>&pound;".$row['price']."</td>
-	<td>&pound;".$row['price']*$_SESSION['basket'][$key]['quantity']."</td></tr>";
+	<td>&pound;".$row['price']."</td>";
+	$subtotal = number_format($row['price']*$_SESSION['basket'][$key]['quantity'], 2, '.', '');
+  echo "<td>&pound;".$subtotal."</td></tr>";
 	$total = $total + ($row['price']*$_SESSION['basket'][$key]['quantity']);
+  $total = number_format($total, 2, '.', '');
 }?>
 
 

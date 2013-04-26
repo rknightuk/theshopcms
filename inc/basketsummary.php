@@ -30,13 +30,13 @@ echo "
 $summary = 0;
 foreach ($_SESSION['basket'] as $key => $value) {
 	$query = "SELECT * FROM products WHERE product_id = $key";
-
 	$result = mysqli_query($dbc, $query);
 	$row = mysqli_fetch_array($result);
 	echo "<tr><td><a href='product.php?product_id=".$row['product_id']."'>".$row['product_name']."</td>
 	<td>".$_SESSION['basket'][$key]['quantity']."</td>
-	<td>&pound;".$row['price']."</td>
-	<td>&pound;".$row['price']*$_SESSION['basket'][$key]['quantity']."</td></tr>";
+	<td>&pound;".$row['price']."</td>";
+	$subtotal = number_format($row['price']*$_SESSION['basket'][$key]['quantity'], 2, '.', '');
+	echo "<td>&pound;".$subtotal."</td></tr>";
 	$summary += 1;
 	if ($summary > 4) {
 		break;

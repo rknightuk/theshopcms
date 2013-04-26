@@ -132,7 +132,7 @@ In the future, I plan to continue development of the system, fixes the issues me
 These are the features I plan to implement before open-sourcing the project.
 
 - Optimise MySQL queries
-- Setup process for input of settings
+- Setup process for input of settings (similar to Wordpress)
 - Installable themes
 - Customisable layouts
 - Product sizes/variations for clothing products

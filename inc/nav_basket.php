@@ -15,6 +15,7 @@
 					$result = mysqli_query($dbc, $query);
 					$row = mysqli_fetch_array($result);
 					$total = $total + ($row['price']*$_SESSION['basket'][$key]['quantity']);
+					$total = number_format($total, 2, '.', '');
 					}
 				}
 
