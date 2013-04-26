@@ -1,6 +1,6 @@
 <?php
 
-	$dbc = mysqli_connect('localhost', 'root', 'root')
+	$dbc = mysqli_connect('localhost', 'root', '')
 		or die ("Cannot connect to database");
 
 	// Check if database exists
@@ -11,7 +11,7 @@
 		$query = "CREATE DATABASE shopping";
 		mysqli_query($dbc, $query);
 
-		$dbc = mysqli_connect('localhost', 'root', 'root', 'shopping');
+		$dbc = mysqli_connect('localhost', 'root', '', 'shopping');
 
 		// Create products table and data
 		$query = 'CREATE TABLE products ( 
