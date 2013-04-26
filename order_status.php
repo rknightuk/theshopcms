@@ -10,33 +10,34 @@ include ("inc/nav_categories.php");
 
 function validateOrder()
 
-{
-  if( this.elements["ordernumber"].value === "" )
-  { 
-    document.getElementById("feedback_form").innerHTML = "! Please enter your order number"; return false;
-  }
-  if( ( this.elements["email"].value.indexOf("@") === -1 )
-   || ( this.elements["email"].value.indexOf(".") === -1 ) )
-  { 
-    document.getElementById("feedback_form").innerHTML = "! Please enter a valid email address"; return false;
-  }
-  else {
-  	return submitForm('db/get_order_status.php', '#order_status', '#order_info');
+  {
+    if( this.elements["ordernumber"].value === "" )
+    { 
+      document.getElementById("feedback_form").innerHTML = "! Please enter your order number"; return false;
+    }
+    if( ( this.elements["email"].value.indexOf("@") === -1 )
+     || ( this.elements["email"].value.indexOf(".") === -1 ) )
+    { 
+      document.getElementById("feedback_form").innerHTML = "! Please enter a valid email address"; return false;
+    }
+    else {
+    	return submitForm('db/get_order_status.php', '#order_status', '#order_info');
+    }
+  
   }
 
-}
-
+// Load initial form feedback
 window.onload = init;
 
 function init()
-{
-  var panel=document.getElementById("feedback_form");
-  panel.innerHTML="<strong>!</strong> Please enter your order details";
-
-  var form=document.getElementById("order_status");
-  form.onsubmit=validateOrder;
-
-}
+  {
+    var panel=document.getElementById("feedback_form");
+    panel.innerHTML="<strong>!</strong> Please enter your order details";
+  
+    var form=document.getElementById("order_status");
+    form.onsubmit=validateOrder;
+  
+  }
 
 </script>
 	

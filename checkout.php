@@ -15,12 +15,11 @@ $email = $_POST['email'];
 // Insert customer details
 
 // Check if returning customer
-
 $query = "SELECT cust_id, cust_email FROM customers WHERE cust_email = '$email'";
 
 $result = mysqli_query($dbc, $query);
 
-// If new customers
+// If new customer
 if ($row = mysqli_fetch_array($result)){
 	$cust_id = $row['cust_id'];
 	echo "<p>Thanks for your repeat custom (customer #$cust_id).</p>";

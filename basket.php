@@ -52,6 +52,8 @@ function init()
   form.onsubmit=validateCustomer;
 
 }
+
+// Load initital form feedback
 onload=init;
 
 </script>
@@ -64,14 +66,14 @@ onload=init;
 // Check if quantities have been modified
 if ( $_SERVER['REQUEST_METHOD'] == 'POST' )
 {
-  # Update changed quantity field values.
+  // Update changed quantity values.
   foreach ( $_POST['qty'] as $item_id => $item_qty )
   {
-    # Ensure values are integers.
+    // Ensure values are int
     $id = (int) $item_id;
     $qty = (int) $item_qty;
 
-    # Change quantity or delete if zero.
+    // Change quantity or delete if <= 0.
     if ( $qty <= 0 ) { unset ($_SESSION['basket'][$id]); } 
     elseif ( $qty > 0 ) { 
       require("db/connect_db.php");
@@ -99,6 +101,7 @@ if (!isset($_SESSION['basket'])){
 else 	{
 	require ("db/connect_db.php");
 
+// Echo basket data
 echo "<p><a href='#checkout'>Checkout</a> &darr;</p>
 <form action='basket.php' method='post'>
 <table>
