@@ -1,6 +1,8 @@
 #theshopcms
 
-Coursework for Year 2 Web Scripting (WEBSCRP).
+Coursework for Year 2 Web Scripting (WEBSCRP). Known issues:
+
+- Lots of them. **This is not production ready, do not use it as such.**
 
 Coursework spec:
 
